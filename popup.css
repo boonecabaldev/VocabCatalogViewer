@@ -5,18 +5,14 @@
   --dark: #1a1a2e;
   --light: #f8f9fa;
   --neon: #0ff0fc;
-  --padding-compact: 12px;
-  --gap-compact: 6px;
 }
 
 body {
   width: 800px;
   height: 600px;
   margin: 0;
-  padding: var(--padding-compact);
+  padding: 0;
   font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  line-height: 1.4;
   background: linear-gradient(135deg, var(--dark), #16213e);
   color: var(--light);
   overflow: hidden;
@@ -27,14 +23,15 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  padding: 20px;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 12px;
-  padding-bottom: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
   border-bottom: 2px solid var(--neon);
 }
 
@@ -46,91 +43,73 @@ h1 {
   background-clip: text;
   color: transparent;
   text-shadow: 0 0 10px rgba(15, 240, 252, 0.3);
-  font-size: 1.8rem;
-}
-
-.word-counter {
-  font-size: 0.9rem;
-  color: var(--neon);
+  font-size: 2.2rem;
 }
 
 .controls {
   display: flex;
-  gap: var(--gap-compact);
-  margin-bottom: 12px;
-  align-items: center;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  padding-bottom: 5px;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .search-box {
-  flex: 1;
-  min-width: 180px;
-}
-
-.select-wrapper {
+  flex-grow: 1;
   position: relative;
-  min-width: 120px;
-  height: 32px;
+  min-width: 250px;
 }
 
+input,
 select {
-  width: 100%;
-  height: 100%;
-  padding: 6px 24px 6px 10px;
-  border-radius: 20px;
-  border: 1px solid rgba(15, 240, 252, 0.3);
-  background: rgba(26, 26, 46, 0.8);
-  color: var(--neon);
-  font-size: 0.8rem;
-  appearance: none;
-  cursor: pointer;
-}
-
-select:valid {
+  padding: 12px 15px;
+  border-radius: 25px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
   color: white;
+  font-size: 1rem;
+  width: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
-.select-wrapper::after {
-  content: "▼";
-  color: var(--neon);
-  font-size: 0.7rem;
+input:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 20px var(--neon);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.search-icon {
   position: absolute;
-  right: 10px;
+  right: 15px;
   top: 50%;
   transform: translateY(-50%);
-  pointer-events: none;
+  color: var(--neon);
 }
 
-.search-box input {
-  height: 32px;
-  border-radius: 20px;
-  border: 1px solid rgba(15, 240, 252, 0.3);
-  background: rgba(26, 26, 46, 0.8)
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%230ff0fc' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/%3E%3C/svg%3E")
-    no-repeat 10px center;
-  color: white;
+.filter-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
-.search-box input {
-  padding: 8px 15px;
+
+.filter-label {
+  font-weight: bold;
+  color: var(--neon);
   font-size: 0.9rem;
-  width: 92%;
 }
 
 .table-container {
   flex-grow: 1;
   overflow-y: auto;
-  border-radius: 8px;
+  border-radius: 10px;
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  scrollbar-width: thin;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.95rem;
 }
 
 th {
@@ -138,16 +117,16 @@ th {
   top: 0;
   background: linear-gradient(to right, var(--primary), var(--secondary));
   color: white;
-  padding: 8px 10px;
+  padding: 15px;
   text-align: left;
   font-family: "Orbitron", sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
 }
 
 td {
-  padding: 8px 10px;
+  padding: 12px 15px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -159,11 +138,11 @@ tr:hover {
   display: inline-block;
   background: rgba(15, 240, 252, 0.2);
   color: var(--neon);
-  padding: 1px 5px;
-  border-radius: 10px;
-  font-size: 0.65rem;
-  margin-right: 3px;
-  margin-bottom: 3px;
+  padding: 3px 8px;
+  border-radius: 15px;
+  font-size: 0.7rem;
+  margin-right: 5px;
+  margin-bottom: 5px;
 }
 
 .big-word {
@@ -188,8 +167,7 @@ tr:hover {
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -198,16 +176,126 @@ tr:hover {
 
 ::-webkit-scrollbar-thumb {
   background: var(--secondary);
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
-select:focus,
-input:focus {
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(15, 240, 252, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(15, 240, 252, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(15, 240, 252, 0);
+  }
+}
+
+/* Improved Controls */
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filter-group {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.filter-label {
+  font-weight: bold;
+  color: var(--neon);
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+select {
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(15, 240, 252, 0.3);
+  background: rgba(26, 26, 46, 0.8);
+  color: white;
+  font-size: 0.85rem;
+  min-width: 120px;
+  cursor: pointer;
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--neon) 50%),
+    linear-gradient(135deg, var(--neon) 50%, transparent 50%);
+  background-position:
+    calc(100% - 15px) 50%,
+    calc(100% - 10px) 50%;
+  background-size:
+    5px 5px,
+    5px 5px;
+  background-repeat: no-repeat;
+  transition: all 0.2s ease;
+}
+
+select:focus {
   outline: none;
   border-color: var(--neon);
   box-shadow: 0 0 0 2px rgba(15, 240, 252, 0.2);
 }
 
-.controls::-webkit-scrollbar-thumb {
-  background: var(--neon);
+/* Fix dropdown options styling */
+select option {
+  background: var(--dark);
+  color: var(--light);
+  padding: 8px;
+}
+
+/* Search box adjustments */
+.search-box {
+  flex-grow: 1;
+  min-width: 200px;
+}
+
+.search-box input {
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  width: 92%;
+}
+
+/* Table sizing adjustments */
+th,
+td {
+  padding: 10px 12px;
+  font-size: 0.9rem;
+}
+
+/* Tag sizing */
+.tag {
+  font-size: 0.7rem;
+  padding: 2px 6px;
+}
+
+/* Add to popup.css */
+.copy-notification {
+  position: fixed;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(26, 26, 46, 0.9);
+  color: var(--neon);
+  padding: 15px 25px;
+  border-radius: 8px;
+  border: 1px solid var(--neon);
+  box-shadow: 0 0 20px rgba(15, 240, 252, 0.4);
+  font-size: 1.2rem;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.copy-notification.show {
+  opacity: 1;
 }

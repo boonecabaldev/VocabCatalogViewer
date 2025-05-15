@@ -77,6 +77,51 @@ function populateTagFilter() {
   });
 }
 
+// Add these variables at the top with the other declarations
+let currentString = '(normal)';
+let notificationTimeout;
+
+// Add this function to show the notification
+function showCopyNotification(text) {
+  const notification = document.getElementById('copy-notification');
+  notification.textContent = text;
+  notification.classList.add('show');
+  
+  // Clear any existing timeout
+  if (notificationTimeout) {
+    clearTimeout(notificationTimeout);
+  }
+  
+  // Hide after 2 seconds
+  notificationTimeout = setTimeout(() => {
+    notification.classList.remove('show');
+  }, 2000);
+}
+
+// Add this function to handle copying
+function handleWordCopy(word, isRightClick = false) {
+  if (isRightClick) {
+    // Right click resets to (normal)
+    currentString = '(normal)';
+  } else {
+    // Left click appends the word in parentheses
+    if (currentString === '(normal)') {
+      currentString = `(${word})`;
+    } else {
+      currentString += `(${word})`;
+    }
+  }
+  
+  // Copy to clipboard
+  navigator.clipboard.writeText(currentString)
+    .then(() => {
+      showCopyNotification(currentString);
+    })
+    .catch(err => {
+      console.error('Could not copy text: ', err);
+    });
+}
+
 // Render words to the table
 function renderWords(words) {
   wordsTable.innerHTML = '';
@@ -121,6 +166,18 @@ function renderWords(words) {
     row.appendChild(typeCell);
     row.appendChild(tagsCell);
     wordsTable.appendChild(row);
+    
+    // Add click handlers
+    row.addEventListener('click', (e) => {
+      if (e.button === 0) { // Left click
+        handleWordCopy(word.term);
+      }
+    });
+    
+    row.addEventListener('contextmenu', (e) => {
+      e.preventDefault(); // Prevent the context menu from appearing
+      handleWordCopy(word.term, true);
+    });
   });
   
   wordCountSpan.textContent = words.length;
