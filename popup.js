@@ -1,4 +1,4 @@
-// Global variables
+// Load word database
 let wordDatabase = {};
 let allWords = [];
 let uniqueTags = new Set();
@@ -27,33 +27,38 @@ async function loadWordDatabase() {
     wordDatabase = await response.json();
   } catch (error) {
     console.error('Error loading word database:', error);
-    // Fallback to chrome.storage if available
-    const result = await chrome.storage.local.get(['wordDatabase']);
-    wordDatabase = result.wordDatabase || {};
   }
 }
 
 // Process all words into a single array
+// In your processAllWords function:
 function processAllWords() {
   allWords = [];
-  uniqueTags.clear();
+  uniqueTags.clear(); // Reset the Set
 
   Object.keys(wordDatabase).forEach(category => {
-    Object.entries(wordDatabase[category]).forEach(([term, data]) => {
-      const wordEntry = { term, ...data, category };
+    const categoryWords = wordDatabase[category];
+    
+    Object.keys(categoryWords).forEach(term => {
+      const wordData = categoryWords[term];
+      const wordEntry = { term, ...wordData, category };
       allWords.push(wordEntry);
       
-      if (data.tags) {
-        data.tags.forEach(function(tag) {
+      // Safe tag processing
+      if (wordData.tags && Array.isArray(wordData.tags)) {
+        wordData.tags.forEach(function(tag) {
           uniqueTags.add(tag);
         });
       }
     });
   });
+
+  wordCountSpan.textContent = allWords.length;
 }
 
-// Populate tag filter dropdown
+// Modify the populateTagFilter function:
 function populateTagFilter() {
+  const tagFilter = document.getElementById('tag-filter');
   tagFilter.innerHTML = '';
   
   const placeholderOption = document.createElement('option');
@@ -73,20 +78,52 @@ function populateTagFilter() {
 }
 
 // Render words to the table
-// In popup.js
 function renderWords(words) {
-  let html = '';
+  wordsTable.innerHTML = '';
+  
   words.forEach(word => {
-    html += `
-    <tr>
-      <td class="${word.class === 'Big' ? 'big-word' : ''}">${word.term}</td>
-      <td>${word.definition}</td>
-      <td>${word.class}</td>
-      <td class="${word.type.toLowerCase()}">${word.type}</td>
-      <td>${word.tags?.map(t => `<span class="tag">${t}</span>`).join('') || ''}</td>
-    </tr>`;
+    const row = document.createElement('tr');
+    
+    // Term with special class for "big" words
+    const termCell = document.createElement('td');
+    termCell.textContent = word.term;
+    if (word.class === 'Big') {
+      termCell.classList.add('big-word');
+    }
+    
+    // Definition
+    const defCell = document.createElement('td');
+    defCell.textContent = word.definition;
+    
+    // Class
+    const classCell = document.createElement('td');
+    classCell.textContent = word.class;
+    
+    // Type with color coding
+    const typeCell = document.createElement('td');
+    typeCell.textContent = word.type;
+    typeCell.classList.add(word.type.toLowerCase());
+    
+    // Tags
+    const tagsCell = document.createElement('td');
+    if (word.tags && word.tags.length > 0) {
+      word.tags.forEach(tag => {
+        const tagSpan = document.createElement('span');
+        tagSpan.classList.add('tag');
+        tagSpan.textContent = tag;
+        tagsCell.appendChild(tagSpan);
+      });
+    }
+    
+    row.appendChild(termCell);
+    row.appendChild(defCell);
+    row.appendChild(classCell);
+    row.appendChild(typeCell);
+    row.appendChild(tagsCell);
+    wordsTable.appendChild(row);
   });
-  wordsTable.innerHTML = html;
+  
+  wordCountSpan.textContent = words.length;
 }
 
 // Filter words based on current filters
@@ -132,17 +169,17 @@ function setupEventListeners() {
   
   // Focus the search input on popup open
   searchInput.focus();
-  
-  // Improve dropdown UX
-  document.querySelectorAll('select').forEach(select => {
-    select.addEventListener('focus', () => {
-      select.style.backgroundColor = 'rgba(15, 240, 252, 0.1)';
-    });
-    select.addEventListener('blur', () => {
-      select.style.backgroundColor = 'rgba(26, 26, 46, 0.8)';
-    });
-  });
 }
+
+// Improve dropdown UX
+document.querySelectorAll('select').forEach(select => {
+  select.addEventListener('focus', () => {
+    select.style.backgroundColor = 'rgba(15, 240, 252, 0.1)';
+  });
+  select.addEventListener('blur', () => {
+    select.style.backgroundColor = 'rgba(26, 26, 46, 0.8)';
+  });
+});
 
 // Initialize the app when DOM is loaded
 document.addEventListener('DOMContentLoaded', init);

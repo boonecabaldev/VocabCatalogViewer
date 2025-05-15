@@ -1,13 +1,12 @@
 :root {
   --primary: #6e48aa;
   --secondary: #9d50bb;
-  --accent: #4776E6;
+  --accent: #4776e6;
   --dark: #1a1a2e;
   --light: #f8f9fa;
   --neon: #0ff0fc;
-  --font-size: 13px; /* Down from 14px */
-  --padding-compact: 8px; /* Reduced from 12px */
-  --gap-compact: 4px; /* Reduced from 6px */
+  --padding-compact: 12px;
+  --gap-compact: 6px;
 }
 
 body {
@@ -15,9 +14,9 @@ body {
   height: 600px;
   margin: 0;
   padding: var(--padding-compact);
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
-  line-height: 1.2;
+  line-height: 1.4;
   background: linear-gradient(135deg, var(--dark), #16213e);
   color: var(--light);
   overflow: hidden;
@@ -34,21 +33,20 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 6px;
-  padding-bottom: 6px;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
   border-bottom: 2px solid var(--neon);
 }
 
 h1 {
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
   margin: 0;
   background: linear-gradient(to right, var(--neon), var(--secondary));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   text-shadow: 0 0 10px rgba(15, 240, 252, 0.3);
-  
-  font-size: 1.5rem; /* Down from 1.8rem */
+  font-size: 1.8rem;
 }
 
 .word-counter {
@@ -59,7 +57,7 @@ h1 {
 .controls {
   display: flex;
   gap: var(--gap-compact);
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   align-items: center;
   flex-wrap: nowrap;
   overflow-x: auto;
@@ -77,10 +75,6 @@ h1 {
   height: 32px;
 }
 
-.search-box, .select-wrapper {
-  height: 28px; /* Reduced from 32px */
-}
-
 select {
   width: 100%;
   height: 100%;
@@ -92,11 +86,6 @@ select {
   font-size: 0.8rem;
   appearance: none;
   cursor: pointer;
-}
-
-select, .search-box input {
-  padding: 4px 20px 4px 8px; /* Tighter padding */
-  font-size: 0.75rem; /* Smaller text */
 }
 
 select:valid {
@@ -115,14 +104,18 @@ select:valid {
 }
 
 .search-box input {
-  width: 100%;
   height: 32px;
-  padding: 6px 12px 6px 32px;
   border-radius: 20px;
   border: 1px solid rgba(15, 240, 252, 0.3);
-  background: rgba(26, 26, 46, 0.8) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%230ff0fc' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/%3E%3C/svg%3E") no-repeat 10px center;
+  background: rgba(26, 26, 46, 0.8)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%230ff0fc' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/%3E%3C/svg%3E")
+    no-repeat 10px center;
   color: white;
-  font-size: 0.8rem;
+}
+.search-box input {
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  width: 92%;
 }
 
 .table-container {
@@ -137,7 +130,7 @@ select:valid {
 table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
 }
 
 th {
@@ -147,7 +140,7 @@ th {
   color: white;
   padding: 8px 10px;
   text-align: left;
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 0.75rem;
@@ -158,10 +151,6 @@ td {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-th, td {
-  padding: 6px 8px; /* Reduced from 8px 10px */
-}
-
 tr:hover {
   background: rgba(110, 72, 170, 0.2);
 }
@@ -170,10 +159,10 @@ tr:hover {
   display: inline-block;
   background: rgba(15, 240, 252, 0.2);
   color: var(--neon);
-  padding: 1px 4px;
+  padding: 1px 5px;
   border-radius: 10px;
-  font-size: 0.6rem;
-  margin-right: 2px;
+  font-size: 0.65rem;
+  margin-right: 3px;
   margin-bottom: 3px;
 }
 
@@ -183,19 +172,19 @@ tr:hover {
 }
 
 .positive {
-  color: #4CAF50;
+  color: #4caf50;
 }
 
 .negative {
-  color: #F44336;
+  color: #f44336;
 }
 
 .neutral {
-  color: #9E9E9E;
+  color: #9e9e9e;
 }
 
 .tone {
-  color: #FFC107;
+  color: #ffc107;
 }
 
 ::-webkit-scrollbar {
@@ -212,7 +201,8 @@ tr:hover {
   border-radius: 3px;
 }
 
-select:focus, input:focus {
+select:focus,
+input:focus {
   outline: none;
   border-color: var(--neon);
   box-shadow: 0 0 0 2px rgba(15, 240, 252, 0.2);
