@@ -2,6 +2,7 @@
 let wordDatabase = {};
 let allWords = [];
 let uniqueTags = new Set();
+let copiedWords = ''; // Stores the current copied words string
 
 // DOM elements
 const searchInput = document.getElementById('search-input');
@@ -31,10 +32,9 @@ async function loadWordDatabase() {
 }
 
 // Process all words into a single array
-// In your processAllWords function:
 function processAllWords() {
   allWords = [];
-  uniqueTags.clear(); // Reset the Set
+  uniqueTags.clear();
 
   Object.keys(wordDatabase).forEach(category => {
     const categoryWords = wordDatabase[category];
@@ -44,9 +44,8 @@ function processAllWords() {
       const wordEntry = { term, ...wordData, category };
       allWords.push(wordEntry);
       
-      // Safe tag processing
       if (wordData.tags && Array.isArray(wordData.tags)) {
-        wordData.tags.forEach(function(tag) {
+        wordData.tags.forEach(tag => {
           uniqueTags.add(tag);
         });
       }
@@ -56,7 +55,6 @@ function processAllWords() {
   wordCountSpan.textContent = allWords.length;
 }
 
-// Modify the populateTagFilter function:
 function populateTagFilter() {
   const tagFilter = document.getElementById('tag-filter');
   tagFilter.innerHTML = '';
@@ -121,10 +119,86 @@ function renderWords(words) {
     row.appendChild(typeCell);
     row.appendChild(tagsCell);
     wordsTable.appendChild(row);
+
+    // Add click event listeners
+    row.addEventListener('click', (e) => handleRowClick(e, word.term, false));
+    row.addEventListener('contextmenu', (e) => handleRowClick(e, word.term, true));
   });
   
   wordCountSpan.textContent = words.length;
 }
+
+// Handle row clicks
+function handleRowClick(event, term, isRightClick) {
+  event.preventDefault();
+  
+  // Remove any existing feedback elements
+  document.querySelectorAll('.copy-feedback').forEach(el => el.remove());
+  
+  if (isRightClick) {
+    // Right click - always set to '(normal)'
+    copiedWords = '(normal)';
+  } else {
+    // Left click - if current value is '(normal)', start fresh
+    if (copiedWords === '(normal)') {
+      copiedWords = `(${term})`;
+    } else {
+      // Otherwise append to existing string
+      copiedWords = copiedWords === '' ? `(${term})` : copiedWords + `(${term})`;
+    }
+  }
+  
+  // Create feedback element
+  const feedback = document.createElement('div');
+  feedback.className = 'copy-feedback';
+  feedback.textContent = `${copiedWords}`;
+  
+  // Position it over the clicked row
+  const row = event.currentTarget;
+  const rowRect = row.getBoundingClientRect();
+  
+  feedback.style.position = 'absolute';
+  feedback.style.left = '0';
+  feedback.style.right = '0';
+  feedback.style.top = `${rowRect.top}px`;
+  feedback.style.height = `${rowRect.height}px`;
+  feedback.style.lineHeight = `${rowRect.height}px`;
+  feedback.style.backgroundColor = isRightClick ? 'rgba(255, 165, 0, 0.9)' 
+    : 'rgba(15, 240, 252, 0.9)';
+  feedback.style.color = '#1a1a2e';
+  feedback.style.fontSize = '14px';
+  feedback.style.fontWeight = 'bold';
+  feedback.style.textAlign = 'center';
+  feedback.style.zIndex = '1000';
+  feedback.style.borderRadius = '4px';
+  feedback.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
+  feedback.style.animation = 'fadeInOut 2.5s forwards';
+  
+  document.body.appendChild(feedback);
+  
+  // Copy to clipboard
+  navigator.clipboard.writeText(copiedWords)
+    .catch(err => {
+      console.error('Failed to copy text: ', err);
+    });
+  
+  // Remove feedback after animation
+  setTimeout(() => {
+    feedback.remove();
+  }, 2500);
+}
+
+// Add fade animation to CSS
+const style = document.createElement('style');
+style.textContent = `
+  @keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(10px); }
+    20% { opacity: 1; transform: translateY(0); }
+    80% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-10px); }
+  }
+`;
+document.head.appendChild(style);
 
 // Filter words based on current filters
 function filterWords() {
@@ -134,22 +208,18 @@ function filterWords() {
   const selectedTag = tagFilter.value;
   
   const filteredWords = allWords.filter(word => {
-    // Search term matching (term or definition)
     const matchesSearch = 
       word.term.toLowerCase().includes(searchTerm) || 
       word.definition.toLowerCase().includes(searchTerm);
     
-    // Class filter
     const matchesClass = 
       selectedClass === 'all' || 
       word.class === selectedClass;
     
-    // Type filter
     const matchesType = 
       selectedType === 'all' || 
       word.type === selectedType;
     
-    // Tag filter
     const matchesTag = 
       selectedTag === 'all' || 
       (word.tags && word.tags.includes(selectedTag));

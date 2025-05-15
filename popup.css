@@ -20,6 +20,11 @@ table {
 th,
 td {
   padding: 4px 6px; /* Minimal padding */
+  cursor: pointer;
+}
+
+#words-table tbody tr td {
+  cursor: default !important;
 }
 
 /* Very Very Compact header */
@@ -234,6 +239,24 @@ h1 {
   }
   100% {
     opacity: 0;
+  }
+}
+@keyframes fadeInOut {
+  0% { 
+    opacity: 0; 
+    transform: translateY(0); /* Changed from translateY(10px) */
+  }
+  20% { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+  80% { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+  100% { 
+    opacity: 0; 
+    transform: translateY(0); /* Changed from translateY(-10px) */
   }
 }
 
