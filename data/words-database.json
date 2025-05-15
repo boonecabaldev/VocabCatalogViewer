@@ -894,6 +894,745 @@
       ]
     }
   },
+  "negativeNormalWords": {
+    "Angry": {
+      "definition": "Feeling or showing strong annoyance, displeasure, or hostility",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "emotion",
+        "mood"
+      ]
+    },
+    "Boring": {
+      "definition": "Not interesting; tedious or dull",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "experience",
+        "quality"
+      ]
+    },
+    "Broken": {
+      "definition": "Having been fractured or damaged and no longer in one piece",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "condition",
+        "state"
+      ]
+    },
+    "Clumsy": {
+      "definition": "Awkward in movement or handling things",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "behavior",
+        "trait"
+      ]
+    },
+    "Cruel": {
+      "definition": "Willfully causing pain or suffering to others",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "behavior",
+        "character"
+      ]
+    },
+    "Dangerous": {
+      "definition": "Able or likely to cause harm or injury",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "risk",
+        "safety"
+      ]
+    },
+    "Dark": {
+      "definition": "Characterized by tragedy, unhappiness, or unpleasantness",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "mood",
+        "atmosphere"
+      ]
+    },
+    "Dirty": {
+      "definition": "Covered or marked with an unclean substance",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "cleanliness",
+        "appearance"
+      ]
+    },
+    "Disgusting": {
+      "definition": "Arousing revulsion or strong indignation",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "reaction",
+        "sensation"
+      ]
+    },
+    "Evil": {
+      "definition": "Profoundly immoral and wicked",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "morality",
+        "character"
+      ]
+    },
+    "Fake": {
+      "definition": "Not genuine; counterfeit or insincere",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "authenticity",
+        "truth"
+      ]
+    },
+    "Fearful": {
+      "definition": "Feeling afraid; showing fear or anxiety",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "emotion",
+        "mood"
+      ]
+    },
+    "Foolish": {
+      "definition": "Lacking good sense or judgment; silly",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "intelligence",
+        "behavior"
+      ]
+    },
+    "Greedy": {
+      "definition": "Having an excessive desire for something, especially wealth",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "desire",
+        "character"
+      ]
+    },
+    "Guilty": {
+      "definition": "Feeling responsible for wrongdoing",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "emotion",
+        "legal"
+      ]
+    },
+    "Harsh": {
+      "definition": "Unpleasantly rough or jarring to the senses",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "sound",
+        "treatment"
+      ]
+    },
+    "Hateful": {
+      "definition": "Feeling or showing hatred",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "emotion",
+        "attitude"
+      ]
+    },
+    "Horrible": {
+      "definition": "Causing or likely to cause horror; shocking",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "quality",
+        "experience"
+      ]
+    },
+    "Hungry": {
+      "definition": "Suffering from lack of food",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "physical",
+        "need"
+      ]
+    },
+    "Ignorant": {
+      "definition": "Lacking knowledge or awareness",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "knowledge",
+        "intelligence"
+      ]
+    },
+    "Jealous": {
+      "definition": "Feeling resentment against someone's advantages or achievements",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "emotion",
+        "relationship"
+      ]
+    },
+    "Lazy": {
+      "definition": "Unwilling to work or use energy",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "behavior",
+        "trait"
+      ]
+    },
+    "Lonely": {
+      "definition": "Sad because one has no friends or company",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "emotion",
+        "state"
+      ]
+    },
+    "Mad": {
+      "definition": "Very angry; insane or irrational",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "emotion",
+        "mental"
+      ]
+    },
+    "Mean": {
+      "definition": "Unkind, spiteful, or unfair",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "behavior",
+        "character"
+      ]
+    },
+    "Messy": {
+      "definition": "Untidy or dirty",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "cleanliness",
+        "appearance"
+      ]
+    },
+    "Nasty": {
+      "definition": "Very bad or unpleasant; malicious",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "quality",
+        "behavior"
+      ]
+    },
+    "Nervous": {
+      "definition": "Easily agitated or alarmed",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "emotion",
+        "state"
+      ]
+    },
+    "Obnoxious": {
+      "definition": "Extremely unpleasant; objectionable",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "behavior",
+        "character"
+      ]
+    },
+    "Painful": {
+      "definition": "Causing physical or emotional pain",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "sensation",
+        "experience"
+      ]
+    },
+    "Pathetic": {
+      "definition": "Arousing pity, especially through vulnerability or sadness",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "quality",
+        "appearance"
+      ]
+    },
+    "Poor": {
+      "definition": "Lacking sufficient money or resources",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "wealth",
+        "status"
+      ]
+    },
+    "Rude": {
+      "definition": "Offensively impolite or ill-mannered",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "behavior",
+        "communication"
+      ]
+    },
+    "Sad": {
+      "definition": "Feeling or showing sorrow; unhappy",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "emotion",
+        "mood"
+      ]
+    },
+    "Scared": {
+      "definition": "Fearful; frightened",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "emotion",
+        "reaction"
+      ]
+    },
+    "Selfish": {
+      "definition": "Concerned chiefly with one's own personal profit or pleasure",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "behavior",
+        "character"
+      ]
+    },
+    "Sick": {
+      "definition": "Affected by physical or mental illness",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "health",
+        "state"
+      ]
+    },
+    "Stupid": {
+      "definition": "Lacking intelligence or common sense",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "intelligence",
+        "behavior"
+      ]
+    },
+    "Tense": {
+      "definition": "Unable to relax; nervous or anxious",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "emotion",
+        "state"
+      ]
+    },
+    "Terrible": {
+      "definition": "Extremely bad or serious",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "quality",
+        "experience"
+      ]
+    },
+    "Tired": {
+      "definition": "In need of sleep or rest; weary",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "physical",
+        "state"
+      ]
+    },
+    "Ugly": {
+      "definition": "Unpleasant or repulsive in appearance",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "appearance",
+        "aesthetic"
+      ]
+    },
+    "Upset": {
+      "definition": "Unhappy, disappointed, or worried",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "emotion",
+        "state"
+      ]
+    },
+    "Violent": {
+      "definition": "Using or involving physical force intended to hurt or damage",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "behavior",
+        "action"
+      ]
+    },
+    "Weak": {
+      "definition": "Lacking physical strength or energy",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "physical",
+        "ability"
+      ]
+    },
+    "Worried": {
+      "definition": "Anxious or troubled about actual or potential problems",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "emotion",
+        "state"
+      ]
+    },
+    "Wrong": {
+      "definition": "Not correct or true; mistaken",
+      "class": "Normal",
+      "type": "Negative",
+      "tags": [
+        "accuracy",
+        "truth"
+      ]
+    }
+  },
+  "negativeBigWords": {
+    "Abhorrent": {
+      "definition": "Inspiring disgust and loathing; repugnant",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["emotion", "reaction"]
+    },
+    "Baleful": {
+      "definition": "Threatening harm; menacing",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["intent", "threat"]
+    },
+    "Belligerent": {
+      "definition": "Hostile and aggressive, eager to fight",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["behavior", "conflict"]
+    },
+    "Calamitous": {
+      "definition": "Causing great damage or distress",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["effect", "disaster"]
+    },
+    "Churlish": {
+      "definition": "Rude in a mean-spirited and surly way",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["behavior", "rudeness"]
+    },
+    "Deleterious": {
+      "definition": "Causing harm or damage, often in a subtle way",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["effect", "consequence"]
+    },
+    "Demonic": {
+      "definition": "Fierce, energetic, or cruel like a demon",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["intensity", "evil"]
+    },
+    "Depraved": {
+      "definition": "Morally corrupt; wicked",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["morality", "character"]
+    },
+    "Despicable": {
+      "definition": "Deserving hatred and contempt",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["behavior", "judgment"]
+    },
+    "Detestable": {
+      "definition": "Deserving intense dislike",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["emotion", "reaction"]
+    },
+    "Dilapidated": {
+      "definition": "In a state of disrepair or ruin",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["condition", "appearance"]
+    },
+    "Disdainful": {
+      "definition": "Showing contempt or lack of respect",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["attitude", "behavior"]
+    },
+    "Dreary": {
+      "definition": "Dull, bleak, and lifeless; depressing",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["mood", "atmosphere"]
+    },
+    "Egregious": {
+      "definition": "Outstandingly bad; shocking",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["quality", "degree"]
+    },
+    "Execrable": {
+      "definition": "Extremely bad or unpleasant",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["quality", "judgment"]
+    },
+    "Fractious": {
+      "definition": "Irritable and quarrelsome",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["behavior", "temperament"]
+    },
+    "Grim": {
+      "definition": "Forbidding or uninviting in appearance; depressing",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["appearance", "mood"]
+    },
+    "Harrowing": {
+      "definition": "Extremely distressing or disturbing",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["experience", "emotion"]
+    },
+    "Heinous": {
+      "definition": "Utterly odious or wicked",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["morality", "crime"]
+    },
+    "Hideous": {
+      "definition": "Extremely ugly or frightening in appearance",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["appearance", "fear"]
+    },
+    "Horrendous": {
+      "definition": "Extremely unpleasant, horrifying, or terrible",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["quality", "degree"]
+    },
+    "Impecunious": {
+      "definition": "Having little or no money",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["wealth", "status"]
+    },
+    "Inauspicious": {
+      "definition": "Not conducive to success; unpromising",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["omen", "future"]
+    },
+    "Incorrigible": {
+      "definition": "Not able to be corrected or reformed",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["behavior", "trait"]
+    },
+    "Indolent": {
+      "definition": "Wanting to avoid activity or exertion; lazy",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["behavior", "character"]
+    },
+    "Inept": {
+      "definition": "Having or showing no skill; clumsy",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["ability", "performance"]
+    },
+    "Insidious": {
+      "definition": "Proceeding in a gradual, subtle way, but with harmful effects",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["danger", "process"]
+    },
+    "Insolent": {
+      "definition": "Showing a rude and arrogant lack of respect",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["behavior", "attitude"]
+    },
+    "Irascible": {
+      "definition": "Easily angered; hot-tempered",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["temperament", "behavior"]
+    },
+    "Lugubrious": {
+      "definition": "Looking or sounding sad and dismal",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["mood", "appearance"]
+    },
+    "Malevolent": {
+      "definition": "Having or showing a wish to do evil to others",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["intent", "character"]
+    },
+    "Mendacious": {
+      "definition": "Not telling the truth; lying",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["truth", "character"]
+    },
+    "Mordant": {
+      "definition": "Bitingly sarcastic or harshly critical",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["humor", "criticism"]
+    },
+    "Nefarious": {
+      "definition": "Wicked or criminal in nature",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["morality", "intent"]
+    },
+    "Noisome": {
+      "definition": "Having an extremely unpleasant smell",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["sensation", "smell"]
+    },
+    "Obdurate": {
+      "definition": "Stubbornly refusing to change one's opinion",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["stubbornness", "attitude"]
+    },
+    "Odious": {
+      "definition": "Extremely unpleasant; repulsive",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["reaction", "quality"]
+    },
+    "Ominous": {
+      "definition": "Giving the impression that something bad will happen",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["omen", "future"]
+    },
+    "Pernicious": {
+      "definition": "Having a harmful effect, especially gradually",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["effect", "danger"]
+    },
+    "Petulant": {
+      "definition": "Childishly sulky or bad-tempered",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["behavior", "mood"]
+    },
+    "Pugnacious": {
+      "definition": "Eager or quick to argue, quarrel, or fight",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["behavior", "conflict"]
+    },
+    "Putrid": {
+      "definition": "Decaying or rotting and emitting a fetid smell",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["condition", "smell"]
+    },
+    "Rancorous": {
+      "definition": "Characterized by bitterness or resentment",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["emotion", "relationship"]
+    },
+    "Reprehensible": {
+      "definition": "Deserving censure or condemnation",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["judgment", "morality"]
+    },
+    "Repugnant": {
+      "definition": "Extremely distasteful; unacceptable",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["reaction", "quality"]
+    },
+    "Scurrilous": {
+      "definition": "Making or spreading scandalous claims",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["speech", "behavior"]
+    },
+    "Sordid": {
+      "definition": "Involving ignoble actions and motives",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["morality", "quality"]
+    },
+    "Treacherous": {
+      "definition": "Guilty of or involving betrayal or deception",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["behavior", "trust"]
+    },
+    "Vile": {
+      "definition": "Extremely unpleasant; morally bad",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["quality", "morality"]
+    },
+    "Virulent": {
+      "definition": "Extremely severe or harmful in its effects",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["intensity", "effect"]
+    },
+    "Vitriolic": {
+      "definition": "Filled with bitter criticism or malice",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["speech", "anger"]
+    },
+    "Vituperative": {
+      "definition": "Bitter and abusive in tone or language",
+      "class": "Big",
+      "type": "Negative",
+      "tags": ["speech", "criticism"]
+    }
+  },
   "neutralNormalWords": {
     "Abstract": {
       "definition": "Existing in thought or as an idea without concrete physical existence",
