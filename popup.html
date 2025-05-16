@@ -1,73 +1,76 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Vocab Master</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
-      rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet" href="popup.css" />
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <h1><i class="fas fa-book-open"></i> Vocab Master</h1>
-        <div class="filter-group">
-          <span class="filter-label">Words: <span id="word-count">0</span></span>
-        </div>
-      </header>
 
-      <div class="controls">
-        <div class="search-box">
-          <input type="text" id="search-input" placeholder="🔍 Search words..." autocomplete="off" />
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <title>Vocab Master</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
 
-        <div class="select-wrapper">
-          <select id="class-filter">
-            <option value="all" selected disabled>Word Class</option>
-            <option value="Normal">Normal</option>
-            <option value="Big">Big</option>
-          </select>
-        </div>
+<body>
+  <div class="container">
+    <header>
+      <h1><i class="fas fa-book-open"></i> Vocab Master</h1>
+      <div class="filter-group">
+        <span class="filter-label">Words: <span id="word-count">0</span></span>
+      </div>
+    </header>
 
-        <div class="select-wrapper">
-          <select id="type-filter">
-            <option value="all" selected disabled>Word Type</option>
-            <option value="Positive">Positive</option>
-            <option value="Negative">Negative</option>
-            <option value="Neutral">Neutral</option>
-            <option value="Tone">Tone</option>
-          </select>
-        </div>
-
-        <div class="select-wrapper">
-          <select id="tag-filter">
-            <option value="all" selected disabled>Tags</option>
-            <!-- Dynamic tags will populate here -->
-          </select>
-        </div>
+    <div class="controls">
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="🔍 Search words..." autocomplete="off" />
       </div>
 
-      <div class="table-container">
-        <table id="words-table">
-          <thead>
-            <tr>
-              <th>Term</th>
-              <th>Definition</th>
-              <th>Class</th>
-              <th>Type</th>
-              <th>Tags</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Words will be populated dynamically -->
-          </tbody>
-        </table>
+      <div class="select-wrapper">
+        <select id="class-filter">
+          <option value="all" selected disabled>Word Class</option>
+          <option value="Normal">Normal</option>
+          <option value="Big">Big</option>
+        </select>
+      </div>
+
+      <div class="select-wrapper">
+        <select id="type-filter">
+          <option value="all" selected disabled>Word Type</option>
+          <option value="Positive">Positive</option>
+          <option value="Negative">Negative</option>
+          <option value="Neutral">Neutral</option>
+          <option value="Tone">Tone</option>
+        </select>
+      </div>
+
+      <div class="select-wrapper">
+        <select id="tag-filter">
+          <option value="all" selected disabled>Tags</option>
+          <!-- Dynamic tags will populate here -->
+        </select>
       </div>
     </div>
-    <div id="copy-notification" class="copy-notification"></div>
 
-    <script src="popup.js"></script>
-  </body>
+    <div class="table-container">
+      <table id="words-table">
+        <thead>
+          <tr>
+            <th>Term</th>
+            <th>Definition</th>
+            <th>Class</th>
+            <th>Type</th>
+            <th>Tags</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Words will be populated dynamically -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div id="copy-notification" class="copy-notification"></div>
+
+  <script src="popup.js"></script>
+</body>
+
 </html>

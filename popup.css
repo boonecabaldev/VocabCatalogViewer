@@ -187,9 +187,11 @@ tr:hover {
   0% {
     box-shadow: 0 0 0 0 rgba(15, 240, 252, 0.7);
   }
+
   70% {
     box-shadow: 0 0 0 10px rgba(15, 240, 252, 0);
   }
+
   100% {
     box-shadow: 0 0 0 0 rgba(15, 240, 252, 0);
   }

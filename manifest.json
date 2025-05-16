@@ -10,9 +10,18 @@
       "128": "icons/icon128.png"
     }
   },
-  "permissions": ["storage", "clipboardWrite"],
-  "web_accessible_resources": [{
-    "resources": ["data/words-database.json"],
-    "matches": ["<all_urls>"]
-  }]
+  "permissions": [
+    "storage",
+    "clipboardWrite"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "data/words-database.json"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
 }
