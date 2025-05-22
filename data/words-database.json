@@ -1,5 +1,14 @@
 {
   "positiveNormalWords": {
+    "Adventurous": {
+      "definition": "Willing to take risks and try new experiences with enthusiasm",
+      "class": "Normal",
+      "type": "Positive",
+      "tags": [
+        "trait",
+        "behavior"
+      ]
+    },
     "Affectionate": {
       "definition": "Demonstrating warm fondness through physical gestures or tender words, often in relationships",
       "class": "Normal",
@@ -7,6 +16,15 @@
       "tags": [
         "emotion",
         "relationship"
+      ]
+    },
+    "Balanced": {
+      "definition": "Mentally and emotionally stable with good judgment and proportion",
+      "class": "Normal",
+      "type": "Positive",
+      "tags": [
+        "mindset",
+        "health"
       ]
     },
     "Brilliant": {
@@ -18,6 +36,15 @@
         "light"
       ]
     },
+    "Charismatic": {
+      "definition": "Possessing compelling charm that inspires admiration in others",
+      "class": "Normal",
+      "type": "Positive",
+      "tags": [
+        "trait",
+        "influence"
+      ]
+    },
     "Compassionate": {
       "definition": "Feeling deep sympathy for others' suffering coupled with a desire to alleviate their pain",
       "class": "Normal",
@@ -27,6 +54,15 @@
         "kindness"
       ]
     },
+    "Delightful": {
+      "definition": "Highly pleasing through charm, joy, or other positive qualities",
+      "class": "Normal",
+      "type": "Positive",
+      "tags": [
+        "experience",
+        "mood"
+      ]
+    },
     "Dependable": {
       "definition": "Consistently reliable and trustworthy over time, like a sturdy bridge in all weather",
       "class": "Normal",
@@ -34,6 +70,33 @@
       "tags": [
         "trait",
         "reliability"
+      ]
+    },
+    "Earnest": {
+      "definition": "Sincere and intense in conviction, not superficial or frivolous",
+      "class": "Normal",
+      "type": "Positive",
+      "tags": [
+        "trait",
+        "communication"
+      ]
+    },
+    "Exciting": {
+      "definition": "Causing great enthusiasm and eagerness through stimulating qualities",
+      "class": "Normal",
+      "type": "Positive",
+      "tags": [
+        "experience",
+        "energy"
+      ]
+    },
+    "Exemplary": {
+      "definition": "Worthy of imitation, representing the best of its kind",
+      "class": "Normal",
+      "type": "Positive",
+      "tags": [
+        "trait",
+        "standard"
       ]
     },
     "Exuberant": {
@@ -54,231 +117,6 @@
         "relationship"
       ]
     },
-    "Generous": {
-      "definition": "Willing to give more than is necessary, whether resources, time, or forgiveness",
-      "class": "Normal",
-      "type": "Positive",
-      "tags": [
-        "behavior",
-        "kindness"
-      ]
-    },
-    "Harmonious": {
-      "definition": "Pleasantly balanced and free from discord, like a perfect musical chord",
-      "class": "Normal",
-      "type": "Positive",
-      "tags": [
-        "state",
-        "aesthetics"
-      ]
-    },
-    "Inspiring": {
-      "definition": "Stimulating motivation or creativity in others through example or words",
-      "class": "Normal",
-      "type": "Positive",
-      "tags": [
-        "influence",
-        "growth"
-      ]
-    },
-    "Joyful": {
-      "definition": "Radiating happiness that often manifests in smiles, laughter, or positive energy",
-      "class": "Normal",
-      "type": "Positive",
-      "tags": [
-        "mood",
-        "emotion"
-      ]
-    },
-    "Kindhearted": {
-      "definition": "Naturally inclined to help others with genuine warmth and consideration",
-      "class": "Normal",
-      "type": "Positive",
-      "tags": [
-        "trait",
-        "behavior"
-      ]
-    },
-    "Lively": {
-      "definition": "Full of energy and spirit, making surroundings feel more animated",
-      "class": "Normal",
-      "type": "Positive",
-      "tags": [
-        "energy",
-        "mood"
-      ]
-    },
-    "Motivated": {
-      "definition": "Driven by strong enthusiasm and determination to achieve goals",
-      "class": "Normal",
-      "type": "Positive",
-      "tags": [
-        "mindset",
-        "work"
-      ]
-    },
-    "Nurturing": {
-      "definition": "Providing care and encouragement that helps others grow and flourish",
-      "class": "Normal",
-      "type": "Positive",
-      "tags": [
-        "behavior",
-        "care"
-      ]
-    },
-    "Optimistic": {
-      "definition": "Maintaining hopeful confidence about future outcomes despite challenges",
-      "class": "Normal",
-      "type": "Positive",
-      "tags": [
-        "mindset",
-        "outlook"
-      ]
-    },
-    "Passionate": {
-      "definition": "Showing intense enthusiasm or conviction about subjects or activities",
-      "class": "Normal",
-      "type": "Positive",
-      "tags": [
-        "emotion",
-        "energy"
-      ]
-    },
-    "Quick-witted": {
-      "definition": "Able to think and respond with cleverness and speed in conversation",
-      "class": "Normal",
-      "type": "Positive",
-      "tags": [
-        "intelligence",
-        "humor"
-      ]
-    },
-    "Radiant": {
-      "definition": "Glowing with health, happiness, or beauty that seems to shine outward",
-      "class": "Normal",
-      "type": "Positive",
-      "tags": [
-        "appearance",
-        "mood"
-      ]
-    },
-    "Sincere": {
-      "definition": "Genuine in feeling and expression, without pretense or deception",
-      "class": "Normal",
-      "type": "Positive",
-      "tags": [
-        "trait",
-        "communication"
-      ]
-    },
-    "Thoughtful": {
-      "definition": "Considerate of others' needs and feelings, often shown through small acts",
-      "class": "Normal",
-      "type": "Positive",
-      "tags": [
-        "behavior",
-        "care"
-      ]
-    },
-    "Upbeat": {
-      "definition": "Cheerfully positive in attitude even in ordinary circumstances",
-      "class": "Normal",
-      "type": "Positive",
-      "tags": [
-        "mood",
-        "attitude"
-      ]
-    },
-    "Vibrant": {
-      "definition": "Full of energy and vividness, whether in personality or appearance",
-      "class": "Normal",
-      "type": "Positive",
-      "tags": [
-        "energy",
-        "aesthetics"
-      ]
-    },
-    "Warmhearted": {
-      "definition": "Naturally kind and sympathetic in disposition toward others",
-      "class": "Normal",
-      "type": "Positive",
-      "tags": [
-        "trait",
-        "emotion"
-      ]
-    },
-    "Exciting": {
-      "definition": "Causing great enthusiasm and eagerness through stimulating qualities",
-      "class": "Normal",
-      "type": "Positive",
-      "tags": [
-        "experience",
-        "energy"
-      ]
-    },
-    "Youthful": {
-      "definition": "Possessing qualities like energy, freshness, or optimism associated with youth",
-      "class": "Normal",
-      "type": "Positive",
-      "tags": [
-        "appearance",
-        "mindset"
-      ]
-    },
-    "Zesty": {
-      "definition": "Lively and pleasingly pungent in flavor or spirited in manner",
-      "class": "Normal",
-      "type": "Positive",
-      "tags": [
-        "energy",
-        "taste"
-      ]
-    },
-    "Adventurous": {
-      "definition": "Willing to take risks and try new experiences with enthusiasm",
-      "class": "Normal",
-      "type": "Positive",
-      "tags": [
-        "trait",
-        "behavior"
-      ]
-    },
-    "Balanced": {
-      "definition": "Mentally and emotionally stable with good judgment and proportion",
-      "class": "Normal",
-      "type": "Positive",
-      "tags": [
-        "mindset",
-        "health"
-      ]
-    },
-    "Charismatic": {
-      "definition": "Possessing compelling charm that inspires admiration in others",
-      "class": "Normal",
-      "type": "Positive",
-      "tags": [
-        "trait",
-        "influence"
-      ]
-    },
-    "Delightful": {
-      "definition": "Highly pleasing through charm, joy, or other positive qualities",
-      "class": "Normal",
-      "type": "Positive",
-      "tags": [
-        "experience",
-        "mood"
-      ]
-    },
-    "Earnest": {
-      "definition": "Sincere and intense in conviction, not superficial or frivolous",
-      "class": "Normal",
-      "type": "Positive",
-      "tags": [
-        "trait",
-        "communication"
-      ]
-    },
     "Friendly": {
       "definition": "Approachable and pleasant in social interaction, putting others at ease",
       "class": "Normal",
@@ -286,6 +124,15 @@
       "tags": [
         "behavior",
         "social"
+      ]
+    },
+    "Generous": {
+      "definition": "Willing to give more than is necessary, whether resources, time, or forgiveness",
+      "class": "Normal",
+      "type": "Positive",
+      "tags": [
+        "behavior",
+        "kindness"
       ]
     },
     "Gracious": {
@@ -297,6 +144,15 @@
         "manners"
       ]
     },
+    "Harmonious": {
+      "definition": "Pleasantly balanced and free from discord, like a perfect musical chord",
+      "class": "Normal",
+      "type": "Positive",
+      "tags": [
+        "state",
+        "aesthetics"
+      ]
+    },
     "Humorous": {
       "definition": "Possessing or showing a playful, amusing quality that provokes laughter",
       "class": "Normal",
@@ -304,6 +160,15 @@
       "tags": [
         "trait",
         "communication"
+      ]
+    },
+    "Inspiring": {
+      "definition": "Stimulating motivation or creativity in others through example or words",
+      "class": "Normal",
+      "type": "Positive",
+      "tags": [
+        "influence",
+        "growth"
       ]
     },
     "Inventive": {
@@ -324,6 +189,24 @@
         "social"
       ]
     },
+    "Joyful": {
+      "definition": "Radiating happiness that often manifests in smiles, laughter, or positive energy",
+      "class": "Normal",
+      "type": "Positive",
+      "tags": [
+        "mood",
+        "emotion"
+      ]
+    },
+    "Kindhearted": {
+      "definition": "Naturally inclined to help others with genuine warmth and consideration",
+      "class": "Normal",
+      "type": "Positive",
+      "tags": [
+        "trait",
+        "behavior"
+      ]
+    },
     "Knowledgeable": {
       "definition": "Well-informed and educated about many subjects or specific areas",
       "class": "Normal",
@@ -331,6 +214,15 @@
       "tags": [
         "intelligence",
         "learning"
+      ]
+    },
+    "Lively": {
+      "definition": "Full of energy and spirit, making surroundings feel more animated",
+      "class": "Normal",
+      "type": "Positive",
+      "tags": [
+        "energy",
+        "mood"
       ]
     },
     "Loving": {
@@ -351,6 +243,15 @@
         "celebration"
       ]
     },
+    "Motivated": {
+      "definition": "Driven by strong enthusiasm and determination to achieve goals",
+      "class": "Normal",
+      "type": "Positive",
+      "tags": [
+        "mindset",
+        "work"
+      ]
+    },
     "Noble": {
       "definition": "Having fine personal qualities like honesty, courage, and generosity",
       "class": "Normal",
@@ -360,6 +261,15 @@
         "character"
       ]
     },
+    "Nurturing": {
+      "definition": "Providing care and encouragement that helps others grow and flourish",
+      "class": "Normal",
+      "type": "Positive",
+      "tags": [
+        "behavior",
+        "care"
+      ]
+    },
     "Open-minded": {
       "definition": "Willing to consider new ideas and perspectives without prejudice",
       "class": "Normal",
@@ -367,6 +277,24 @@
       "tags": [
         "mindset",
         "growth"
+      ]
+    },
+    "Optimistic": {
+      "definition": "Maintaining hopeful confidence about future outcomes despite challenges",
+      "class": "Normal",
+      "type": "Positive",
+      "tags": [
+        "mindset",
+        "outlook"
+      ]
+    },
+    "Passionate": {
+      "definition": "Showing intense enthusiasm or conviction about subjects or activities",
+      "class": "Normal",
+      "type": "Positive",
+      "tags": [
+        "emotion",
+        "energy"
       ]
     },
     "Playful": {
@@ -387,6 +315,24 @@
         "value"
       ]
     },
+    "Quick-witted": {
+      "definition": "Able to think and respond with cleverness and speed in conversation",
+      "class": "Normal",
+      "type": "Positive",
+      "tags": [
+        "intelligence",
+        "humor"
+      ]
+    },
+    "Radiant": {
+      "definition": "Glowing with health, happiness, or beauty that seems to shine outward",
+      "class": "Normal",
+      "type": "Positive",
+      "tags": [
+        "appearance",
+        "mood"
+      ]
+    },
     "Reassuring": {
       "definition": "Restoring confidence and relieving anxiety through comfort",
       "class": "Normal",
@@ -396,8 +342,26 @@
         "care"
       ]
     },
+    "Sincere": {
+      "definition": "Genuine in feeling and expression, without pretense or deception",
+      "class": "Normal",
+      "type": "Positive",
+      "tags": [
+        "trait",
+        "communication"
+      ]
+    },
     "Supportive": {
       "definition": "Providing encouragement or practical help to others",
+      "class": "Normal",
+      "type": "Positive",
+      "tags": [
+        "behavior",
+        "care"
+      ]
+    },
+    "Thoughtful": {
+      "definition": "Considerate of others' needs and feelings, often shown through small acts",
       "class": "Normal",
       "type": "Positive",
       "tags": [
@@ -423,6 +387,15 @@
         "empathy"
       ]
     },
+    "Upbeat": {
+      "definition": "Cheerfully positive in attitude even in ordinary circumstances",
+      "class": "Normal",
+      "type": "Positive",
+      "tags": [
+        "mood",
+        "attitude"
+      ]
+    },
     "Valiant": {
       "definition": "Possessing courage and determination in facing difficulties",
       "class": "Normal",
@@ -430,6 +403,24 @@
       "tags": [
         "trait",
         "bravery"
+      ]
+    },
+    "Vibrant": {
+      "definition": "Full of energy and vividness, whether in personality or appearance",
+      "class": "Normal",
+      "type": "Positive",
+      "tags": [
+        "energy",
+        "aesthetics"
+      ]
+    },
+    "Warmhearted": {
+      "definition": "Naturally kind and sympathetic in disposition toward others",
+      "class": "Normal",
+      "type": "Positive",
+      "tags": [
+        "trait",
+        "emotion"
       ]
     },
     "Wholesome": {
@@ -441,168 +432,42 @@
         "health"
       ]
     },
-    "Exemplary": {
-      "definition": "Worthy of imitation, representing the best of its kind",
+    "Youthful": {
+      "definition": "Possessing qualities like energy, freshness, or optimism associated with youth",
       "class": "Normal",
       "type": "Positive",
       "tags": [
-        "trait",
-        "standard"
+        "appearance",
+        "mindset"
+      ]
+    },
+    "Zesty": {
+      "definition": "Lively and pleasingly pungent in flavor or spirited in manner",
+      "class": "Normal",
+      "type": "Positive",
+      "tags": [
+        "energy",
+        "taste"
       ]
     }
   },
   "positiveBigWords": {
-    "Ebullient": {
-      "definition": "Bubbling over with fervent enthusiasm as if boiling with joyous energy",
+    "Aestival": {
+      "definition": "Pertaining to summer with all its lush abundance and vitality",
       "class": "Big",
       "type": "Positive",
       "tags": [
-        "mood",
-        "intensity"
+        "season",
+        "vibrancy"
       ]
     },
-    "Sagacious": {
-      "definition": "Possessing profound wisdom and keen discernment, like an oracle foreseeing truths",
+    "Ameliorate": {
+      "definition": "To make something bad or unsatisfactory better, often easing pain or improving conditions.",
       "class": "Big",
       "type": "Positive",
       "tags": [
-        "intelligence",
-        "wisdom"
-      ]
-    },
-    "Beatific": {
-      "definition": "Radiating bliss so intense it appears saintly or divinely inspired",
-      "class": "Big",
-      "type": "Positive",
-      "tags": [
-        "emotion",
-        "spirituality"
-      ]
-    },
-    "Ineffable": {
-      "definition": "Too magnificent for human language to capture, like celestial beauty that leaves one speechless",
-      "class": "Big",
-      "type": "Positive",
-      "tags": [
-        "experience",
-        "awe"
-      ]
-    },
-    "Serendipitous": {
-      "definition": "Occurring through delightful cosmic accident rather than deliberate effort",
-      "class": "Big",
-      "type": "Positive",
-      "tags": [
-        "fortune",
-        "chance"
-      ]
-    },
-    "Halcyon": {
-      "definition": "Marked by idyllic peace and tranquility, like the mythical windless days when kingfishers nested",
-      "class": "Big",
-      "type": "Positive",
-      "tags": [
-        "time",
-        "peace"
-      ]
-    },
-    "Scintillating": {
-      "definition": "Sparkling brilliantly whether in wit, conversation, or literal light",
-      "class": "Big",
-      "type": "Positive",
-      "tags": [
-        "intelligence",
-        "appearance"
-      ]
-    },
-    "Resplendent": {
-      "definition": "Shining with magnificent splendor, as if gilded by celestial light",
-      "class": "Big",
-      "type": "Positive",
-      "tags": [
-        "appearance",
-        "grandeur"
-      ]
-    },
-    "Ephemeral": {
-      "definition": "Beautiful precisely because of its fleeting nature, like morning dew or fireflies at dusk",
-      "class": "Big",
-      "type": "Positive",
-      "tags": [
-        "time",
-        "beauty"
-      ]
-    },
-    "Luminous": {
-      "definition": "Emitting intellectual or spiritual light that seems to illuminate surroundings",
-      "class": "Big",
-      "type": "Positive",
-      "tags": [
-        "intelligence",
-        "appearance"
-      ]
-    },
-    "Ethereal": {
-      "definition": "Exquisitely delicate and otherworldly, as if not entirely of this earth",
-      "class": "Big",
-      "type": "Positive",
-      "tags": [
-        "aesthetic",
-        "mood"
-      ]
-    },
-    "Panacea": {
-      "definition": "A solution or remedy that appears to cure all difficulties or diseases",
-      "class": "Big",
-      "type": "Positive",
-      "tags": [
-        "solution",
-        "hope"
-      ]
-    },
-    "Quintessential": {
-      "definition": "Representing the most perfect embodiment of a quality or class",
-      "class": "Big",
-      "type": "Positive",
-      "tags": [
-        "perfection",
-        "example"
-      ]
-    },
-    "Sublime": {
-      "definition": "Of such grandeur it inspires awe, walking the line between beautiful and terrifying",
-      "class": "Big",
-      "type": "Positive",
-      "tags": [
-        "experience",
-        "awe"
-      ]
-    },
-    "Redolent": {
-      "definition": "Strongly evocative or suggestive, whether of fragrance or memories",
-      "class": "Big",
-      "type": "Positive",
-      "tags": [
-        "sensation",
-        "memory"
-      ]
-    },
-    "Effervescent": {
-      "definition": "Vivacious and enthusiastic to the point of seeming carbonated with joy",
-      "class": "Big",
-      "type": "Positive",
-      "tags": [
-        "mood",
-        "energy"
-      ]
-    },
-    "Epiphany": {
-      "definition": "A sudden intuitive leap of understanding that feels revelatory",
-      "class": "Big",
-      "type": "Positive",
-      "tags": [
-        "insight",
-        "moment"
+        "improvement",
+        "solution"
       ]
     },
     "Aplomb": {
@@ -614,85 +479,13 @@
         "skill"
       ]
     },
-    "Felicitous": {
-      "definition": "Pleasingly apt or well-chosen, as if blessed by linguistic fortune",
+    "Aureate": {
+      "definition": "Golden in either color or rhetorical eloquence",
       "class": "Big",
       "type": "Positive",
       "tags": [
-        "expression",
-        "luck"
-      ]
-    },
-    "Rapturous": {
-      "definition": "Filled with ecstatic joy that seems to transport one beyond ordinary experience",
-      "class": "Big",
-      "type": "Positive",
-      "tags": [
-        "emotion",
-        "intensity"
-      ]
-    },
-    "Sumptuous": {
-      "definition": "Rich to the point of extravagance, whether in flavor, appearance, or texture",
-      "class": "Big",
-      "type": "Positive",
-      "tags": [
-        "aesthetic",
-        "luxury"
-      ]
-    },
-    "Mellifluous": {
-      "definition": "Sweetly flowing in sound, like honey poured into musical notes",
-      "class": "Big",
-      "type": "Positive",
-      "tags": [
-        "sound",
+        "appearance",
         "language"
-      ]
-    },
-    "Jubilant": {
-      "definition": "Expressing triumphant joy, especially after a significant achievement",
-      "class": "Big",
-      "type": "Positive",
-      "tags": [
-        "mood",
-        "celebration"
-      ]
-    },
-    "Perspicacious": {
-      "definition": "Having acute mental perception and understanding, cutting through obscurity",
-      "class": "Big",
-      "type": "Positive",
-      "tags": [
-        "intelligence",
-        "insight"
-      ]
-    },
-    "Beatitude": {
-      "definition": "A state of supreme blessedness and contentment, often spiritual in nature",
-      "class": "Big",
-      "type": "Positive",
-      "tags": [
-        "state",
-        "bliss"
-      ]
-    },
-    "Elysian": {
-      "definition": "Relating to paradise; blissfully delightful like the mythological Elysian Fields",
-      "class": "Big",
-      "type": "Positive",
-      "tags": [
-        "place",
-        "ideal"
-      ]
-    },
-    "Lissome": {
-      "definition": "Moving with effortless grace and supple ease, whether physically or mentally",
-      "class": "Big",
-      "type": "Positive",
-      "tags": [
-        "movement",
-        "grace"
       ]
     },
     "Auspicious": {
@@ -704,67 +497,103 @@
         "future"
       ]
     },
-    "Salubrious": {
-      "definition": "Promoting health and well-being, often with an invigorating quality",
+    "Beatific": {
+      "definition": "Radiating bliss so intense it appears saintly or divinely inspired",
       "class": "Big",
       "type": "Positive",
       "tags": [
-        "health",
-        "environment"
+        "emotion",
+        "spirituality"
       ]
     },
-    "Propitious": {
-      "definition": "Presenting favorable circumstances as if the universe conspires to help",
+    "Beatitude": {
+      "definition": "A state of supreme blessedness, often implying profound inner peace and joy.",
       "class": "Big",
       "type": "Positive",
       "tags": [
-        "fortune",
-        "timing"
-      ]
-    },
-    "Sanguine": {
-      "definition": "Optimistically confident despite challenges, with cheerful blood-red vigor",
-      "class": "Big",
-      "type": "Positive",
-      "tags": [
-        "mindset",
-        "hope"
-      ]
-    },
-    "Rhapsodic": {
-      "definition": "Extravagantly enthusiastic in expression, like an improvised epic poem",
-      "class": "Big",
-      "type": "Positive",
-      "tags": [
-        "speech",
-        "emotion"
-      ]
-    },
-    "Idyllic": {
-      "definition": "Charmingly simple and peaceful, like an idealized rural paradise",
-      "class": "Big",
-      "type": "Positive",
-      "tags": [
-        "setting",
+        "bliss",
         "peace"
       ]
     },
-    "Liminal": {
-      "definition": "Existing in transitional threshold spaces ripe with creative potential",
+    "Bucolic": {
+      "definition": "Relating to the pleasant aspects of the countryside and country life, evoking a peaceful pastoral scene.",
       "class": "Big",
       "type": "Positive",
       "tags": [
-        "state",
-        "transition"
+        "nature",
+        "peace"
       ]
     },
-    "Pulchritudinous": {
-      "definition": "Possessing magnificent physical beauty that inspires admiration",
+    "Cacography": {
+      "definition": "Though usually meaning bad handwriting, it can amusingly refer to brilliantly terrible and intentionally humorous writing, creating unexpected delight.",
       "class": "Big",
       "type": "Positive",
       "tags": [
-        "appearance",
-        "beauty"
+        "humor",
+        "writing"
+      ]
+    },
+    "Chiaroscuro": {
+      "definition": "The use of strong contrasts between light and dark, usually bold contrasts affecting a whole composition, enhancing drama and depth.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "art",
+        "contrast"
+      ]
+    },
+    "Clement": {
+      "definition": "Merciful; lenient, often used for favorable weather, bringing relief and pleasant conditions.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "mercy",
+        "weather"
+      ]
+    },
+    "Cornucopia": {
+      "definition": "An abundance or plentiful supply of good things, symbolically representing prosperity and nourishment.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "abundance",
+        "prosperity"
+      ]
+    },
+    "Dalliance": {
+      "definition": "A brief love affair, or a leisurely passing of time; suggesting lighthearted, enjoyable moments.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "leisure",
+        "romance"
+      ]
+    },
+    "Demesne": {
+      "definition": "Territory over which rule or control is exercised, often suggesting a personal realm of expertise or serene sanctuary.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "territory",
+        "control"
+      ]
+    },
+    "Dulcet": {
+      "definition": "Sweet and soothing, often used to describe a sound that is pleasing to the ear.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "sound",
+        "pleasantness"
+      ]
+    },
+    "Ebullient": {
+      "definition": "Cheerfully energetic; overflowing with enthusiasm, bubbling with infectious joy.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "energy",
+        "enthusiasm"
       ]
     },
     "Eclat": {
@@ -776,76 +605,49 @@
         "style"
       ]
     },
-    "Numenous": {
-      "definition": "Having spiritual presence that inspires awe and reverence",
+    "Effervescent": {
+      "definition": "Vivacious and enthusiastic to the point of seeming carbonated with joy",
       "class": "Big",
       "type": "Positive",
       "tags": [
-        "spirituality",
-        "awe"
+        "mood",
+        "energy"
       ]
     },
-    "Sempiternal": {
-      "definition": "Everlasting across infinite time, yet distinct from mere immortality",
+    "Elysian": {
+      "definition": "Relating to paradise; blissfully delightful, evoking a sense of perfect happiness.",
       "class": "Big",
       "type": "Positive",
       "tags": [
-        "time",
-        "endurance"
+        "paradise",
+        "happiness"
       ]
     },
-    "Susurrous": {
-      "definition": "Full of whispering or rustling sounds that create soothing ambiance",
+    "Empyrean": {
+      "definition": "Relating to heaven or the highest part of heaven, signifying ultimate bliss and perfection.",
       "class": "Big",
       "type": "Positive",
       "tags": [
-        "sound",
-        "nature"
+        "divine",
+        "perfection"
       ]
     },
-    "Irenic": {
-      "definition": "Promoting peace and reconciliation rather than conflict or controversy",
+    "Entelechy": {
+      "definition": "The realization of potential; the actualization of a form-giving cause, suggesting the inherent drive towards perfection.",
       "class": "Big",
       "type": "Positive",
       "tags": [
-        "diplomacy",
-        "harmony"
+        "potential",
+        "perfection"
       ]
     },
-    "Eudaimonic": {
-      "definition": "Relating to human flourishing and the pursuit of true contentment",
+    "Ephemeral": {
+      "definition": "Lasting for a very short time, emphasizing the beauty and preciousness of transient moments.",
       "class": "Big",
       "type": "Positive",
       "tags": [
-        "philosophy",
-        "wellbeing"
-      ]
-    },
-    "Aestival": {
-      "definition": "Pertaining to summer with all its lush abundance and vitality",
-      "class": "Big",
-      "type": "Positive",
-      "tags": [
-        "season",
-        "vibrancy"
-      ]
-    },
-    "Perennial": {
-      "definition": "Enduring continuously like a plant that blooms year after year",
-      "class": "Big",
-      "type": "Positive",
-      "tags": [
-        "time",
-        "renewal"
-      ]
-    },
-    "Numinous": {
-      "definition": "Filled with a sense of the divine, inspiring spiritual awe",
-      "class": "Big",
-      "type": "Positive",
-      "tags": [
-        "spirituality",
-        "mystery"
+        "transience",
+        "beauty"
       ]
     },
     "Epicurean": {
@@ -857,22 +659,166 @@
         "taste"
       ]
     },
-    "Aureate": {
-      "definition": "Golden in either color or rhetorical eloquence",
+    "Epiphany": {
+      "definition": "A sudden intuitive leap of understanding that feels revelatory",
       "class": "Big",
       "type": "Positive",
       "tags": [
-        "appearance",
-        "language"
+        "insight",
+        "moment"
       ]
     },
-    "Seraphic": {
-      "definition": "Angelic in purity or beauty, resembling the highest order of angels",
+    "Ethereal": {
+      "definition": "Exquisitely delicate and otherworldly, as if not entirely of this earth",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "aesthetic",
+        "mood"
+      ]
+    },
+    "Eudaimonic": {
+      "definition": "Relating to human flourishing and the pursuit of true contentment",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "philosophy",
+        "wellbeing"
+      ]
+    },
+    "Fecund": {
+      "definition": "Producing or capable of producing an abundance of offspring or new growth; fertile, indicating rich creativity and productivity.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "fertility",
+        "creativity"
+      ]
+    },
+    "Felicitous": {
+      "definition": "Pleasingly apt or well-chosen, as if blessed by linguistic fortune",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "expression",
+        "luck"
+      ]
+    },
+    "Fugacious": {
+      "definition": "Fleeting or transient; lasting only a short time, which can highlight the preciousness of momentary beauty.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "time",
+        "beauty"
+      ]
+    },
+    "Garrulous": {
+      "definition": "Excessively talkative, especially on trivial matters, but can imply a lively, engaging conversationalist.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "communication",
+        "lively"
+      ]
+    },
+    "Gregarious": {
+      "definition": "Fond of company; sociable, thriving in social interactions and bringing energy to a group.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "social",
+        "extrovert"
+      ]
+    },
+    "Halcyon": {
+      "definition": "Denoting a period of time in the past that was idyllically happy and peaceful, recalling cherished memories.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "peace",
+        "nostalgia"
+      ]
+    },
+    "Hirsute": {
+      "definition": "Hairy, especially profusely or coarsely; can be positive when describing natural beauty or rugged charm.",
       "class": "Big",
       "type": "Positive",
       "tags": [
         "appearance",
-        "virtue"
+        "nature"
+      ]
+    },
+    "Idyllic": {
+      "definition": "Charmingly simple and peaceful, like an idealized rural paradise",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "setting",
+        "peace"
+      ]
+    },
+    "Imbroglio": {
+      "definition": "A complex or embarrassing situation, but solving one can lead to great satisfaction and progress.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "challenge",
+        "resolution"
+      ]
+    },
+    "Incandescent": {
+      "definition": "Emitting light as a result of being heated; or, of a very high standard; extremely impressive, shining with brilliance.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "brilliance",
+        "light"
+      ]
+    },
+    "Ineffable": {
+      "definition": "Too great or extreme to be expressed or described in words, capturing profound beauty or joy.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "beauty",
+        "awe"
+      ]
+    },
+    "Irenic": {
+      "definition": "Promoting peace and reconciliation rather than conflict or controversy",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "diplomacy",
+        "harmony"
+      ]
+    },
+    "Jocund": {
+      "definition": "Full of high spirits and cheerfulness, inspiring mirth and joy in others.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "mood",
+        "joy"
+      ]
+    },
+    "Jubilant": {
+      "definition": "Feeling or expressing great happiness and triumph, especially in celebration.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "joy",
+        "celebration"
+      ]
+    },
+    "Kalon": {
+      "definition": "Ideal physical and moral beauty, implying an inner goodness that shines through.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "beauty",
+        "morality"
       ]
     },
     "Lambent": {
@@ -884,13 +830,400 @@
         "gentleness"
       ]
     },
-    "Empyrean": {
-      "definition": "Belonging to the highest heaven, the realm of pure fire and light",
+    "Largesse": {
+      "definition": "Generosity in bestowing money or gifts upon others, or the money or gifts themselves, signifying open-handed kindness.",
       "class": "Big",
       "type": "Positive",
       "tags": [
-        "place",
-        "divine"
+        "generosity",
+        "kindness"
+      ]
+    },
+    "Liminal": {
+      "definition": "Existing in transitional threshold spaces ripe with creative potential",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "state",
+        "transition"
+      ]
+    },
+    "Lissome": {
+      "definition": "Thin, supple, and graceful, often describing elegant and flexible movement.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "grace",
+        "movement"
+      ]
+    },
+    "Luminous": {
+      "definition": "Emitting intellectual or spiritual light that seems to illuminate surroundings",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "intelligence",
+        "appearance"
+      ]
+    },
+    "Mellifluous": {
+      "definition": "Sweet or musical; pleasant to hear, like a harmonious melody.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "sound",
+        "harmony"
+      ]
+    },
+    "Miasma": {
+      "definition": "A noxious atmosphere or influence; can refer metaphorically to a rich, enveloping ambiance, like a fragrant aura.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "atmosphere",
+        "sensation"
+      ]
+    },
+    "Mirthful": {
+      "definition": "Full of mirth; merry or amusing, inspiring laughter and lightheartedness.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "mood",
+        "humor"
+      ]
+    },
+    "Numenous": {
+      "definition": "Having spiritual presence that inspires awe and reverence",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "spirituality",
+        "awe"
+      ]
+    },
+    "Numinous": {
+      "definition": "Having a strong religious or spiritual quality; indicating or suggesting the presence of a divinity, inspiring reverence and awe.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "spirituality",
+        "awe"
+      ]
+    },
+    "Obsequious": {
+      "definition": "Excessively obedient or attentive, but can be a dedicated and helpful quality when genuine and not manipulative.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "behavior",
+        "loyalty"
+      ]
+    },
+    "Opulent": {
+      "definition": "Rich and luxurious or lavish, indicating great beauty and comfort.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "luxury",
+        "beauty"
+      ]
+    },
+    "Panacea": {
+      "definition": "A solution or remedy for all difficulties or diseases, offering universal healing and hope.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "solution",
+        "healing"
+      ]
+    },
+    "Panegyric": {
+      "definition": "A public speech or published text in praise of someone or something, celebrating achievements and virtues.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "praise",
+        "celebration"
+      ]
+    },
+    "Perennial": {
+      "definition": "Enduring continuously like a plant that blooms year after year",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "time",
+        "renewal"
+      ]
+    },
+    "Perspicacious": {
+      "definition": "Having a ready insight into and understanding of things; shrewd, indicating profound wisdom and foresight.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "insight",
+        "wisdom"
+      ]
+    },
+    "Ponderous": {
+      "definition": "Slow and clumsy because of great weight, but can also describe something impressively deep and significant, requiring thoughtful consideration.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "thought",
+        "significance"
+      ]
+    },
+    "Propitious": {
+      "definition": "Giving or indicating a good chance of success; favorable, foretelling good fortune.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "fortune",
+        "success"
+      ]
+    },
+    "Pulchritude": {
+      "definition": "Beauty, especially physical beauty, captivating and aesthetically pleasing.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "beauty",
+        "appearance"
+      ]
+    },
+    "Pulchritudinous": {
+      "definition": "Possessing magnificent physical beauty that inspires admiration",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "appearance",
+        "beauty"
+      ]
+    },
+    "Querencia": {
+      "definition": "A place from which one's strength is drawn, where one feels at home; a place where you are your most authentic self.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "comfort",
+        "belonging"
+      ]
+    },
+    "Quintessential": {
+      "definition": "Representing the most perfect or typical example of a quality or class, embodying excellence.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "excellence",
+        "example"
+      ]
+    },
+    "Rapprochement": {
+      "definition": "The establishment or resumption of harmonious relations, especially between countries, signifying reconciliation and peace.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "reconciliation",
+        "harmony"
+      ]
+    },
+    "Rapturous": {
+      "definition": "Characterized by, feeling, or expressing great pleasure or enthusiasm, transporting one into a state of ecstasy.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "ecstasy",
+        "enthusiasm"
+      ]
+    },
+    "Redolent": {
+      "definition": "Strongly evocative or suggestive, whether of fragrance or memories",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "sensation",
+        "memory"
+      ]
+    },
+    "Resplendent": {
+      "definition": "Shining brilliantly; gleaming, dazzling with beauty and splendor.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "splendor",
+        "beauty"
+      ]
+    },
+    "Rhapsodic": {
+      "definition": "Extravagantly enthusiastic in expression, like an improvised epic poem",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "speech",
+        "emotion"
+      ]
+    },
+    "Sagacious": {
+      "definition": "Possessing profound wisdom and keen discernment, like an oracle foreseeing truths",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "intelligence",
+        "wisdom"
+      ]
+    },
+    "Salubrious": {
+      "definition": "Health-giving; healthy, often used for places or climates, contributing to well-being.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "health",
+        "environment"
+      ]
+    },
+    "Sanguine": {
+      "definition": "Optimistic or positive, especially in an apparently difficult situation, maintaining a hopeful outlook.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "optimism",
+        "hope"
+      ]
+    },
+    "Scintillating": {
+      "definition": "Sparkling or shining brightly; brilliantly and excitingly clever or skillful, captivating attention.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "cleverness",
+        "charm"
+      ]
+    },
+    "Sempiternal": {
+      "definition": "Eternal and everlasting; having no end, representing enduring hope and beauty.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "eternity",
+        "hope"
+      ]
+    },
+    "Seraphic": {
+      "definition": "Having a blissful, angelic appearance, exuding pure innocence and beauty.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "beauty",
+        "innocence"
+      ]
+    },
+    "Serendipitous": {
+      "definition": "Occurring through delightful cosmic accident rather than deliberate effort",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "fortune",
+        "chance"
+      ]
+    },
+    "Sublime": {
+      "definition": "Of such excellence, grandeur, or beauty as to inspire great admiration or awe, transcending the ordinary.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "awe",
+        "grandeur"
+      ]
+    },
+    "Sumptuous": {
+      "definition": "Splendid and expensive-looking, suggesting rich beauty and grandeur.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "luxury",
+        "grandeur"
+      ]
+    },
+    "Supernal": {
+      "definition": "Of or relating to the sky or the heavens; celestial; divinely excellent, suggesting transcendent beauty.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "divine",
+        "beauty"
+      ]
+    },
+    "Susurrous": {
+      "definition": "Full of whispering or rustling sounds that create soothing ambiance",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "sound",
+        "nature"
+      ]
+    },
+    "Tryst": {
+      "definition": "A private, romantic rendezvous between lovers, imbued with anticipation and affection.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "romance",
+        "secrecy"
+      ]
+    },
+    "Ubiquitous": {
+      "definition": "Present, appearing, or found everywhere, implying a constant, reassuring presence.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "presence",
+        "pervasiveness"
+      ]
+    },
+    "Verdant": {
+      "definition": "Green with grass or other rich vegetation, symbolizing lush growth and vibrancy.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "nature",
+        "vibrancy"
+      ]
+    },
+    "Wafture": {
+      "definition": "The act of waving or wafting; a gentle movement that suggests grace and lightness.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "movement",
+        "grace"
+      ]
+    },
+    "Xenodochial": {
+      "definition": "Hospitable to strangers; characterized by generous treatment of guests, highlighting kindness and openness.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "hospitality",
+        "kindness"
+      ]
+    },
+    "Yonderly": {
+      "definition": "Mentally or emotionally distant; can suggest a pleasant dreaminess or contemplation of distant beauty.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "contemplation",
+        "dreaminess"
+      ]
+    },
+    "Zephyr": {
+      "definition": "A soft, gentle breeze, bringing comfort and refreshment.",
+      "class": "Big",
+      "type": "Positive",
+      "tags": [
+        "nature",
+        "comfort"
       ]
     }
   },
@@ -1324,313 +1657,829 @@
       "definition": "Inspiring disgust and loathing; repugnant",
       "class": "Big",
       "type": "Negative",
-      "tags": ["emotion", "reaction"]
+      "tags": [
+        "emotion",
+        "reaction"
+      ]
+    },
+    "Acerbic": {
+      "definition": "Having a sour or bitter taste; sharply critical or cynical in tone, leaving a lingering unpleasantness.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "criticism",
+        "bitterness"
+      ]
+    },
+    "Anathema": {
+      "definition": "Something or someone that one vehemently dislikes; a formal curse, representing deep-seated aversion.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "curse",
+        "dislike"
+      ]
+    },
+    "Asperity": {
+      "definition": "Harshness of tone or manner, creating a sharp and unwelcoming impression.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "harshness",
+        "tone"
+      ]
     },
     "Baleful": {
       "definition": "Threatening harm; menacing",
       "class": "Big",
       "type": "Negative",
-      "tags": ["intent", "threat"]
+      "tags": [
+        "intent",
+        "threat"
+      ]
+    },
+    "Banal": {
+      "definition": "So lacking in originality as to be obvious and boring, leaving one feeling uninspired.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "boring",
+        "unoriginal"
+      ]
     },
     "Belligerent": {
       "definition": "Hostile and aggressive, eager to fight",
       "class": "Big",
       "type": "Negative",
-      "tags": ["behavior", "conflict"]
+      "tags": [
+        "behavior",
+        "conflict"
+      ]
+    },
+    "Cacophonous": {
+      "definition": "Involving or producing a harsh, discordant mixture of sounds, grating on the ears.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "sound",
+        "discord"
+      ]
     },
     "Calamitous": {
       "definition": "Causing great damage or distress",
       "class": "Big",
       "type": "Negative",
-      "tags": ["effect", "disaster"]
+      "tags": [
+        "effect",
+        "disaster"
+      ]
+    },
+    "Chicanery": {
+      "definition": "The use of trickery to achieve a political, financial, or legal purpose, indicating deceit and dishonesty.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "deceit",
+        "trickery"
+      ]
     },
     "Churlish": {
       "definition": "Rude in a mean-spirited and surly way",
       "class": "Big",
       "type": "Negative",
-      "tags": ["behavior", "rudeness"]
+      "tags": [
+        "behavior",
+        "rudeness"
+      ]
+    },
+    "Contumacious": {
+      "definition": "Stubbornly or willfully disobedient to authority, showing defiant resistance.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "disobedience",
+        "stubbornness"
+      ]
+    },
+    "Craven": {
+      "definition": "Lacking in courage; cowardly, shrinking from confrontation.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "cowardice",
+        "fear"
+      ]
     },
     "Deleterious": {
       "definition": "Causing harm or damage, often in a subtle way",
       "class": "Big",
       "type": "Negative",
-      "tags": ["effect", "consequence"]
+      "tags": [
+        "effect",
+        "consequence"
+      ]
     },
     "Demonic": {
       "definition": "Fierce, energetic, or cruel like a demon",
       "class": "Big",
       "type": "Negative",
-      "tags": ["intensity", "evil"]
+      "tags": [
+        "intensity",
+        "evil"
+      ]
     },
     "Depraved": {
       "definition": "Morally corrupt; wicked",
       "class": "Big",
       "type": "Negative",
-      "tags": ["morality", "character"]
+      "tags": [
+        "morality",
+        "character"
+      ]
     },
     "Despicable": {
       "definition": "Deserving hatred and contempt",
       "class": "Big",
       "type": "Negative",
-      "tags": ["behavior", "judgment"]
+      "tags": [
+        "behavior",
+        "judgment"
+      ]
     },
     "Detestable": {
       "definition": "Deserving intense dislike",
       "class": "Big",
       "type": "Negative",
-      "tags": ["emotion", "reaction"]
+      "tags": [
+        "emotion",
+        "reaction"
+      ]
+    },
+    "Diatribe": {
+      "definition": "A forceful and bitter verbal attack against someone or something, full of harsh criticism.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "criticism",
+        "attack"
+      ]
     },
     "Dilapidated": {
       "definition": "In a state of disrepair or ruin",
       "class": "Big",
       "type": "Negative",
-      "tags": ["condition", "appearance"]
+      "tags": [
+        "condition",
+        "appearance"
+      ]
+    },
+    "Discombobulate": {
+      "definition": "To disconcert or confuse someone, causing disarray and disorientation.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "confusion",
+        "disarray"
+      ]
     },
     "Disdainful": {
       "definition": "Showing contempt or lack of respect",
       "class": "Big",
       "type": "Negative",
-      "tags": ["attitude", "behavior"]
+      "tags": [
+        "attitude",
+        "behavior"
+      ]
+    },
+    "Disquietude": {
+      "definition": "A state of uneasiness or anxiety, creating a sense of restless worry.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "anxiety",
+        "uneasiness"
+      ]
+    },
+    "Draconian": {
+      "definition": "Excessively harsh and severe laws or measures, imposing oppressive restrictions.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "harshness",
+        "oppression"
+      ]
     },
     "Dreary": {
       "definition": "Dull, bleak, and lifeless; depressing",
       "class": "Big",
       "type": "Negative",
-      "tags": ["mood", "atmosphere"]
+      "tags": [
+        "mood",
+        "atmosphere"
+      ]
     },
     "Egregious": {
       "definition": "Outstandingly bad; shocking",
       "class": "Big",
       "type": "Negative",
-      "tags": ["quality", "degree"]
+      "tags": [
+        "quality",
+        "degree"
+      ]
+    },
+    "Emasculate": {
+      "definition": "To deprive a man of his male role or identity; to make someone weaker or less effective, draining their strength.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "weakness",
+        "disempowerment"
+      ]
+    },
+    "Enervate": {
+      "definition": "To cause (someone) to feel drained of energy or vitality; to weaken, leaving one feeling listless.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "weakness",
+        "fatigue"
+      ]
     },
     "Execrable": {
       "definition": "Extremely bad or unpleasant",
       "class": "Big",
       "type": "Negative",
-      "tags": ["quality", "judgment"]
+      "tags": [
+        "quality",
+        "judgment"
+      ]
+    },
+    "Execrate": {
+      "definition": "To feel or express great loathing for, uttering curses or condemnations.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "hatred",
+        "condemnation"
+      ]
+    },
+    "Fatuous": {
+      "definition": "Silly and pointless in a smug or self-satisfied way, demonstrating foolish arrogance.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "foolishness",
+        "arrogance"
+      ]
+    },
+    "Feckless": {
+      "definition": "Lacking initiative or strength of character; irresponsible, showing utter incompetence.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "irresponsibility",
+        "incompetence"
+      ]
     },
     "Fractious": {
       "definition": "Irritable and quarrelsome",
       "class": "Big",
       "type": "Negative",
-      "tags": ["behavior", "temperament"]
+      "tags": [
+        "behavior",
+        "temperament"
+      ]
+    },
+    "Glabrous": {
+      "definition": "Smooth; bald; can be negative when describing an unwelcome lack of features or detail, leaving an unappealing bareness.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "appearance",
+        "lack"
+      ]
     },
     "Grim": {
       "definition": "Forbidding or uninviting in appearance; depressing",
       "class": "Big",
       "type": "Negative",
-      "tags": ["appearance", "mood"]
+      "tags": [
+        "appearance",
+        "mood"
+      ]
     },
     "Harrowing": {
       "definition": "Extremely distressing or disturbing",
       "class": "Big",
       "type": "Negative",
-      "tags": ["experience", "emotion"]
+      "tags": [
+        "experience",
+        "emotion"
+      ]
     },
     "Heinous": {
       "definition": "Utterly odious or wicked",
       "class": "Big",
       "type": "Negative",
-      "tags": ["morality", "crime"]
+      "tags": [
+        "morality",
+        "crime"
+      ]
     },
     "Hideous": {
       "definition": "Extremely ugly or frightening in appearance",
       "class": "Big",
       "type": "Negative",
-      "tags": ["appearance", "fear"]
+      "tags": [
+        "appearance",
+        "fear"
+      ]
     },
     "Horrendous": {
       "definition": "Extremely unpleasant, horrifying, or terrible",
       "class": "Big",
       "type": "Negative",
-      "tags": ["quality", "degree"]
+      "tags": [
+        "quality",
+        "degree"
+      ]
     },
-    "Impecunious": {
-      "definition": "Having little or no money",
+    "Ignominious": {
+      "definition": "Deserving or causing public disgrace or shame, leading to profound humiliation.",
       "class": "Big",
       "type": "Negative",
-      "tags": ["wealth", "status"]
+      "tags": [
+        "shame",
+        "disgrace"
+      ]
+    },
+    "Impecunious": {
+      "definition": "Having little or no money, suffering from extreme poverty.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "poverty",
+        "lack"
+      ]
     },
     "Inauspicious": {
       "definition": "Not conducive to success; unpromising",
       "class": "Big",
       "type": "Negative",
-      "tags": ["omen", "future"]
+      "tags": [
+        "omen",
+        "future"
+      ]
     },
     "Incorrigible": {
       "definition": "Not able to be corrected or reformed",
       "class": "Big",
       "type": "Negative",
-      "tags": ["behavior", "trait"]
+      "tags": [
+        "behavior",
+        "trait"
+      ]
     },
     "Indolent": {
       "definition": "Wanting to avoid activity or exertion; lazy",
       "class": "Big",
       "type": "Negative",
-      "tags": ["behavior", "character"]
+      "tags": [
+        "behavior",
+        "character"
+      ]
     },
     "Inept": {
       "definition": "Having or showing no skill; clumsy",
       "class": "Big",
       "type": "Negative",
-      "tags": ["ability", "performance"]
+      "tags": [
+        "ability",
+        "performance"
+      ]
+    },
+    "Inimical": {
+      "definition": "Tending to obstruct or harm; unfriendly, hostile, posing a direct threat.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "hostility",
+        "harm"
+      ]
     },
     "Insidious": {
-      "definition": "Proceeding in a gradual, subtle way, but with harmful effects",
+      "definition": "Proceeding in a gradual, subtle way, but with harmful effects, slowly and cunningly causing damage.",
       "class": "Big",
       "type": "Negative",
-      "tags": ["danger", "process"]
+      "tags": [
+        "harm",
+        "cunning"
+      ]
     },
     "Insolent": {
-      "definition": "Showing a rude and arrogant lack of respect",
+      "definition": "Showing a rude and arrogant lack of respect, displaying blatant disrespect.",
       "class": "Big",
       "type": "Negative",
-      "tags": ["behavior", "attitude"]
+      "tags": [
+        "rudeness",
+        "arrogance"
+      ]
     },
     "Irascible": {
-      "definition": "Easily angered; hot-tempered",
+      "definition": "Easily angered; prone to outbursts of temper, having a fiery disposition.",
       "class": "Big",
       "type": "Negative",
-      "tags": ["temperament", "behavior"]
+      "tags": [
+        "anger",
+        "temperament"
+      ]
+    },
+    "Lachrymose": {
+      "definition": "Tearful or given to weeping, suggesting excessive sadness or sentimentality.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "sadness",
+        "sentimentality"
+      ]
     },
     "Lugubrious": {
-      "definition": "Looking or sounding sad and dismal",
+      "definition": "Looking or sounding sad and dismal, often to an exaggerated degree, creating an air of melancholic gloom.",
       "class": "Big",
       "type": "Negative",
-      "tags": ["mood", "appearance"]
+      "tags": [
+        "sadness",
+        "gloom"
+      ]
     },
     "Malevolent": {
       "definition": "Having or showing a wish to do evil to others",
       "class": "Big",
       "type": "Negative",
-      "tags": ["intent", "character"]
+      "tags": [
+        "intent",
+        "character"
+      ]
+    },
+    "Malign": {
+      "definition": "Evil in nature or effect; malevolent, actively seeking to cause harm.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "evil",
+        "harm"
+      ]
     },
     "Mendacious": {
-      "definition": "Not telling the truth; lying",
+      "definition": "Not telling the truth; habitually dishonest, relying on fabrication and deceit.",
       "class": "Big",
       "type": "Negative",
-      "tags": ["truth", "character"]
+      "tags": [
+        "dishonesty",
+        "lying"
+      ]
+    },
+    "Miasma": {
+      "definition": "A highly unpleasant or unhealthy smell or vapor; an oppressive or unpleasant atmosphere, creating a sense of dread.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "smell",
+        "atmosphere"
+      ]
     },
     "Mordant": {
-      "definition": "Bitingly sarcastic or harshly critical",
+      "definition": "Having or showing a sharp or critical quality; biting, incisive, and often sarcastic, inflicting verbal wounds.",
       "class": "Big",
       "type": "Negative",
-      "tags": ["humor", "criticism"]
+      "tags": [
+        "criticism",
+        "sarcasm"
+      ]
+    },
+    "Moribund": {
+      "definition": "At the point of death; in terminal decline, signifying hopelessness and decay.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "decay",
+        "decline"
+      ]
     },
     "Nefarious": {
-      "definition": "Wicked or criminal in nature",
+      "definition": "Wicked or criminal, involved in despicable acts.",
       "class": "Big",
       "type": "Negative",
-      "tags": ["morality", "intent"]
+      "tags": [
+        "wickedness",
+        "crime"
+      ]
     },
     "Noisome": {
       "definition": "Having an extremely unpleasant smell",
       "class": "Big",
       "type": "Negative",
-      "tags": ["sensation", "smell"]
+      "tags": [
+        "sensation",
+        "smell"
+      ]
     },
     "Obdurate": {
       "definition": "Stubbornly refusing to change one's opinion",
       "class": "Big",
       "type": "Negative",
-      "tags": ["stubbornness", "attitude"]
+      "tags": [
+        "stubbornness",
+        "attitude"
+      ]
+    },
+    "Obfuscate": {
+      "definition": "To make obscure, unclear, or unintelligible, intentionally creating confusion.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "confusion",
+        "obscurity"
+      ]
     },
     "Odious": {
-      "definition": "Extremely unpleasant; repulsive",
+      "definition": "Extremely unpleasant; repulsive, evoking strong feelings of disgust.",
       "class": "Big",
       "type": "Negative",
-      "tags": ["reaction", "quality"]
+      "tags": [
+        "disgust",
+        "repulsion"
+      ]
     },
     "Ominous": {
-      "definition": "Giving the impression that something bad will happen",
+      "definition": "Giving the worrying impression that something bad is going to happen; threateningly inauspicious, foreshadowing disaster.",
       "class": "Big",
       "type": "Negative",
-      "tags": ["omen", "future"]
+      "tags": [
+        "threat",
+        "foreboding"
+      ]
+    },
+    "Onerous": {
+      "definition": "Involving an amount of effort and difficulty that is oppressively burdensome, feeling like a heavy weight.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "burden",
+        "difficulty"
+      ]
     },
     "Pernicious": {
-      "definition": "Having a harmful effect, especially gradually",
+      "definition": "Having a harmful effect, especially in a gradual or subtle way, eroding from within.",
       "class": "Big",
       "type": "Negative",
-      "tags": ["effect", "danger"]
+      "tags": [
+        "harm",
+        "subtlety"
+      ]
     },
     "Petulant": {
-      "definition": "Childishly sulky or bad-tempered",
+      "definition": "Childishly sulky or bad-tempered, displaying unreasonable annoyance.",
       "class": "Big",
       "type": "Negative",
-      "tags": ["behavior", "mood"]
+      "tags": [
+        "bad-temper",
+        "immaturity"
+      ]
+    },
+    "Profligate": {
+      "definition": "Recklessly extravagant or wasteful in the use of resources, leading to ruin.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "wasteful",
+        "reckless"
+      ]
     },
     "Pugnacious": {
-      "definition": "Eager or quick to argue, quarrel, or fight",
+      "definition": "Eager or quick to argue, quarrel, or fight, constantly seeking confrontation.",
       "class": "Big",
       "type": "Negative",
-      "tags": ["behavior", "conflict"]
+      "tags": [
+        "aggressiveness",
+        "conflict"
+      ]
+    },
+    "Putative": {
+      "definition": "Generally considered or reputed to be, but not necessarily so; can imply a deceptive or false reputation.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "deception",
+        "reputation"
+      ]
     },
     "Putrid": {
       "definition": "Decaying or rotting and emitting a fetid smell",
       "class": "Big",
       "type": "Negative",
-      "tags": ["condition", "smell"]
+      "tags": [
+        "condition",
+        "smell"
+      ]
     },
-    "Rancorous": {
-      "definition": "Characterized by bitterness or resentment",
+    "Querulous": {
+      "definition": "Complaining in a petulant or whining manner, expressing constant dissatisfaction.",
       "class": "Big",
       "type": "Negative",
-      "tags": ["emotion", "relationship"]
+      "tags": [
+        "complaint",
+        "whining"
+      ]
+    },
+    "Rancorous": {
+      "definition": "Characterized by bitterness or resentment, especially long-standing resentment, fueled by deep-seated hatred.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "resentment",
+        "hatred"
+      ]
+    },
+    "Recalcitrant": {
+      "definition": "Having an obstinately uncooperative attitude toward authority or discipline, showing defiant resistance.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "defiance",
+        "uncooperative"
+      ]
+    },
+    "Redolent": {
+      "definition": "Having a strong smell; strongly reminiscent or suggestive of something, but can imply an unwelcome or cloying scent.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "smell",
+        "unpleasant"
+      ]
     },
     "Reprehensible": {
       "definition": "Deserving censure or condemnation",
       "class": "Big",
       "type": "Negative",
-      "tags": ["judgment", "morality"]
+      "tags": [
+        "judgment",
+        "morality"
+      ]
+    },
+    "Reprobate": {
+      "definition": "An unprincipled person; a scoundrel, utterly lacking moral character.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "immorality",
+        "scoundrel"
+      ]
     },
     "Repugnant": {
       "definition": "Extremely distasteful; unacceptable",
       "class": "Big",
       "type": "Negative",
-      "tags": ["reaction", "quality"]
+      "tags": [
+        "reaction",
+        "quality"
+      ]
     },
     "Scurrilous": {
       "definition": "Making or spreading scandalous claims",
       "class": "Big",
       "type": "Negative",
-      "tags": ["speech", "behavior"]
+      "tags": [
+        "speech",
+        "behavior"
+      ]
     },
     "Sordid": {
-      "definition": "Involving ignoble actions and motives",
+      "definition": "Involving ignoble actions and motives; arousing moral distaste and contempt, revealing moral squalor.",
       "class": "Big",
       "type": "Negative",
-      "tags": ["morality", "quality"]
+      "tags": [
+        "immorality",
+        "debasement"
+      ]
+    },
+    "Specious": {
+      "definition": "Superficially plausible, but actually wrong, misleading with false appearance.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "deception",
+        "falsity"
+      ]
+    },
+    "Spurious": {
+      "definition": "Not being what it purports to be; false or fake, lacking authenticity.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "fake",
+        "inauthentic"
+      ]
+    },
+    "Stygian": {
+      "definition": "Of or relating to the River Styx, and by extension, hell; extremely dark, gloomy, or forbidding, casting a pall of dread.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "darkness",
+        "gloom"
+      ]
+    },
+    "Surreptitious": {
+      "definition": "Kept secret, especially because it would not be approved of, implying sneaky and dishonest behavior.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "secrecy",
+        "dishonesty"
+      ]
     },
     "Treacherous": {
-      "definition": "Guilty of or involving betrayal or deception",
+      "definition": "Guilty of or involving betrayal or deception; dangerously unstable or unpredictable, posing a hidden threat.",
       "class": "Big",
       "type": "Negative",
-      "tags": ["behavior", "trust"]
+      "tags": [
+        "betrayal",
+        "danger"
+      ]
+    },
+    "Truculent": {
+      "definition": "Eager or quick to argue or fight; aggressively defiant, displaying savage hostility.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "aggressiveness",
+        "defiance"
+      ]
+    },
+    "Turpitude": {
+      "definition": "Depravity; wickedness, describing a state of moral corruption.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "wickedness",
+        "depravity"
+      ]
+    },
+    "Venal": {
+      "definition": "Showing or motivated by susceptibility to bribery; corrupt, indicating moral decay through greed.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "corruption",
+        "greed"
+      ]
     },
     "Vile": {
       "definition": "Extremely unpleasant; morally bad",
       "class": "Big",
       "type": "Negative",
-      "tags": ["quality", "morality"]
+      "tags": [
+        "quality",
+        "morality"
+      ]
     },
     "Virulent": {
       "definition": "Extremely severe or harmful in its effects",
       "class": "Big",
       "type": "Negative",
-      "tags": ["intensity", "effect"]
+      "tags": [
+        "intensity",
+        "effect"
+      ]
     },
     "Vitriolic": {
-      "definition": "Filled with bitter criticism or malice",
+      "definition": "Full of bitter criticism or malice, spewing venomous remarks.",
       "class": "Big",
       "type": "Negative",
-      "tags": ["speech", "anger"]
+      "tags": [
+        "criticism",
+        "malice"
+      ]
     },
     "Vituperative": {
-      "definition": "Bitter and abusive in tone or language",
+      "definition": "Bitter and abusive in tone or language, filled with harsh denunciation.",
       "class": "Big",
       "type": "Negative",
-      "tags": ["speech", "criticism"]
+      "tags": [
+        "abuse",
+        "anger"
+      ]
+    },
+    "Vociferous": {
+      "definition": "Crying out noisily; loud and clamorous, often in an annoying or aggressive way.",
+      "class": "Big",
+      "type": "Negative",
+      "tags": [
+        "noise",
+        "aggressiveness"
+      ]
     }
   },
   "neutralNormalWords": {
@@ -1643,6 +2492,24 @@
         "thought"
       ]
     },
+    "Active": {
+      "definition": "Engaging or ready to engage in physically energetic pursuits",
+      "class": "Normal",
+      "type": "Neutral",
+      "tags": [
+        "movement",
+        "energy"
+      ]
+    },
+    "Actual": {
+      "definition": "Existing in fact; typically as contrasted with what was intended or believed",
+      "class": "Normal",
+      "type": "Neutral",
+      "tags": [
+        "reality",
+        "truth"
+      ]
+    },
     "Basic": {
       "definition": "Forming the essential foundation or starting point",
       "class": "Normal",
@@ -1652,6 +2519,24 @@
         "simple"
       ]
     },
+    "Brief": {
+      "definition": "Of short duration; not lasting for long",
+      "class": "Normal",
+      "type": "Neutral",
+      "tags": [
+        "time",
+        "duration"
+      ]
+    },
+    "Certain": {
+      "definition": "Known for sure; established beyond doubt",
+      "class": "Normal",
+      "type": "Neutral",
+      "tags": [
+        "knowledge",
+        "certainty"
+      ]
+    },
     "Common": {
       "definition": "Occurring frequently or widely; not rare or special",
       "class": "Normal",
@@ -1659,6 +2544,24 @@
       "tags": [
         "frequency",
         "standard"
+      ]
+    },
+    "Complex": {
+      "definition": "Consisting of many different and connected parts",
+      "class": "Normal",
+      "type": "Neutral",
+      "tags": [
+        "composition",
+        "difficulty"
+      ]
+    },
+    "Different": {
+      "definition": "Not the same as another or each other; unlike in nature or qualities",
+      "class": "Normal",
+      "type": "Neutral",
+      "tags": [
+        "comparison",
+        "variation"
       ]
     },
     "Direct": {
@@ -1677,6 +2580,33 @@
       "tags": [
         "state",
         "space"
+      ]
+    },
+    "Equal": {
+      "definition": "Being the same in quantity, size, degree, or value",
+      "class": "Normal",
+      "type": "Neutral",
+      "tags": [
+        "mathematics",
+        "fairness"
+      ]
+    },
+    "External": {
+      "definition": "Belonging to or forming the outer surface or structure",
+      "class": "Normal",
+      "type": "Neutral",
+      "tags": [
+        "position",
+        "surface"
+      ]
+    },
+    "Final": {
+      "definition": "Coming at the end of a series; ultimate",
+      "class": "Normal",
+      "type": "Neutral",
+      "tags": [
+        "sequence",
+        "conclusion"
       ]
     },
     "Frequent": {
@@ -1704,6 +2634,15 @@
       "tags": [
         "position",
         "orientation"
+      ]
+    },
+    "Human": {
+      "definition": "Relating to or characteristic of people or human beings",
+      "class": "Normal",
+      "type": "Neutral",
+      "tags": [
+        "species",
+        "biology"
       ]
     },
     "Individual": {
@@ -1742,168 +2681,6 @@
         "scope"
       ]
     },
-    "Main": {
-      "definition": "Chief in size or importance; principal",
-      "class": "Normal",
-      "type": "Neutral",
-      "tags": [
-        "importance",
-        "primary"
-      ]
-    },
-    "Neutral": {
-      "definition": "Not supporting or helping either side in a conflict or disagreement",
-      "class": "Normal",
-      "type": "Neutral",
-      "tags": [
-        "position",
-        "balance"
-      ]
-    },
-    "Objective": {
-      "definition": "Not influenced by personal feelings or opinions in considering facts",
-      "class": "Normal",
-      "type": "Neutral",
-      "tags": [
-        "perspective",
-        "fact"
-      ]
-    },
-    "Parallel": {
-      "definition": "Side by side and having the same distance continuously between them",
-      "class": "Normal",
-      "type": "Neutral",
-      "tags": [
-        "position",
-        "comparison"
-      ]
-    },
-    "Quality": {
-      "definition": "The standard of something as measured against other things of similar kind",
-      "class": "Normal",
-      "type": "Neutral",
-      "tags": [
-        "standard",
-        "characteristic"
-      ]
-    },
-    "Random": {
-      "definition": "Made, done, or happening without method or conscious decision",
-      "class": "Normal",
-      "type": "Neutral",
-      "tags": [
-        "chance",
-        "unplanned"
-      ]
-    },
-    "Same": {
-      "definition": "Identical; not different or changed",
-      "class": "Normal",
-      "type": "Neutral",
-      "tags": [
-        "similarity",
-        "equality"
-      ]
-    },
-    "Transparent": {
-      "definition": "Allowing light to pass through so that objects behind can be distinctly seen",
-      "class": "Normal",
-      "type": "Neutral",
-      "tags": [
-        "appearance",
-        "clarity"
-      ]
-    },
-    "Uniform": {
-      "definition": "Not changing in form or character; remaining the same in all cases",
-      "class": "Normal",
-      "type": "Neutral",
-      "tags": [
-        "consistency",
-        "appearance"
-      ]
-    },
-    "Valid": {
-      "definition": "Having a sound basis in logic or fact; reasonable or cogent",
-      "class": "Normal",
-      "type": "Neutral",
-      "tags": [
-        "logic",
-        "truth"
-      ]
-    },
-    "Whole": {
-      "definition": "All of; entire; containing all the elements properly belonging",
-      "class": "Normal",
-      "type": "Neutral",
-      "tags": [
-        "completeness",
-        "entirety"
-      ]
-    },
-    "Actual": {
-      "definition": "Existing in fact; typically as contrasted with what was intended or believed",
-      "class": "Normal",
-      "type": "Neutral",
-      "tags": [
-        "reality",
-        "truth"
-      ]
-    },
-    "Brief": {
-      "definition": "Of short duration; not lasting for long",
-      "class": "Normal",
-      "type": "Neutral",
-      "tags": [
-        "time",
-        "duration"
-      ]
-    },
-    "Certain": {
-      "definition": "Known for sure; established beyond doubt",
-      "class": "Normal",
-      "type": "Neutral",
-      "tags": [
-        "knowledge",
-        "certainty"
-      ]
-    },
-    "Different": {
-      "definition": "Not the same as another or each other; unlike in nature or qualities",
-      "class": "Normal",
-      "type": "Neutral",
-      "tags": [
-        "comparison",
-        "variation"
-      ]
-    },
-    "Equal": {
-      "definition": "Being the same in quantity, size, degree, or value",
-      "class": "Normal",
-      "type": "Neutral",
-      "tags": [
-        "mathematics",
-        "fairness"
-      ]
-    },
-    "Final": {
-      "definition": "Coming at the end of a series; ultimate",
-      "class": "Normal",
-      "type": "Neutral",
-      "tags": [
-        "sequence",
-        "conclusion"
-      ]
-    },
-    "Human": {
-      "definition": "Relating to or characteristic of people or human beings",
-      "class": "Normal",
-      "type": "Neutral",
-      "tags": [
-        "species",
-        "biology"
-      ]
-    },
     "Local": {
       "definition": "Relating or restricted to a particular area or neighborhood",
       "class": "Normal",
@@ -1911,6 +2688,15 @@
       "tags": [
         "geography",
         "scope"
+      ]
+    },
+    "Main": {
+      "definition": "Chief in size or importance; principal",
+      "class": "Normal",
+      "type": "Neutral",
+      "tags": [
+        "importance",
+        "primary"
       ]
     },
     "Major": {
@@ -1931,6 +2717,42 @@
         "origin"
       ]
     },
+    "Neutral": {
+      "definition": "Not supporting or helping either side in a conflict or disagreement",
+      "class": "Normal",
+      "type": "Neutral",
+      "tags": [
+        "position",
+        "balance"
+      ]
+    },
+    "Normal": {
+      "definition": "Conforming to a standard; usual, typical, or expected",
+      "class": "Normal",
+      "type": "Neutral",
+      "tags": [
+        "standard",
+        "expectation"
+      ]
+    },
+    "Objective": {
+      "definition": "Not influenced by personal feelings or opinions in considering facts",
+      "class": "Normal",
+      "type": "Neutral",
+      "tags": [
+        "perspective",
+        "fact"
+      ]
+    },
+    "Ordinary": {
+      "definition": "With no special or distinctive features; normal",
+      "class": "Normal",
+      "type": "Neutral",
+      "tags": [
+        "common",
+        "routine"
+      ]
+    },
     "Original": {
       "definition": "Present or existing from the beginning; first or earliest",
       "class": "Normal",
@@ -1938,6 +2760,24 @@
       "tags": [
         "time",
         "authenticity"
+      ]
+    },
+    "Parallel": {
+      "definition": "Side by side and having the same distance continuously between them",
+      "class": "Normal",
+      "type": "Neutral",
+      "tags": [
+        "position",
+        "comparison"
+      ]
+    },
+    "Particular": {
+      "definition": "Used to single out an individual member of a specified group",
+      "class": "Normal",
+      "type": "Neutral",
+      "tags": [
+        "specific",
+        "detail"
       ]
     },
     "Physical": {
@@ -1949,6 +2789,15 @@
         "science"
       ]
     },
+    "Present": {
+      "definition": "Existing or occurring now; current",
+      "class": "Normal",
+      "type": "Neutral",
+      "tags": [
+        "time",
+        "existence"
+      ]
+    },
     "Public": {
       "definition": "Of or concerning the people as a whole; open to or shared by all",
       "class": "Normal",
@@ -1958,6 +2807,24 @@
         "access"
       ]
     },
+    "Quality": {
+      "definition": "The standard of something as measured against other things of similar kind",
+      "class": "Normal",
+      "type": "Neutral",
+      "tags": [
+        "standard",
+        "characteristic"
+      ]
+    },
+    "Random": {
+      "definition": "Made, done, or happening without method or conscious decision",
+      "class": "Normal",
+      "type": "Neutral",
+      "tags": [
+        "chance",
+        "unplanned"
+      ]
+    },
     "Recent": {
       "definition": "Having happened, begun, or been done not long ago",
       "class": "Normal",
@@ -1965,6 +2832,24 @@
       "tags": [
         "time",
         "newness"
+      ]
+    },
+    "Regular": {
+      "definition": "Arranged in or constituting a constant or definite pattern",
+      "class": "Normal",
+      "type": "Neutral",
+      "tags": [
+        "pattern",
+        "frequency"
+      ]
+    },
+    "Same": {
+      "definition": "Identical; not different or changed",
+      "class": "Normal",
+      "type": "Neutral",
+      "tags": [
+        "similarity",
+        "equality"
       ]
     },
     "Simple": {
@@ -2003,6 +2888,15 @@
         "ability"
       ]
     },
+    "Transparent": {
+      "definition": "Allowing light to pass through so that objects behind can be distinctly seen",
+      "class": "Normal",
+      "type": "Neutral",
+      "tags": [
+        "appearance",
+        "clarity"
+      ]
+    },
     "True": {
       "definition": "In accordance with fact or reality",
       "class": "Normal",
@@ -2010,6 +2904,24 @@
       "tags": [
         "truth",
         "accuracy"
+      ]
+    },
+    "Uniform": {
+      "definition": "Not changing in form or character; remaining the same in all cases",
+      "class": "Normal",
+      "type": "Neutral",
+      "tags": [
+        "consistency",
+        "appearance"
+      ]
+    },
+    "Valid": {
+      "definition": "Having a sound basis in logic or fact; reasonable or cogent",
+      "class": "Normal",
+      "type": "Neutral",
+      "tags": [
+        "logic",
+        "truth"
       ]
     },
     "Various": {
@@ -2030,6 +2942,15 @@
         "appearance"
       ]
     },
+    "Whole": {
+      "definition": "All of; entire; containing all the elements properly belonging",
+      "class": "Normal",
+      "type": "Neutral",
+      "tags": [
+        "completeness",
+        "entirety"
+      ]
+    },
     "Yellow": {
       "definition": "Of the color between green and orange in the spectrum",
       "class": "Normal",
@@ -2038,81 +2959,18 @@
         "color",
         "visual"
       ]
-    },
-    "Active": {
-      "definition": "Engaging or ready to engage in physically energetic pursuits",
-      "class": "Normal",
-      "type": "Neutral",
-      "tags": [
-        "movement",
-        "energy"
-      ]
-    },
-    "Complex": {
-      "definition": "Consisting of many different and connected parts",
-      "class": "Normal",
-      "type": "Neutral",
-      "tags": [
-        "composition",
-        "difficulty"
-      ]
-    },
-    "External": {
-      "definition": "Belonging to or forming the outer surface or structure",
-      "class": "Normal",
-      "type": "Neutral",
-      "tags": [
-        "position",
-        "surface"
-      ]
-    },
-    "Normal": {
-      "definition": "Conforming to a standard; usual, typical, or expected",
-      "class": "Normal",
-      "type": "Neutral",
-      "tags": [
-        "standard",
-        "expectation"
-      ]
-    },
-    "Ordinary": {
-      "definition": "With no special or distinctive features; normal",
-      "class": "Normal",
-      "type": "Neutral",
-      "tags": [
-        "common",
-        "routine"
-      ]
-    },
-    "Particular": {
-      "definition": "Used to single out an individual member of a specified group",
-      "class": "Normal",
-      "type": "Neutral",
-      "tags": [
-        "specific",
-        "detail"
-      ]
-    },
-    "Present": {
-      "definition": "Existing or occurring now; current",
-      "class": "Normal",
-      "type": "Neutral",
-      "tags": [
-        "time",
-        "existence"
-      ]
-    },
-    "Regular": {
-      "definition": "Arranged in or constituting a constant or definite pattern",
-      "class": "Normal",
-      "type": "Neutral",
-      "tags": [
-        "pattern",
-        "frequency"
-      ]
     }
   },
   "neutralBigWords": {
+    "Abstruse": {
+      "definition": "Difficult to understand; obscure, requiring deep study or insight.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "difficulty",
+        "knowledge"
+      ]
+    },
     "Ambivalent": {
       "definition": "Having mixed or contradictory feelings about something or someone",
       "class": "Big",
@@ -2120,6 +2978,15 @@
       "tags": [
         "emotion",
         "conflict"
+      ]
+    },
+    "Ancillary": {
+      "definition": "Providing necessary support to the primary activities or operation of an organization, institution, or system, acting as a supplementary aid.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "support",
+        "secondary"
       ]
     },
     "Arbitrary": {
@@ -2131,6 +2998,15 @@
         "randomness"
       ]
     },
+    "Autarky": {
+      "definition": "Economic independence or self-sufficiency, a state of being self-contained.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "economy",
+        "independence"
+      ]
+    },
     "Axiomatic": {
       "definition": "Self-evident or unquestionable as a basic principle",
       "class": "Big",
@@ -2138,6 +3014,24 @@
       "tags": [
         "truth",
         "foundation"
+      ]
+    },
+    "Bifurcate": {
+      "definition": "To divide into two branches or forks, creating a split or divergence.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "division",
+        "structure"
+      ]
+    },
+    "Circumlocution": {
+      "definition": "The use of many words where fewer would do, especially in a deliberate attempt to be vague or evasive, rather than direct.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "language",
+        "indirectness"
       ]
     },
     "Circumspect": {
@@ -2158,13 +3052,67 @@
         "communication"
       ]
     },
-    "Concomitant": {
-      "definition": "Naturally accompanying or associated with something else",
+    "Cognizant": {
+      "definition": "Having knowledge or being aware of something, indicating a state of informed understanding.",
       "class": "Big",
       "type": "Neutral",
       "tags": [
-        "relationship",
-        "occurrence"
+        "awareness",
+        "knowledge"
+      ]
+    },
+    "Commensurate": {
+      "definition": "Proportionate in measure; corresponding in size or degree, indicating an appropriate balance.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "proportion",
+        "equality"
+      ]
+    },
+    "Concomitant": {
+      "definition": "Naturally accompanying or associated with something else, indicating a simultaneous occurrence.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "association",
+        "coexistence"
+      ]
+    },
+    "Conflate": {
+      "definition": "To combine (two or more texts, ideas, etc.) into one, often erroneously, merging distinct concepts.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "combination",
+        "merging"
+      ]
+    },
+    "Conjecture": {
+      "definition": "An opinion or conclusion formed on the basis of incomplete information, a reasoned guess.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "theory",
+        "speculation"
+      ]
+    },
+    "Corporeal": {
+      "definition": "Relating to a person's body, especially as opposed to their spirit, focusing on physical existence.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "physical",
+        "material"
+      ]
+    },
+    "Coterie": {
+      "definition": "A small group of people with shared interests or tastes, especially one that is exclusive of other people, forming a tight-knit circle.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "group",
+        "exclusive"
       ]
     },
     "Deleterious": {
@@ -2176,6 +3124,15 @@
         "consequence"
       ]
     },
+    "Demarcation": {
+      "definition": "The action of fixing the boundary or limits of something, clearly defining borders.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "boundary",
+        "definition"
+      ]
+    },
     "Didactic": {
       "definition": "Intended to teach, particularly in having moral instruction",
       "class": "Big",
@@ -2183,6 +3140,15 @@
       "tags": [
         "education",
         "tone"
+      ]
+    },
+    "Discursive": {
+      "definition": "Digressing from subject to subject, indicating a meandering or rambling style.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "language",
+        "wandering"
       ]
     },
     "Disparate": {
@@ -2203,6 +3169,15 @@
         "selection"
       ]
     },
+    "Egregious": {
+      "definition": "Outstandingly bad; shocking, but also can mean conspicuously good, indicating something standing out remarkably.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "remarkable",
+        "prominent"
+      ]
+    },
     "Empirical": {
       "definition": "Based on observation or experience rather than theory",
       "class": "Big",
@@ -2210,6 +3185,24 @@
       "tags": [
         "evidence",
         "science"
+      ]
+    },
+    "Enervate": {
+      "definition": "To cause (someone) to feel drained of energy or vitality; to weaken, describing a process of depletion.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "weakening",
+        "depletion"
+      ]
+    },
+    "Ennui": {
+      "definition": "A feeling of listlessness and dissatisfaction arising from a lack of occupation or excitement, a profound boredom.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "boredom",
+        "dissatisfaction"
       ]
     },
     "Epistemological": {
@@ -2230,6 +3223,15 @@
         "uncertainty"
       ]
     },
+    "Equivocate": {
+      "definition": "To use ambiguous language so as to conceal the truth or avoid committing oneself, speaking with deliberate vagueness.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "ambiguity",
+        "evasion"
+      ]
+    },
     "Esoteric": {
       "definition": "Intended for or understood by only a small group with specialized knowledge",
       "class": "Big",
@@ -2237,6 +3239,15 @@
       "tags": [
         "knowledge",
         "obscurity"
+      ]
+    },
+    "Exigency": {
+      "definition": "An urgent need or demand, a pressing necessity that requires immediate attention.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "urgency",
+        "necessity"
       ]
     },
     "Extraneous": {
@@ -2257,6 +3268,24 @@
         "tone"
       ]
     },
+    "Fastidious": {
+      "definition": "Very attentive to and concerned about accuracy and detail; difficult to please, characterized by meticulousness.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "precision",
+        "detail"
+      ]
+    },
+    "Fiduciary": {
+      "definition": "Involving trust, especially with regard to the relationship between a trustee and a beneficiary, relating to financial responsibility.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "trust",
+        "finance"
+      ]
+    },
     "Fractious": {
       "definition": "Irritable and quarrelsome, typically difficult to control",
       "class": "Big",
@@ -2266,6 +3295,15 @@
         "mood"
       ]
     },
+    "Gnostic": {
+      "definition": "Relating to knowledge, especially spiritual knowledge, signifying a deep understanding.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "knowledge",
+        "spiritual"
+      ]
+    },
     "Hermeneutic": {
       "definition": "Concerning interpretation, especially of scripture or literary texts",
       "class": "Big",
@@ -2273,6 +3311,24 @@
       "tags": [
         "interpretation",
         "analysis"
+      ]
+    },
+    "Heuristic": {
+      "definition": "Enabling a person to discover or learn something for themselves, providing a practical method for problem-solving.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "learning",
+        "method"
+      ]
+    },
+    "Holistic": {
+      "definition": "Characterized by comprehension of the parts of something as intimately interconnected and explicable only by reference to the whole, considering everything as a complete system.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "interconnectedness",
+        "completeness"
       ]
     },
     "Iconoclastic": {
@@ -2285,12 +3341,21 @@
       ]
     },
     "Idiosyncratic": {
-      "definition": "Peculiar or individual; relating to idiosyncrasy",
+      "definition": "Peculiar or individual, highlighting a unique and distinctive quality.",
       "class": "Big",
       "type": "Neutral",
       "tags": [
         "uniqueness",
-        "behavior"
+        "peculiarity"
+      ]
+    },
+    "Inchoate": {
+      "definition": "Just begun and consequently not fully formed or developed; rudimentary, describing something in its nascent stage.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "beginning",
+        "undeveloped"
       ]
     },
     "Incontrovertible": {
@@ -2302,6 +3367,15 @@
         "evidence"
       ]
     },
+    "Inculcate": {
+      "definition": "To instill (an idea, attitude, or habit) by persistent instruction or repetition, deeply embedding principles.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "teaching",
+        "instill"
+      ]
+    },
     "Indeterminate": {
       "definition": "Not exactly known, established, or defined",
       "class": "Big",
@@ -2311,13 +3385,22 @@
         "measurement"
       ]
     },
-    "Ineluctable": {
-      "definition": "Unable to be resisted or avoided; inescapable",
+    "Indubitable": {
+      "definition": "Impossible to doubt; unquestionable, signifying undeniable truth.",
       "class": "Big",
       "type": "Neutral",
       "tags": [
-        "fate",
-        "certainty"
+        "certainty",
+        "truth"
+      ]
+    },
+    "Ineluctable": {
+      "definition": "Unable to be resisted or avoided; inescapable, describing an unavoidable fate.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "inescapable",
+        "fate"
       ]
     },
     "Infinitesimal": {
@@ -2336,6 +3419,15 @@
       "tags": [
         "taste",
         "character"
+      ]
+    },
+    "Internecine": {
+      "definition": "Destructive to both sides in a conflict; relating to conflict within a group or organization, describing mutually destructive struggle.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "conflict",
+        "mutual"
       ]
     },
     "Intransigent": {
@@ -2363,6 +3455,42 @@
       "tags": [
         "complexity",
         "simplicity"
+      ]
+    },
+    "Juxtapose": {
+      "definition": "To place or deal with close together for contrasting effect, highlighting differences through proximity.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "contrast",
+        "placement"
+      ]
+    },
+    "Lackadaisical": {
+      "definition": "Lacking enthusiasm and determination; carelessly lazy, showing indifference.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "laziness",
+        "indifference"
+      ]
+    },
+    "Lamentable": {
+      "definition": "Deplorably bad or unsatisfactory, giving cause for regret or sorrow, describing a regrettable situation.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "regret",
+        "sorrow"
+      ]
+    },
+    "Liminal": {
+      "definition": "Relating to a transitional or initial stage of a process; occupying a position at, or on both sides of, a boundary or threshold, marking a state of in-betweenness.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "transition",
+        "boundary"
       ]
     },
     "Lugubrious": {
@@ -2401,6 +3529,24 @@
         "comparison"
       ]
     },
+    "Meticulous": {
+      "definition": "Showing great attention to detail; very careful and precise, executing with thoroughness.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "detail",
+        "precision"
+      ]
+    },
+    "Modus operandi": {
+      "definition": "A particular way or method of doing something, indicating a standard approach.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "method",
+        "procedure"
+      ]
+    },
     "Nebulous": {
       "definition": "In the form of a cloud or haze; hazy; vague or ill-defined",
       "class": "Big",
@@ -2408,6 +3554,24 @@
       "tags": [
         "clarity",
         "appearance"
+      ]
+    },
+    "Nihilism": {
+      "definition": "The rejection of all religious and moral principles, often in the belief that life is meaningless, a philosophical stance of disbelief.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "philosophy",
+        "meaninglessness"
+      ]
+    },
+    "Non sequitur": {
+      "definition": "A conclusion or statement that does not logically follow from the previous argument or statement, a disconnected thought.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "logic",
+        "fallacy"
       ]
     },
     "Obfuscate": {
@@ -2419,6 +3583,15 @@
         "confusion"
       ]
     },
+    "Obviate": {
+      "definition": "To remove a difficulty or need; to avoid or prevent, making something unnecessary.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "prevention",
+        "removal"
+      ]
+    },
     "Ostensible": {
       "definition": "Stated or appearing to be true, but not necessarily so",
       "class": "Big",
@@ -2426,6 +3599,15 @@
       "tags": [
         "appearance",
         "truth"
+      ]
+    },
+    "Paradigm": {
+      "definition": "A typical example or pattern of something; a model, serving as a framework for understanding.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "model",
+        "framework"
       ]
     },
     "Paradigmatic": {
@@ -2446,13 +3628,22 @@
         "precision"
       ]
     },
-    "Perfunctory": {
-      "definition": "Carried out with minimum effort or reflection",
+    "Penultimate": {
+      "definition": "Second to last in a series or sequence, marking the position before the end.",
       "class": "Big",
       "type": "Neutral",
       "tags": [
-        "effort",
-        "action"
+        "sequence",
+        "order"
+      ]
+    },
+    "Perfunctory": {
+      "definition": "Carried out with a minimum of effort or reflection, performing a duty without enthusiasm.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "lack of effort",
+        "routine"
       ]
     },
     "Platitudinous": {
@@ -2464,6 +3655,15 @@
         "repetition"
       ]
     },
+    "Pleonasm": {
+      "definition": "The use of more words than are necessary to express an idea; redundancy, often used for emphasis or simply due to poor style.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "language",
+        "redundancy"
+      ]
+    },
     "Precipitous": {
       "definition": "Dangerously high or steep; done suddenly without careful consideration",
       "class": "Big",
@@ -2471,6 +3671,15 @@
       "tags": [
         "height",
         "action"
+      ]
+    },
+    "Prognosticate": {
+      "definition": "To foretell or prophesy (an event in the future), making a prediction.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "future",
+        "prediction"
       ]
     },
     "Prosaic": {
@@ -2500,15 +3709,6 @@
         "resistance"
       ]
     },
-    "Reductive": {
-      "definition": "Tending to present a subject in simplified form",
-      "class": "Big",
-      "type": "Neutral",
-      "tags": [
-        "simplification",
-        "analysis"
-      ]
-    },
     "Recondite": {
       "definition": "Little known; abstruse; understood by few",
       "class": "Big",
@@ -2518,6 +3718,42 @@
         "obscurity"
       ]
     },
+    "Reductive": {
+      "definition": "Tending to present a subject in simplified form",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "simplification",
+        "analysis"
+      ]
+    },
+    "Redundant": {
+      "definition": "Not or no longer needed or useful; superfluous, serving no essential purpose.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "unnecessary",
+        "superfluous"
+      ]
+    },
+    "Remuneration": {
+      "definition": "Money paid for work or a service, recompense, typically indicating payment or reward.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "payment",
+        "reward"
+      ]
+    },
+    "Requisite": {
+      "definition": "Made necessary by particular circumstances or regulations, a necessary condition.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "necessity",
+        "requirement"
+      ]
+    },
     "Sanguine": {
       "definition": "Optimistic or positive, especially in a bad situation",
       "class": "Big",
@@ -2525,6 +3761,15 @@
       "tags": [
         "attitude",
         "optimism"
+      ]
+    },
+    "Sine qua non": {
+      "definition": "An essential condition; a thing that is absolutely necessary, a fundamental prerequisite.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "essential",
+        "condition"
       ]
     },
     "Soporific": {
@@ -2545,6 +3790,42 @@
         "truth"
       ]
     },
+    "Stochastic": {
+      "definition": "Randomly determined; having a random probability distribution or pattern that may be analyzed statistically but not predicted precisely, involving chance.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "randomness",
+        "probability"
+      ]
+    },
+    "Surrogate": {
+      "definition": "A substitute, especially a person deputizing for another in a specific role or office, serving as a stand-in.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "substitute",
+        "representation"
+      ]
+    },
+    "Tautology": {
+      "definition": "The saying of the same thing twice over in different words, generally considered to be a fault of style, stating the obvious redundantly.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "redundancy",
+        "logic"
+      ]
+    },
+    "Tenebrous": {
+      "definition": "Dark; shadowy or obscure, lacking clarity or light.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "darkness",
+        "obscurity"
+      ]
+    },
     "Tenuous": {
       "definition": "Very weak or slight; insubstantial",
       "class": "Big",
@@ -2552,6 +3833,15 @@
       "tags": [
         "strength",
         "connection"
+      ]
+    },
+    "Transmogrify": {
+      "definition": "To transform in a surprising or magical manner, changing form completely.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "transformation",
+        "change"
       ]
     },
     "Turgid": {
@@ -2564,12 +3854,30 @@
       ]
     },
     "Ubiquitous": {
-      "definition": "Present, appearing, or found everywhere",
+      "definition": "Present, appearing, or found everywhere, indicating widespread presence.",
       "class": "Big",
       "type": "Neutral",
       "tags": [
-        "presence",
-        "frequency"
+        "pervasiveness",
+        "presence"
+      ]
+    },
+    "Vacillate": {
+      "definition": "To alternate or waver between different opinions or actions; be indecisive, showing hesitation.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "indecision",
+        "hesitation"
+      ]
+    },
+    "Vicissitude": {
+      "definition": "A change of circumstances or fortune, typically one that is unwelcome or unpleasant, denoting unpredictable shifts.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "change",
+        "fortune"
       ]
     },
     "Vociferous": {
@@ -2579,6 +3887,51 @@
       "tags": [
         "sound",
         "protest"
+      ]
+    },
+    "Wiry": {
+      "definition": "Resembling wire in form and texture; thin but strong, indicating a lean and tough build.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "physical",
+        "strength"
+      ]
+    },
+    "Xenophobia": {
+      "definition": "Dislike of or prejudice against people from other countries, indicating a narrow and fearful outlook.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "prejudice",
+        "fear"
+      ]
+    },
+    "Yielding": {
+      "definition": "Producing or providing something; or, allowing oneself to be moved or influenced by persuasion, indicating a flexible or productive nature.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "flexibility",
+        "production"
+      ]
+    },
+    "Zenith": {
+      "definition": "The time at which something is most powerful or successful, marking the peak or highest point.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "peak",
+        "climax"
+      ]
+    },
+    "Zeugma": {
+      "definition": "A figure of speech in which a word applies to two others in different senses (e.g., 'John and his license expired'), showcasing a clever linguistic construction.",
+      "class": "Big",
+      "type": "Neutral",
+      "tags": [
+        "language",
+        "rhetoric"
       ]
     }
   },
@@ -2592,6 +3945,24 @@
         "reaction"
       ]
     },
+    "Biting": {
+      "definition": "Harsh or cruel in tone or manner",
+      "class": "Normal",
+      "type": "Tone",
+      "tags": [
+        "criticism",
+        "intensity"
+      ]
+    },
+    "Candid": {
+      "definition": "Truthful and straightforward; frank",
+      "class": "Normal",
+      "type": "Tone",
+      "tags": [
+        "honesty",
+        "communication"
+      ]
+    },
     "Casual": {
       "definition": "Relaxed and unconcerned, without formality or seriousness",
       "class": "Normal",
@@ -2599,6 +3970,15 @@
       "tags": [
         "attitude",
         "style"
+      ]
+    },
+    "Caustic": {
+      "definition": "Sarcastic in a scathing and bitter way",
+      "class": "Normal",
+      "type": "Tone",
+      "tags": [
+        "criticism",
+        "humor"
       ]
     },
     "Cheerful": {
@@ -2610,6 +3990,24 @@
         "energy"
       ]
     },
+    "Contemplative": {
+      "definition": "Expressing or involving prolonged thought",
+      "class": "Normal",
+      "type": "Tone",
+      "tags": [
+        "thought",
+        "mood"
+      ]
+    },
+    "Cynical": {
+      "definition": "Distrustful of human sincerity or integrity",
+      "class": "Normal",
+      "type": "Tone",
+      "tags": [
+        "attitude",
+        "skepticism"
+      ]
+    },
     "Dark": {
       "definition": "Having elements of sadness, mystery, or pessimism",
       "class": "Normal",
@@ -2617,6 +4015,24 @@
       "tags": [
         "mood",
         "atmosphere"
+      ]
+    },
+    "Detached": {
+      "definition": "Separate or disconnected; emotionally uninvolved",
+      "class": "Normal",
+      "type": "Tone",
+      "tags": [
+        "attitude",
+        "perspective"
+      ]
+    },
+    "Diplomatic": {
+      "definition": "Using tact and sensitivity in dealing with others",
+      "class": "Normal",
+      "type": "Tone",
+      "tags": [
+        "communication",
+        "tact"
       ]
     },
     "Dramatic": {
@@ -2637,6 +4053,24 @@
         "delivery"
       ]
     },
+    "Earnest": {
+      "definition": "Resulting from or showing sincere conviction",
+      "class": "Normal",
+      "type": "Tone",
+      "tags": [
+        "sincerity",
+        "attitude"
+      ]
+    },
+    "Effusive": {
+      "definition": "Expressing feelings of gratitude or pleasure in unrestrained way",
+      "class": "Normal",
+      "type": "Tone",
+      "tags": [
+        "emotion",
+        "expression"
+      ]
+    },
     "Emotional": {
       "definition": "Expressing or arousing strong feelings",
       "class": "Normal",
@@ -2644,6 +4078,24 @@
       "tags": [
         "feeling",
         "intensity"
+      ]
+    },
+    "Exasperated": {
+      "definition": "Intensely irritated and frustrated",
+      "class": "Normal",
+      "type": "Tone",
+      "tags": [
+        "emotion",
+        "reaction"
+      ]
+    },
+    "Flippant": {
+      "definition": "Not showing serious attitude toward something",
+      "class": "Normal",
+      "type": "Tone",
+      "tags": [
+        "attitude",
+        "humor"
       ]
     },
     "Formal": {
@@ -2673,6 +4125,15 @@
         "softness"
       ]
     },
+    "Grave": {
+      "definition": "Serious or solemn in manner or appearance",
+      "class": "Normal",
+      "type": "Tone",
+      "tags": [
+        "seriousness",
+        "mood"
+      ]
+    },
     "Humorous": {
       "definition": "Intended to be funny or amusing",
       "class": "Normal",
@@ -2700,6 +4161,15 @@
         "contrast"
       ]
     },
+    "Jovial": {
+      "definition": "Cheerful and friendly",
+      "class": "Normal",
+      "type": "Tone",
+      "tags": [
+        "mood",
+        "social"
+      ]
+    },
     "Light": {
       "definition": "Free from worry; cheerful and carefree",
       "class": "Normal",
@@ -2707,6 +4177,15 @@
       "tags": [
         "mood",
         "atmosphere"
+      ]
+    },
+    "Matter-of-fact": {
+      "definition": "Unemotional and practical; straightforward",
+      "class": "Normal",
+      "type": "Tone",
+      "tags": [
+        "communication",
+        "style"
       ]
     },
     "Melancholic": {
@@ -2933,132 +4412,6 @@
         "energy",
         "attitude"
       ]
-    },
-    "Biting": {
-      "definition": "Harsh or cruel in tone or manner",
-      "class": "Normal",
-      "type": "Tone",
-      "tags": [
-        "criticism",
-        "intensity"
-      ]
-    },
-    "Candid": {
-      "definition": "Truthful and straightforward; frank",
-      "class": "Normal",
-      "type": "Tone",
-      "tags": [
-        "honesty",
-        "communication"
-      ]
-    },
-    "Caustic": {
-      "definition": "Sarcastic in a scathing and bitter way",
-      "class": "Normal",
-      "type": "Tone",
-      "tags": [
-        "criticism",
-        "humor"
-      ]
-    },
-    "Contemplative": {
-      "definition": "Expressing or involving prolonged thought",
-      "class": "Normal",
-      "type": "Tone",
-      "tags": [
-        "thought",
-        "mood"
-      ]
-    },
-    "Cynical": {
-      "definition": "Distrustful of human sincerity or integrity",
-      "class": "Normal",
-      "type": "Tone",
-      "tags": [
-        "attitude",
-        "skepticism"
-      ]
-    },
-    "Detached": {
-      "definition": "Separate or disconnected; emotionally uninvolved",
-      "class": "Normal",
-      "type": "Tone",
-      "tags": [
-        "attitude",
-        "perspective"
-      ]
-    },
-    "Diplomatic": {
-      "definition": "Using tact and sensitivity in dealing with others",
-      "class": "Normal",
-      "type": "Tone",
-      "tags": [
-        "communication",
-        "tact"
-      ]
-    },
-    "Earnest": {
-      "definition": "Resulting from or showing sincere conviction",
-      "class": "Normal",
-      "type": "Tone",
-      "tags": [
-        "sincerity",
-        "attitude"
-      ]
-    },
-    "Effusive": {
-      "definition": "Expressing feelings of gratitude or pleasure in unrestrained way",
-      "class": "Normal",
-      "type": "Tone",
-      "tags": [
-        "emotion",
-        "expression"
-      ]
-    },
-    "Exasperated": {
-      "definition": "Intensely irritated and frustrated",
-      "class": "Normal",
-      "type": "Tone",
-      "tags": [
-        "emotion",
-        "reaction"
-      ]
-    },
-    "Flippant": {
-      "definition": "Not showing serious attitude toward something",
-      "class": "Normal",
-      "type": "Tone",
-      "tags": [
-        "attitude",
-        "humor"
-      ]
-    },
-    "Grave": {
-      "definition": "Serious or solemn in manner or appearance",
-      "class": "Normal",
-      "type": "Tone",
-      "tags": [
-        "seriousness",
-        "mood"
-      ]
-    },
-    "Jovial": {
-      "definition": "Cheerful and friendly",
-      "class": "Normal",
-      "type": "Tone",
-      "tags": [
-        "mood",
-        "social"
-      ]
-    },
-    "Matter-of-fact": {
-      "definition": "Unemotional and practical; straightforward",
-      "class": "Normal",
-      "type": "Tone",
-      "tags": [
-        "communication",
-        "style"
-      ]
     }
   },
   "toneBigWords": {
@@ -3071,6 +4424,24 @@
         "sharpness"
       ]
     },
+    "Acrimonious": {
+      "definition": "Typically of a speech or discussion) angry and bitter, especially in feeling or manner, characterized by harshness.",
+      "class": "Big",
+      "type": "Tone",
+      "tags": [
+        "anger",
+        "bitterness"
+      ]
+    },
+    "Admonitory": {
+      "definition": "Giving or conveying a warning or reprimand, serving as a gentle but firm caution.",
+      "class": "Big",
+      "type": "Tone",
+      "tags": [
+        "warning",
+        "reprimand"
+      ]
+    },
     "Ambiguous": {
       "definition": "Open to multiple interpretations due to deliberate vagueness",
       "class": "Big",
@@ -3080,13 +4451,40 @@
         "language"
       ]
     },
-    "Bombastic": {
-      "definition": "High-sounding but with little meaning; inflated",
+    "Arcane": {
+      "definition": "Understood by few; mysterious or secret, implying a tone of exclusivity or deep, hidden knowledge.",
       "class": "Big",
       "type": "Tone",
       "tags": [
-        "language",
-        "pretension"
+        "mystery",
+        "secretive"
+      ]
+    },
+    "Bellicose": {
+      "definition": "Demonstrating aggression and willingness to fight, indicating a hostile or warlike disposition.",
+      "class": "Big",
+      "type": "Tone",
+      "tags": [
+        "aggressive",
+        "hostile"
+      ]
+    },
+    "Bombastic": {
+      "definition": "High-sounding but with little meaning; inflated, employing pompous and exaggerated language.",
+      "class": "Big",
+      "type": "Tone",
+      "tags": [
+        "pretentious",
+        "exaggerated"
+      ]
+    },
+    "Caustic": {
+      "definition": "Sarcastic in a scathing and bitter way, often inflicting sharp verbal wounds.",
+      "class": "Big",
+      "type": "Tone",
+      "tags": [
+        "sarcastic",
+        "critical"
       ]
     },
     "Cavalier": {
@@ -3107,6 +4505,24 @@
         "behavior"
       ]
     },
+    "Circumspect": {
+      "definition": "Wary and unwilling to take risks; cautious, conveying a tone of careful consideration and prudence.",
+      "class": "Big",
+      "type": "Tone",
+      "tags": [
+        "cautious",
+        "wary"
+      ]
+    },
+    "Convivial": {
+      "definition": "Friendly, lively, and enjoyable, indicating a cheerful and festive atmosphere.",
+      "class": "Big",
+      "type": "Tone",
+      "tags": [
+        "friendly",
+        "lively"
+      ]
+    },
     "Convoluted": {
       "definition": "Extremely complex and difficult to follow",
       "class": "Big",
@@ -3114,6 +4530,15 @@
       "tags": [
         "complexity",
         "confusion"
+      ]
+    },
+    "Declamatory": {
+      "definition": "Delivering speeches or passages in a rhetorical or dramatic manner, often with exaggerated emphasis, speaking with fervent passion.",
+      "class": "Big",
+      "type": "Tone",
+      "tags": [
+        "rhetorical",
+        "dramatic"
       ]
     },
     "Demure": {
@@ -3134,6 +4559,15 @@
         "contempt"
       ]
     },
+    "Didactic": {
+      "definition": "Intended to teach, particularly in having moral instruction as an ulterior motive, conveying a tone of instruction or moralizing.",
+      "class": "Big",
+      "type": "Tone",
+      "tags": [
+        "instructional",
+        "moralizing"
+      ]
+    },
     "Diffident": {
       "definition": "Modest or shy due to lack of self-confidence",
       "class": "Big",
@@ -3143,6 +4577,15 @@
         "hesitation"
       ]
     },
+    "Disconsolate": {
+      "definition": "Without consolation or comfort; unhappy, conveying a tone of deep sadness and hopelessness.",
+      "class": "Big",
+      "type": "Tone",
+      "tags": [
+        "sadness",
+        "hopelessness"
+      ]
+    },
     "Disdainful": {
       "definition": "Showing contempt or lack of respect",
       "class": "Big",
@@ -3150,6 +4593,24 @@
       "tags": [
         "contempt",
         "superiority"
+      ]
+    },
+    "Droll": {
+      "definition": "Curious or unusual in a way that provokes dry amusement, characterized by a subtly humorous tone.",
+      "class": "Big",
+      "type": "Tone",
+      "tags": [
+        "humorous",
+        "dry"
+      ]
+    },
+    "Ebullient": {
+      "definition": "Cheerful and full of energy, conveying a tone of bubbling enthusiasm and joy.",
+      "class": "Big",
+      "type": "Tone",
+      "tags": [
+        "energetic",
+        "enthusiastic"
       ]
     },
     "Effusive": {
@@ -3188,6 +4649,15 @@
         "subtlety"
       ]
     },
+    "Facetious": {
+      "definition": "Treating serious issues with deliberately inappropriate humor; flippant, adopting a tone of lighthearted mockery.",
+      "class": "Big",
+      "type": "Tone",
+      "tags": [
+        "humorous",
+        "flippant"
+      ]
+    },
     "Fatuous": {
       "definition": "Silly and pointless in a smug or self-satisfied way",
       "class": "Big",
@@ -3206,13 +4676,22 @@
         "humor"
       ]
     },
-    "Grandiloquent": {
-      "definition": "Pompous or extravagant in style or manner",
+    "Garrulous": {
+      "definition": "Excessively talkative, especially on trivial matters, indicating a rambling or verbose tone.",
       "class": "Big",
       "type": "Tone",
       "tags": [
-        "language",
-        "pretension"
+        "talkative",
+        "verbose"
+      ]
+    },
+    "Grandiloquent": {
+      "definition": "Pompous or extravagant in language, style, or manner, affecting a high-flown and pretentious tone.",
+      "class": "Big",
+      "type": "Tone",
+      "tags": [
+        "pompous",
+        "pretentious"
       ]
     },
     "Haughty": {
@@ -3225,30 +4704,48 @@
       ]
     },
     "Histrionic": {
-      "definition": "Overly theatrical or melodramatic in manner",
+      "definition": "Overly theatrical or melodramatic in character or style, conveying a tone of exaggerated drama.",
       "class": "Big",
       "type": "Tone",
       "tags": [
-        "drama",
-        "exaggeration"
+        "dramatic",
+        "theatrical"
       ]
     },
     "Imperious": {
-      "definition": "Assuming power or authority without justification",
+      "definition": "Assuming power or authority without justification; arrogant and domineering, asserting a tone of command.",
       "class": "Big",
       "type": "Tone",
       "tags": [
-        "arrogance",
-        "authority"
+        "authoritative",
+        "domineering"
+      ]
+    },
+    "Impetuous": {
+      "definition": "Acting or done quickly and without thought or care, conveying a tone of impulsive rashness.",
+      "class": "Big",
+      "type": "Tone",
+      "tags": [
+        "impulsive",
+        "rash"
       ]
     },
     "Incisive": {
-      "definition": "Accurate and sharply clear in thought or style",
+      "definition": "Of a person or mental process) intelligently analytical and clear-thinking; accurate and sharp, demonstrating a penetrating and perceptive tone.",
       "class": "Big",
       "type": "Tone",
       "tags": [
-        "clarity",
-        "sharpness"
+        "analytical",
+        "sharp"
+      ]
+    },
+    "Indignant": {
+      "definition": "Feeling or showing anger or annoyance at what is perceived as unfair treatment, conveying a tone of righteous displeasure.",
+      "class": "Big",
+      "type": "Tone",
+      "tags": [
+        "angry",
+        "resentful"
       ]
     },
     "Ingratiating": {
@@ -3260,31 +4757,76 @@
         "manipulation"
       ]
     },
-    "Laconic": {
-      "definition": "Using very few words to convey much meaning",
+    "Insipid": {
+      "definition": "Lacking flavor, vigor, or interest, creating a dull and uninspiring tone.",
       "class": "Big",
       "type": "Tone",
       "tags": [
-        "brevity",
-        "style"
+        "dull",
+        "uninspiring"
+      ]
+    },
+    "Insouciant": {
+      "definition": "Showing a casual lack of concern; indifferent, adopting a lighthearted and carefree tone.",
+      "class": "Big",
+      "type": "Tone",
+      "tags": [
+        "carefree",
+        "indifferent"
+      ]
+    },
+    "Intransigent": {
+      "definition": "Unwilling or refusing to change one's views or to agree about something, displaying a stubborn and uncompromising tone.",
+      "class": "Big",
+      "type": "Tone",
+      "tags": [
+        "stubborn",
+        "uncompromising"
+      ]
+    },
+    "Laconic": {
+      "definition": "Using very few words, conveying much meaning in a concise and brief tone.",
+      "class": "Big",
+      "type": "Tone",
+      "tags": [
+        "concise",
+        "brief"
       ]
     },
     "Languid": {
-      "definition": "Slow, relaxed, and lacking energy",
+      "definition": "Having a disinclination for physical exertion or effort; slow and relaxed, adopting a sluggish and weary tone.",
       "class": "Big",
       "type": "Tone",
       "tags": [
-        "slowness",
-        "mood"
+        "slow",
+        "relaxed"
       ]
     },
     "Maudlin": {
-      "definition": "Self-pityingly or tearfully sentimental",
+      "definition": "Self-pityingly or tearfully sentimental, often through drunkenness, conveying an overly emotional and sentimental tone.",
       "class": "Big",
       "type": "Tone",
       "tags": [
-        "sentimentality",
-        "emotion"
+        "sentimental",
+        "emotional"
+      ]
+    },
+    "Mellifluous": {
+      "definition": "Sweet or musical; pleasant to hear, creating a smooth and harmonious tone.",
+      "class": "Big",
+      "type": "Tone",
+      "tags": [
+        "sweet",
+        "musical"
+      ]
+    },
+    "Meretricious": {
+      "definition": "Apparently attractive but having in reality no value or integrity, conveying a tone of superficiality and false allure.",
+      "class": "Big",
+      "type": "Tone",
+      "tags": [
+        "superficial",
+        "flashy"
       ]
     },
     "Mordant": {
@@ -3296,94 +4838,130 @@
         "criticism"
       ]
     },
-    "Orotund": {
-      "definition": "Pompous and pretentious in speech or writing",
+    "Munificent": {
+      "definition": "Larger or more generous than is usual or necessary, conveying a tone of lavish generosity.",
       "class": "Big",
       "type": "Tone",
       "tags": [
-        "language",
-        "pretension"
+        "generous",
+        "lavish"
+      ]
+    },
+    "Nonchalant": {
+      "definition": "Feeling or appearing casually calm and relaxed; not displaying anxiety, interest, or enthusiasm, maintaining an air of cool indifference.",
+      "class": "Big",
+      "type": "Tone",
+      "tags": [
+        "calm",
+        "indifferent"
+      ]
+    },
+    "Obsequious": {
+      "definition": "Excessively obedient or attentive to an excessive degree, conveying a tone of fawning subservience.",
+      "class": "Big",
+      "type": "Tone",
+      "tags": [
+        "fawning",
+        "subservient"
+      ]
+    },
+    "Orotund": {
+      "definition": "Pompous or bombastic (of speech or writing); full, round, and imposing (of a voice), indicating a grand and inflated tone.",
+      "class": "Big",
+      "type": "Tone",
+      "tags": [
+        "pompous",
+        "resonant"
       ]
     },
     "Patronizing": {
-      "definition": "Treating with apparent kindness but betraying superiority",
+      "definition": "Treating with apparent kindness that betrays a feeling of superiority, conveying a condescending tone.",
       "class": "Big",
       "type": "Tone",
       "tags": [
-        "attitude",
-        "condescension"
+        "condescending",
+        "superior"
       ]
     },
     "Pedantic": {
-      "definition": "Overly concerned with formal rules and trivial details",
+      "definition": "Overly concerned with minute details or formalisms, especially in teaching, adopting an overly meticulous and didactic tone.",
       "class": "Big",
       "type": "Tone",
       "tags": [
-        "precision",
-        "nitpicking"
+        "meticulous",
+        "didactic"
       ]
     },
     "Pernickety": {
-      "definition": "Placing too much emphasis on trivial details",
+      "definition": "Placing too much emphasis on trivial or minor details; fussy, indicating an overly particular and nitpicking tone.",
       "class": "Big",
       "type": "Tone",
       "tags": [
-        "fussiness",
-        "detail"
+        "fussy",
+        "particular"
       ]
     },
     "Pithy": {
-      "definition": "Concise and forcefully expressive in style",
+      "definition": "Concise and forcefully expressive, delivering powerful messages with brevity and impact.",
       "class": "Big",
       "type": "Tone",
       "tags": [
-        "brevity",
-        "impact"
+        "concise",
+        "forceful"
       ]
     },
     "Plaintive": {
-      "definition": "Sounding sad and mournful in tone",
+      "definition": "Sounding sad and mournful, expressing a tone of sorrowful lament.",
       "class": "Big",
       "type": "Tone",
       "tags": [
-        "sadness",
-        "sound"
+        "sad",
+        "mournful"
       ]
     },
     "Polemical": {
-      "definition": "Strongly critical or disputatious in tone",
+      "definition": "Relating to or involving strongly critical, controversial, or disputatious writing or speech, taking a combative and argumentative tone.",
       "class": "Big",
       "type": "Tone",
       "tags": [
-        "argument",
-        "controversy"
+        "argumentative",
+        "controversial"
       ]
     },
     "Pontifical": {
-      "definition": "Pompously dogmatic like a pontiff",
+      "definition": "Characterized by pompous and authoritative dogmatism, adopting a self-important and preachy tone.",
       "class": "Big",
       "type": "Tone",
       "tags": [
-        "authority",
-        "pretension"
+        "authoritative",
+        "preachy"
       ]
     },
     "Precocious": {
-      "definition": "Showing unusually early development in manner",
+      "definition": "Having developed certain abilities or proclivities at an earlier age than usual, conveying a tone of surprising maturity or advanced development.",
       "class": "Big",
       "type": "Tone",
       "tags": [
-        "intelligence",
-        "youth"
+        "mature",
+        "advanced"
+      ]
+    },
+    "Prosaic": {
+      "definition": "Having the style or diction of prose; lacking poetic beauty, originality, or imagination; mundane, creating a dull and uninspired tone.",
+      "class": "Big",
+      "type": "Tone",
+      "tags": [
+        "mundane",
+        "unimaginative"
       ]
     },
     "Querulous": {
-      "definition": "Complaining in a petulant or whining manner",
+      "definition": "Complaining in a petulant or whining manner, displaying a habitually irritable and discontented tone.",
       "class": "Big",
       "type": "Tone",
       "tags": [
-        "complaint",
-        "attitude"
+        "complaining",
+        "whining"
       ]
     },
     "Recalcitrant": {
@@ -3396,102 +4974,183 @@
       ]
     },
     "Reticent": {
-      "definition": "Reserved and inclined to silence in manner",
+      "definition": "Not revealing one's thoughts or feelings readily, conveying a reserved and restrained tone.",
       "class": "Big",
       "type": "Tone",
       "tags": [
-        "silence",
-        "restraint"
+        "reserved",
+        "restrained"
       ]
     },
     "Ribald": {
-      "definition": "Referring to sexual matters in amusingly coarse way",
+      "definition": "Referring to sexual matters in an amusingly rude or irreverent way, adopting a coarse and bawdy tone.",
       "class": "Big",
       "type": "Tone",
       "tags": [
-        "humor",
-        "vulgarity"
+        "crude",
+        "humorous"
+      ]
+    },
+    "Risible": {
+      "definition": "Provoking laughter through being ludicrous or absurd, creating a tone of lighthearted mockery or amusement.",
+      "class": "Big",
+      "type": "Tone",
+      "tags": [
+        "ludicrous",
+        "amusing"
       ]
     },
     "Sardonic": {
-      "definition": "Grimly mocking or cynical in tone",
+      "definition": "Grimly mocking or cynical, expressing a tone of disdainful humor.",
       "class": "Big",
       "type": "Tone",
       "tags": [
-        "humor",
-        "cynicism"
+        "mocking",
+        "cynical"
       ]
     },
     "Scathing": {
-      "definition": "Severely critical and harsh in manner",
+      "definition": "Severely critical; unsparing, delivering a harshly critical and damaging tone.",
       "class": "Big",
       "type": "Tone",
       "tags": [
-        "criticism",
-        "harshness"
+        "critical",
+        "harsh"
       ]
     },
     "Sententious": {
-      "definition": "Given to moralizing in pompous way",
+      "definition": "Given to moralizing in a pompous or affected manner, adopting a tone of self-righteous sermonizing.",
       "class": "Big",
       "type": "Tone",
       "tags": [
-        "morality",
-        "pretension"
+        "moralizing",
+        "preachy"
+      ]
+    },
+    "Soporific": {
+      "definition": "Tending to induce drowsiness or sleep, creating a dull and monotonous tone.",
+      "class": "Big",
+      "type": "Tone",
+      "tags": [
+        "drowsy",
+        "monotonous"
+      ]
+    },
+    "Stentorian": {
+      "definition": "Of a person's voice) loud and powerful, resonating with impressive volume.",
+      "class": "Big",
+      "type": "Tone",
+      "tags": [
+        "loud",
+        "powerful"
+      ]
+    },
+    "Stoic": {
+      "definition": "A person who can endure pain or hardship without showing their feelings or complaining, maintaining a calm and unemotional tone.",
+      "class": "Big",
+      "type": "Tone",
+      "tags": [
+        "calm",
+        "unemotional"
+      ]
+    },
+    "Taciturn": {
+      "definition": "Reserved or uncommunicative in speech; saying little, adopting a quiet and introverted tone.",
+      "class": "Big",
+      "type": "Tone",
+      "tags": [
+        "reserved",
+        "silent"
+      ]
+    },
+    "Temerity": {
+      "definition": "Excessive confidence or boldness; audacity, displaying a tone of reckless daring.",
+      "class": "Big",
+      "type": "Tone",
+      "tags": [
+        "boldness",
+        "audacity"
       ]
     },
     "Trenchant": {
-      "definition": "Vigorous and incisive in expression or style",
+      "definition": "Vigorous or incisive in expression or style; keen or sharp, delivering observations with sharp clarity and impact.",
       "class": "Big",
       "type": "Tone",
       "tags": [
-        "sharpness",
-        "impact"
+        "sharp",
+        "incisive"
+      ]
+    },
+    "Truculent": {
+      "definition": "Eager or quick to argue or fight; aggressively defiant, displaying a fierce and combative tone.",
+      "class": "Big",
+      "type": "Tone",
+      "tags": [
+        "aggressive",
+        "defiant"
       ]
     },
     "Unctuous": {
-      "definition": "Excessively flattering or ingratiating in manner",
+      "definition": "Excessively flattering or ingratiating; oily, conveying a tone of insincere smoothness.",
       "class": "Big",
       "type": "Tone",
       "tags": [
-        "flattery",
-        "insincerity"
+        "flattering",
+        "insincere"
+      ]
+    },
+    "Vacuous": {
+      "definition": "Having or showing a lack of thought or intelligence; mindless, creating an empty and superficial tone.",
+      "class": "Big",
+      "type": "Tone",
+      "tags": [
+        "mindless",
+        "superficial"
       ]
     },
     "Vehement": {
-      "definition": "Showing strong feeling; forceful, passionate, or intense",
+      "definition": "Showing strong feeling; forceful, passionate, or intense, expressing convictions with powerful emotion.",
       "class": "Big",
       "type": "Tone",
       "tags": [
-        "intensity",
-        "emotion"
+        "forceful",
+        "passionate"
+      ]
+    },
+    "Verbal": {
+      "definition": "Relating to or in the form of words; expressed in spoken rather than written words, conveying a tone of direct communication.",
+      "class": "Big",
+      "type": "Tone",
+      "tags": [
+        "communication",
+        "direct"
       ]
     },
     "Vituperative": {
-      "definition": "Bitter and abusive in tone or language",
+      "definition": "Bitter and abusive in tone or language, filled with harsh denunciation.",
       "class": "Big",
       "type": "Tone",
       "tags": [
-        "abuse",
-        "anger"
+        "abusive",
+        "bitter"
       ]
     },
     "Waggish": {
-      "definition": "Humorous in playful, mischievous, or facetious manner",
+      "definition": "Humorous in a playful, mischievous, or facetious manner, adopting a mischievous and jocular tone.",
       "class": "Big",
       "type": "Tone",
       "tags": [
-        "humor",
-        "playfulness"
+        "mischievous",
+        "playful"
       ]
     },
     "Withering": {
-      "definition": "Intended to make someone feel humiliated or scorned",
+      "definition": "Intended to make someone feel humiliated; scornful, delivering a devastating and contemptuous tone.",
       "class": "Big",
       "type": "Tone",
       "tags": [
-        "contempt",
-        "criticism"
+        "scornful",
+        "humiliating"
       ]
     },
     "Zealous": {
