@@ -1,470 +1,255 @@
-// Load word database
-let wordDatabase = {};
-let allWords = [];
-let uniqueTags = new Set();
+// --- Model ---
+class VocabCatalogViewerModel {
+  constructor() {
+    this.wordDatabase = {};
+    this.allWords = [];
+    this.uniqueTags = new Set();
+  }
 
-// DOM elements
-const searchInput = document.getElementById("search-input");
-const classFilter = document.getElementById("class-filter");
-const typeFilter = document.getElementById("type-filter");
-const tagFilter = document.getElementById("tag-filter");
-const wordsTable = document
-  .getElementById("words-table")
-  .getElementsByTagName("tbody")[0];
-const wordCountSpan = document.getElementById("word-count");
-
-// --- Model Code ---
-const VocabModel = (() => {
-    let vocabList = [];
-
-    function loadVocab() {
-        // Example: Load from localStorage or hardcoded data
-        const data = localStorage.getItem('vocabList');
-        vocabList = data ? JSON.parse(data) : [];
+  async loadWordDatabase() {
+    try {
+      const response = await fetch(
+        chrome.runtime.getURL("data/words-database.json")
+      );
+      this.wordDatabase = await response.json();
+    } catch (error) {
+      console.error("Error loading word database:", error);
     }
+  }
 
-    function saveVocab() {
-        localStorage.setItem('vocabList', JSON.stringify(vocabList));
-    }
+  processAllWords() {
+    this.allWords = [];
+    this.uniqueTags.clear();
 
-    function addWord(word, meaning) {
-        vocabList.push({ word, meaning });
-        saveVocab();
-    }
+    Object.keys(this.wordDatabase).forEach((category) => {
+      const categoryWords = this.wordDatabase[category];
+      Object.keys(categoryWords).forEach((term) => {
+        const wordData = categoryWords[term];
+        const wordEntry = { term, ...wordData, category };
+        this.allWords.push(wordEntry);
 
-    function getAllWords() {
-        return vocabList;
-    }
+        if (wordData.tags && Array.isArray(wordData.tags)) {
+          wordData.tags.forEach((tag) => this.uniqueTags.add(tag));
+        }
+      });
+    });
+  }
 
-    function removeWord(index) {
-        vocabList.splice(index, 1);
-        saveVocab();
-    }
+  getAllWords() {
+    return this.allWords;
+  }
 
-    // Expose model methods
-    return {
-        loadVocab,
-        addWord,
-        getAllWords,
-        removeWord
-    };
-})();
+  getUniqueTags() {
+    return Array.from(this.uniqueTags).sort();
+  }
 
-// Initialize the app
-async function init() {
-  await loadWordDatabase();
-  processAllWords();
-  setupClassFilter();
-  setupTypeFilter();
-  populateTagFilter();
-  renderWords(allWords);
-  setupEventListeners();
-}
+  filterWords({ searchTerm, selectedClass, selectedType, selectedTag }) {
+    return this.allWords.filter((word) => {
+      const matchesSearch =
+        word.term.toLowerCase().includes(searchTerm) ||
+        word.definition.toLowerCase().includes(searchTerm);
 
-// Load word database from JSON file
-async function loadWordDatabase() {
-  try {
-    const response = await fetch(
-      chrome.runtime.getURL("data/words-database.json")
-    );
-    wordDatabase = await response.json();
-  } catch (error) {
-    console.error("Error loading word database:", error);
+      const matchesClass =
+        selectedClass === "all" || word.class === selectedClass;
+
+      const matchesType = selectedType === "all" || word.type === selectedType;
+
+      const matchesTag =
+        selectedTag === "all" || (word.tags && word.tags.includes(selectedTag));
+
+      return matchesSearch && matchesClass && matchesType && matchesTag;
+    });
   }
 }
 
-// Process all words into a single array
-// In your processAllWords function:
-function processAllWords() {
-  allWords = [];
-  uniqueTags.clear(); // Reset the Set
+// --- View ---
+class VocabCatalogViewerView {
+  constructor(model) {
+    this.model = model;
+    // DOM elements
+    this.searchInput = document.getElementById("search-input");
+    this.classFilter = document.getElementById("class-filter");
+    this.typeFilter = document.getElementById("type-filter");
+    this.tagFilter = document.getElementById("tag-filter");
+    this.wordsTable = document
+      .getElementById("words-table")
+      .getElementsByTagName("tbody")[0];
+    this.wordCountSpan = document.getElementById("word-count");
+    this.notification = document.getElementById("copy-notification");
+    this.currentString = "(normal)";
+    this.notificationTimeout = null;
+  }
 
-  Object.keys(wordDatabase).forEach((category) => {
-    const categoryWords = wordDatabase[category];
+  populateClassFilter() {
+    this.classFilter.innerHTML = "";
+    const allOption = document.createElement("option");
+    allOption.value = "all";
+    allOption.textContent = "(all)";
+    allOption.selected = true;
+    this.classFilter.appendChild(allOption);
 
-    Object.keys(categoryWords).forEach((term) => {
-      const wordData = categoryWords[term];
-      const wordEntry = { term, ...wordData, category };
-      allWords.push(wordEntry);
+    ["Normal", "Big"].forEach((cls) => {
+      const option = document.createElement("option");
+      option.value = cls;
+      option.textContent = cls;
+      this.classFilter.appendChild(option);
+    });
+  }
 
-      // Safe tag processing
-      if (wordData.tags && Array.isArray(wordData.tags)) {
-        wordData.tags.forEach(function (tag) {
-          uniqueTags.add(tag);
+  populateTypeFilter() {
+    this.typeFilter.innerHTML = "";
+    const placeholderOption = document.createElement("option");
+    placeholderOption.value = "all";
+    placeholderOption.textContent = "Type";
+    placeholderOption.selected = true;
+    placeholderOption.disabled = true;
+    this.typeFilter.appendChild(placeholderOption);
+
+    ["Positive", "Negative", "Neutral", "Tone"].forEach((type) => {
+      const option = document.createElement("option");
+      option.value = type;
+      option.textContent = type;
+      this.typeFilter.appendChild(option);
+    });
+  }
+
+  populateTagFilter() {
+    this.tagFilter.innerHTML = "";
+    const placeholderOption = document.createElement("option");
+    placeholderOption.value = "all";
+    placeholderOption.textContent = "Tags";
+    placeholderOption.selected = true;
+    placeholderOption.disabled = true;
+    this.tagFilter.appendChild(placeholderOption);
+
+    this.model.getUniqueTags().forEach((tag) => {
+      const option = document.createElement("option");
+      option.value = tag;
+      option.textContent = tag;
+      this.tagFilter.appendChild(option);
+    });
+  }
+
+  showCopyNotification(text) {
+    this.notification.textContent = text;
+    this.notification.classList.add("show");
+    if (this.notificationTimeout) clearTimeout(this.notificationTimeout);
+    this.notificationTimeout = setTimeout(() => {
+      this.notification.classList.remove("show");
+    }, 2000);
+  }
+
+  handleWordCopy(word, isRightClick = false) {
+    if (isRightClick) {
+      this.currentString = "(normal)";
+    } else {
+      if (this.currentString === "(normal)") {
+        this.currentString = `(${word})`;
+      } else {
+        this.currentString += `(${word})`;
+      }
+    }
+    navigator.clipboard
+      .writeText(this.currentString)
+      .then(() => this.showCopyNotification(this.currentString))
+      .catch((err) => console.error("Could not copy text: ", err));
+  }
+
+  renderWords(words) {
+    this.wordsTable.innerHTML = "";
+    words.forEach((word) => {
+      const row = document.createElement("tr");
+
+      const termCell = document.createElement("td");
+      termCell.textContent = word.term;
+      if (word.class === "Big") termCell.classList.add("big-word");
+
+      const defCell = document.createElement("td");
+      defCell.textContent = word.definition;
+
+      const classCell = document.createElement("td");
+      classCell.textContent = word.class;
+
+      const typeCell = document.createElement("td");
+      typeCell.textContent = word.type;
+      typeCell.classList.add(word.type.toLowerCase());
+
+      const tagsCell = document.createElement("td");
+      if (word.tags && word.tags.length > 0) {
+        word.tags.forEach((tag) => {
+          const tagSpan = document.createElement("span");
+          tagSpan.classList.add("tag");
+          tagSpan.textContent = tag;
+          tagsCell.appendChild(tagSpan);
         });
       }
-    });
-  });
 
-  wordCountSpan.textContent = allWords.length;
-}
+      row.appendChild(termCell);
+      row.appendChild(defCell);
+      row.appendChild(classCell);
+      row.appendChild(typeCell);
+      row.appendChild(tagsCell);
+      this.wordsTable.appendChild(row);
 
-// Modify the populateTagFilter function:
-function populateTagFilter() {
-  const tagFilter = document.getElementById("tag-filter");
-  tagFilter.innerHTML = "";
-
-  // Placeholder option
-  const placeholderOption = document.createElement("option");
-  placeholderOption.value = "";
-  placeholderOption.textContent = "Tags";
-  placeholderOption.disabled = true;
-  placeholderOption.selected = true;
-  placeholderOption.style.color = "#bbb"; // Set gray color for placeholder
-  tagFilter.appendChild(placeholderOption);
-
-  // (all) option
-  const allOption = document.createElement("option");
-  allOption.value = "all";
-  allOption.textContent = "(all)";
-  tagFilter.appendChild(allOption);
-
-  const sortedTags = Array.from(uniqueTags).sort();
-  sortedTags.forEach((tag) => {
-    const option = document.createElement("option");
-    option.value = tag;
-    option.textContent = tag;
-    tagFilter.appendChild(option);
-  });
-
-  // Set initial color for placeholder
-  tagFilter.style.color = "#bbb";
-  tagFilter.selectedIndex = 0;
-  tagFilter.value = "";
-
-  tagFilter.addEventListener("change", function () {
-    tagFilter.style.color = tagFilter.value === "" ? "#bbb" : "";
-  });
-}
-
-// Add these variables at the top with the other declarations
-let currentString = "(normal)";
-let notificationTimeout;
-
-// Add this function to show the notification
-function showCopyNotification(text) {
-  const notification = document.getElementById("copy-notification");
-  notification.textContent = text;
-  notification.classList.add("show");
-
-  // Clear any existing timeout
-  if (notificationTimeout) {
-    clearTimeout(notificationTimeout);
-  }
-
-  // Hide after 2 seconds
-  notificationTimeout = setTimeout(() => {
-    notification.classList.remove("show");
-  }, 2000);
-}
-
-// Add this function to handle copying
-function handleWordCopy(word, isRightClick = false) {
-  if (isRightClick) {
-    // Right click resets to (normal)
-    currentString = "(normal)";
-  } else {
-    // Left click appends the word in parentheses
-    if (currentString === "(normal)") {
-      currentString = `(${word})`;
-    } else {
-      currentString += `(${word})`;
-    }
-  }
-
-  // Copy to clipboard
-  navigator.clipboard
-    .writeText(currentString)
-    .then(() => {
-      showCopyNotification(currentString);
-    })
-    .catch((err) => {
-      console.error("Could not copy text: ", err);
-    });
-}
-
-// Render words to the table
-function renderWords(words) {
-  wordsTable.innerHTML = "";
-
-  words.forEach((word) => {
-    const row = document.createElement("tr");
-
-    // Term with special class for "big" words
-    const termCell = document.createElement("td");
-    termCell.textContent = word.term;
-    if (word.class === "Big") {
-      termCell.classList.add("big-word");
-    }
-
-    // Definition
-    const defCell = document.createElement("td");
-    defCell.textContent = word.definition;
-
-    // Class
-    const classCell = document.createElement("td");
-    classCell.textContent = word.class;
-
-    // Type with color coding
-    const typeCell = document.createElement("td");
-    typeCell.textContent = word.type;
-    typeCell.classList.add(word.type.toLowerCase());
-
-    // Tags
-    const tagsCell = document.createElement("td");
-    if (word.tags && word.tags.length > 0) {
-      word.tags.forEach((tag) => {
-        const tagSpan = document.createElement("span");
-        tagSpan.classList.add("tag");
-        tagSpan.textContent = tag;
-        tagsCell.appendChild(tagSpan);
+      row.addEventListener("click", (e) => {
+        if (e.button === 0) this.handleWordCopy(word.term);
       });
-    }
-
-    row.appendChild(termCell);
-    row.appendChild(defCell);
-    row.appendChild(classCell);
-    row.appendChild(typeCell);
-    row.appendChild(tagsCell);
-    wordsTable.appendChild(row);
-
-    // Add click handlers
-    row.addEventListener("click", (e) => {
-      if (e.button === 0) {
-        // Left click
-        handleWordCopy(word.term);
-      }
+      row.addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+        this.handleWordCopy(word.term, true);
+      });
     });
+    this.wordCountSpan.textContent = words.length;
+  }
 
-    row.addEventListener("contextmenu", (e) => {
-      e.preventDefault(); // Prevent the context menu from appearing
-      handleWordCopy(word.term, true);
+  setupEventListeners(filterCallback) {
+    this.searchInput.addEventListener("input", filterCallback);
+    this.classFilter.addEventListener("change", filterCallback);
+    this.typeFilter.addEventListener("change", filterCallback);
+    this.tagFilter.addEventListener("change", filterCallback);
+    this.searchInput.focus();
+  }
+
+  improveDropdownUX() {
+    document.querySelectorAll("select").forEach((select) => {
+      select.addEventListener("focus", () => {
+        select.style.backgroundColor = "rgba(15, 240, 252, 0.1)";
+      });
+      select.addEventListener("blur", () => {
+        select.style.backgroundColor = "rgba(26, 26, 46, 0.8)";
+      });
     });
-  });
-
-  wordCountSpan.textContent = words.length;
-}
-
-// Filter words based on current filters
-function filterWords() {
-  const searchTerm = searchInput.value.toLowerCase();
-  const selectedClass = classFilter.value;
-  const selectedType = typeFilter.value;
-  const selectedTag = tagFilter.value;
-
-  const filteredWords = allWords.filter((word) => {
-    // Search term matching (term or definition)
-    const matchesSearch =
-      word.term.toLowerCase().includes(searchTerm) ||
-      word.definition.toLowerCase().includes(searchTerm);
-
-    // Class filter: show all if "" (placeholder) or "all" is selected
-    const matchesClass =
-      !selectedClass || selectedClass === "all" || word.class === selectedClass;
-
-    // Type filter: show all if "" (placeholder) or "all" is selected
-    const matchesType =
-      !selectedType || selectedType === "all" || word.type === selectedType;
-
-    // Tag filter: show all if "" (placeholder) or "all" is selected
-    const matchesTag =
-      !selectedTag ||
-      selectedTag === "all" ||
-      (word.tags && word.tags.includes(selectedTag));
-
-    return matchesSearch && matchesClass && matchesType && matchesTag;
-  });
-
-  renderWords(filteredWords);
-}
-
-// Set up event listeners
-function setupEventListeners() {
-  searchInput.addEventListener("input", filterWords);
-  classFilter.addEventListener("change", filterWords);
-  typeFilter.addEventListener("change", filterWords);
-  tagFilter.addEventListener("change", filterWords);
-
-  // Focus the search input on popup open
-  searchInput.focus();
-}
-
-// Improve dropdown UX
-document.querySelectorAll("select").forEach((select) => {
-  select.addEventListener("focus", () => {
-    select.style.backgroundColor = "rgba(15, 240, 252, 0.1)";
-  });
-  select.addEventListener("blur", () => {
-    select.style.backgroundColor = "rgba(26, 26, 46, 0.8)";
-  });
-});
-
-// --- Unit Tests for VocabModel ---
-function runVocabModelTests() {
-  let passed = 0, failed = 0;
-
-  // Helper to reset localStorage and model
-  function reset() {
-    localStorage.removeItem('vocabList');
-    VocabModel.loadVocab();
   }
-
-  function assertEqual(actual, expected, msg) {
-    const pass = JSON.stringify(actual) === JSON.stringify(expected);
-    if (pass) {
-      passed++;
-      console.log('✅', msg);
-    } else {
-      failed++;
-      console.error('❌', msg, '\n  Expected:', expected, '\n  Got:', actual);
-    }
-  }
-
-  // Test: loadVocab with no data
-  reset();
-  assertEqual(VocabModel.getAllWords(), [], 'Should load empty vocab list if none exists');
-
-  // Test: addWord and persistence
-  reset();
-  VocabModel.addWord('test', 'a procedure');
-  assertEqual(VocabModel.getAllWords().length, 1, 'Should add a word');
-  assertEqual(VocabModel.getAllWords()[0], { word: 'test', meaning: 'a procedure' }, 'Should store correct word/meaning');
-  // Simulate reload
-  VocabModel.loadVocab();
-  assertEqual(VocabModel.getAllWords().length, 1, 'Should persist after reload');
-
-  // Test: removeWord
-  reset();
-  VocabModel.addWord('one', 'first');
-  VocabModel.addWord('two', 'second');
-  VocabModel.removeWord(0);
-  assertEqual(VocabModel.getAllWords().length, 1, 'Should remove a word by index');
-  assertEqual(VocabModel.getAllWords()[0].word, 'two', 'Should keep the correct word after removal');
-
-  // Test: remove out-of-bounds
-  reset();
-  VocabModel.addWord('one', 'first');
-  try {
-    VocabModel.removeWord(5);
-    assertEqual(VocabModel.getAllWords().length, 1, 'Should not throw when removing out-of-bounds index');
-  } catch (e) {
-    failed++;
-    console.error('❌ Should not throw when removing out-of-bounds index', e);
-  }
-
-  console.log(`VocabModel tests: ${passed} passed, ${failed} failed.`);
 }
 
-// Uncomment to run tests in the browser console
-runVocabModelTests();
+// --- Controller / App Initialization ---
+const model = new VocabCatalogViewerModel();
+let view;
 
-// Initialize the app when DOM is loaded
-document.addEventListener("DOMContentLoaded", init);
-
-// In your HTML, update the class-filter <select> to match this logic:
-// <select id="class-filter">
-//   <option value="all" selected>(all)</option>
-//   <option value="Normal">Normal</option>
-//   <option value="Big">Big</option>
-// </select>
-
-// If you want to ensure this is always set up in JS (in case options are dynamic), you can do:
-function setupClassFilter() {
-  classFilter.innerHTML = "";
-
-  // Placeholder option
-  const placeholderOption = document.createElement("option");
-  placeholderOption.value = "";
-  placeholderOption.textContent = "Word Class";
-  placeholderOption.disabled = true;
-  placeholderOption.selected = true;
-  placeholderOption.style.color = "#bbb"; // Set gray color for placeholder
-  classFilter.appendChild(placeholderOption);
-
-  // (all) option
-  const allOption = document.createElement("option");
-  allOption.value = "all";
-  allOption.textContent = "(all)";
-  classFilter.appendChild(allOption);
-
-  // Normal option
-  const normalOption = document.createElement("option");
-  normalOption.value = "Normal";
-  normalOption.textContent = "Normal";
-  classFilter.appendChild(normalOption);
-
-  // Big option
-  const bigOption = document.createElement("option");
-  bigOption.value = "Big";
-  bigOption.textContent = "Big";
-  classFilter.appendChild(bigOption);
-
-  // Set initial color for placeholder
-  classFilter.style.color = "#bbb";
-  classFilter.selectedIndex = 0;
-  classFilter.value = "";
-
-  classFilter.addEventListener("change", function () {
-    // Remove gray color when a real value is selected
-    classFilter.style.color = classFilter.value === "" ? "#bbb" : "";
-  });
-}
-
-function setupTypeFilter() {
-  typeFilter.innerHTML = "";
-
-  // Placeholder option
-  const placeholderOption = document.createElement("option");
-  placeholderOption.value = "";
-  placeholderOption.textContent = "Word Type";
-  placeholderOption.disabled = true;
-  placeholderOption.selected = true;
-  placeholderOption.style.color = "#bbb"; // Set gray color for placeholder
-  typeFilter.appendChild(placeholderOption);
-
-  // (all) option
-  const allOption = document.createElement("option");
-  allOption.value = "all";
-  allOption.textContent = "(all)";
-  typeFilter.appendChild(allOption);
-
-  // Type options
-  ["Positive", "Negative", "Neutral", "Tone"].forEach(type => {
-    const option = document.createElement("option");
-    option.value = type;
-    option.textContent = type;
-    typeFilter.appendChild(option);
-  });
-
-  // Set initial color for placeholder
-  typeFilter.style.color = "#bbb";
-  typeFilter.selectedIndex = 0;
-  typeFilter.value = "";
-
-  typeFilter.addEventListener("change", function () {
-    typeFilter.style.color = typeFilter.value === "" ? "#bbb" : "";
-  });
-}
-
-// Ensure this is called in your init function
 async function init() {
-  await loadWordDatabase();
-  processAllWords();
-  setupClassFilter();
-  setupTypeFilter();
-  populateTagFilter();
-  renderWords(allWords);
-  setupEventListeners();
+  await model.loadWordDatabase();
+  model.processAllWords();
+  view = new VocabCatalogViewerView(model);
+  view.populateClassFilter();
+  view.populateTypeFilter();
+  view.populateTagFilter();
+  view.renderWords(model.getAllWords());
+  view.setupEventListeners(filterWords);
+  view.improveDropdownUX();
 }
 
-// Optional: Change text color when user selects a real value
-classFilter.addEventListener("change", function () {
-  if (classFilter.value === "") {
-    classFilter.style.color = "#888";
-  } else {
-    classFilter.style.color = ""; // Use default text color
-  }
-});
+function filterWords() {
+  const searchTerm = view.searchInput.value.toLowerCase();
+  const selectedClass = view.classFilter.value;
+  const selectedType = view.typeFilter.value;
+  const selectedTag = view.tagFilter.value;
+  const filtered = model.filterWords({
+    searchTerm,
+    selectedClass,
+    selectedType,
+    selectedTag,
+  });
+  view.renderWords(filtered);
+}
 
-// Set initial color for placeholder
-classFilter.style.color = "#888";
+document.addEventListener("DOMContentLoaded", init);
