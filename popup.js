@@ -277,5 +277,64 @@ document.querySelectorAll("select").forEach((select) => {
   });
 });
 
+// --- Unit Tests for VocabModel ---
+function runVocabModelTests() {
+  let passed = 0, failed = 0;
+
+  // Helper to reset localStorage and model
+  function reset() {
+    localStorage.removeItem('vocabList');
+    VocabModel.loadVocab();
+  }
+
+  function assertEqual(actual, expected, msg) {
+    const pass = JSON.stringify(actual) === JSON.stringify(expected);
+    if (pass) {
+      passed++;
+      console.log('✅', msg);
+    } else {
+      failed++;
+      console.error('❌', msg, '\n  Expected:', expected, '\n  Got:', actual);
+    }
+  }
+
+  // Test: loadVocab with no data
+  reset();
+  assertEqual(VocabModel.getAllWords(), [], 'Should load empty vocab list if none exists');
+
+  // Test: addWord and persistence
+  reset();
+  VocabModel.addWord('test', 'a procedure');
+  assertEqual(VocabModel.getAllWords().length, 1, 'Should add a word');
+  assertEqual(VocabModel.getAllWords()[0], { word: 'test', meaning: 'a procedure' }, 'Should store correct word/meaning');
+  // Simulate reload
+  VocabModel.loadVocab();
+  assertEqual(VocabModel.getAllWords().length, 1, 'Should persist after reload');
+
+  // Test: removeWord
+  reset();
+  VocabModel.addWord('one', 'first');
+  VocabModel.addWord('two', 'second');
+  VocabModel.removeWord(0);
+  assertEqual(VocabModel.getAllWords().length, 1, 'Should remove a word by index');
+  assertEqual(VocabModel.getAllWords()[0].word, 'two', 'Should keep the correct word after removal');
+
+  // Test: remove out-of-bounds
+  reset();
+  VocabModel.addWord('one', 'first');
+  try {
+    VocabModel.removeWord(5);
+    assertEqual(VocabModel.getAllWords().length, 1, 'Should not throw when removing out-of-bounds index');
+  } catch (e) {
+    failed++;
+    console.error('❌ Should not throw when removing out-of-bounds index', e);
+  }
+
+  console.log(`VocabModel tests: ${passed} passed, ${failed} failed.`);
+}
+
+// Uncomment to run tests in the browser console
+runVocabModelTests();
+
 // Initialize the app when DOM is loaded
 document.addEventListener("DOMContentLoaded", init);
