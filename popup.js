@@ -13,6 +13,43 @@ const wordsTable = document
   .getElementsByTagName("tbody")[0];
 const wordCountSpan = document.getElementById("word-count");
 
+// --- Model Code ---
+const VocabModel = (() => {
+    let vocabList = [];
+
+    function loadVocab() {
+        // Example: Load from localStorage or hardcoded data
+        const data = localStorage.getItem('vocabList');
+        vocabList = data ? JSON.parse(data) : [];
+    }
+
+    function saveVocab() {
+        localStorage.setItem('vocabList', JSON.stringify(vocabList));
+    }
+
+    function addWord(word, meaning) {
+        vocabList.push({ word, meaning });
+        saveVocab();
+    }
+
+    function getAllWords() {
+        return vocabList;
+    }
+
+    function removeWord(index) {
+        vocabList.splice(index, 1);
+        saveVocab();
+    }
+
+    // Expose model methods
+    return {
+        loadVocab,
+        addWord,
+        getAllWords,
+        removeWord
+    };
+})();
+
 // Initialize the app
 async function init() {
   await loadWordDatabase();
