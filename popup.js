@@ -82,10 +82,20 @@ class VocabCatalogViewerView {
 
   populateClassFilter() {
     this.classFilter.innerHTML = "";
+
+    // Add a dark magenta placeholder as the first option
+    const placeholder = document.createElement("option");
+    placeholder.value = "";
+    placeholder.textContent = "Word Class";
+    placeholder.disabled = true;
+    placeholder.selected = true;
+    placeholder.style.color = "#8B008B"; // dark magenta
+    this.classFilter.appendChild(placeholder);
+
+    // (all) as the first selectable item
     const allOption = document.createElement("option");
     allOption.value = "all";
     allOption.textContent = "(all)";
-    allOption.selected = true;
     this.classFilter.appendChild(allOption);
 
     ["Normal", "Big"].forEach((cls) => {
@@ -98,12 +108,21 @@ class VocabCatalogViewerView {
 
   populateTypeFilter() {
     this.typeFilter.innerHTML = "";
-    const placeholderOption = document.createElement("option");
-    placeholderOption.value = "all";
-    placeholderOption.textContent = "Type";
-    placeholderOption.selected = true;
-    placeholderOption.disabled = true;
-    this.typeFilter.appendChild(placeholderOption);
+
+    // Add a dark magenta placeholder as the first option
+    const placeholder = document.createElement("option");
+    placeholder.value = "";
+    placeholder.textContent = "Word Type";
+    placeholder.disabled = true;
+    placeholder.selected = true;
+    placeholder.style.color = "#8B008B"; // dark magenta
+    this.typeFilter.appendChild(placeholder);
+
+    // (all) as the first selectable item
+    const allOption = document.createElement("option");
+    allOption.value = "all";
+    allOption.textContent = "(all)";
+    this.typeFilter.appendChild(allOption);
 
     ["Positive", "Negative", "Neutral", "Tone"].forEach((type) => {
       const option = document.createElement("option");
@@ -115,12 +134,21 @@ class VocabCatalogViewerView {
 
   populateTagFilter() {
     this.tagFilter.innerHTML = "";
-    const placeholderOption = document.createElement("option");
-    placeholderOption.value = "all";
-    placeholderOption.textContent = "Tags";
-    placeholderOption.selected = true;
-    placeholderOption.disabled = true;
-    this.tagFilter.appendChild(placeholderOption);
+
+    // Add a dark magenta placeholder as the first option
+    const placeholder = document.createElement("option");
+    placeholder.value = "";
+    placeholder.textContent = "Tags";
+    placeholder.disabled = true;
+    placeholder.selected = true;
+    placeholder.style.color = "#8B008B"; // dark magenta
+    this.tagFilter.appendChild(placeholder);
+
+    // (all) as the first selectable item
+    const allOption = document.createElement("option");
+    allOption.value = "all";
+    allOption.textContent = "(all)";
+    this.tagFilter.appendChild(allOption);
 
     this.model.getUniqueTags().forEach((tag) => {
       const option = document.createElement("option");
@@ -204,20 +232,72 @@ class VocabCatalogViewerView {
 
   setupEventListeners(filterCallback) {
     this.searchInput.addEventListener("input", filterCallback);
-    this.classFilter.addEventListener("change", filterCallback);
-    this.typeFilter.addEventListener("change", filterCallback);
-    this.tagFilter.addEventListener("change", filterCallback);
+
+    // Remove placeholder on first change for class filter
+    this.classFilter.addEventListener("change", function handler(e) {
+      if (this.options[0].value === "") {
+        this.remove(0);
+        this.removeEventListener("change", handler);
+      }
+      filterCallback();
+    });
+
+    // Remove placeholder on first change for type filter
+    this.typeFilter.addEventListener("change", function handler(e) {
+      if (this.options[0].value === "") {
+        this.remove(0);
+        this.removeEventListener("change", handler);
+      }
+      filterCallback();
+    });
+
+    // Remove placeholder on first change for tag filter
+    this.tagFilter.addEventListener("change", function handler(e) {
+      if (this.options[0].value === "") {
+        this.remove(0);
+        this.removeEventListener("change", handler);
+      }
+      filterCallback();
+    });
+
     this.searchInput.focus();
   }
 
   improveDropdownUX() {
-    document.querySelectorAll("select").forEach((select) => {
-      select.addEventListener("focus", () => {
-        select.style.backgroundColor = "rgba(15, 240, 252, 0.1)";
-      });
-      select.addEventListener("blur", () => {
-        select.style.backgroundColor = "rgba(26, 26, 46, 0.8)";
-      });
+    // Word Class
+    this.classFilter.addEventListener("focus", function () {
+      if (this.selectedIndex === 0 && this.options[0].value === "") {
+        this.selectedIndex = 1; // Select (all)
+        this.remove(0); // Remove the placeholder
+      }
+      this.style.backgroundColor = "rgba(15, 240, 252, 0.1)";
+    });
+    this.classFilter.addEventListener("blur", function () {
+      this.style.backgroundColor = "rgba(26, 26, 46, 0.8)";
+    });
+
+    // Word Type
+    this.typeFilter.addEventListener("focus", function () {
+      if (this.selectedIndex === 0 && this.options[0].value === "") {
+        this.selectedIndex = 1; // Select (all)
+        this.remove(0); // Remove the placeholder
+      }
+      this.style.backgroundColor = "rgba(15, 240, 252, 0.1)";
+    });
+    this.typeFilter.addEventListener("blur", function () {
+      this.style.backgroundColor = "rgba(26, 26, 46, 0.8)";
+    });
+
+    // Tags
+    this.tagFilter.addEventListener("focus", function () {
+      if (this.selectedIndex === 0 && this.options[0].value === "") {
+        this.selectedIndex = 1; // Select (all)
+        this.remove(0); // Remove the placeholder
+      }
+      this.style.backgroundColor = "rgba(15, 240, 252, 0.1)";
+    });
+    this.tagFilter.addEventListener("blur", function () {
+      this.style.backgroundColor = "rgba(26, 26, 46, 0.8)";
     });
   }
 }
@@ -239,10 +319,10 @@ async function init() {
 }
 
 function filterWords() {
-  const searchTerm = view.searchInput.value.toLowerCase();
-  const selectedClass = view.classFilter.value;
-  const selectedType = view.typeFilter.value;
-  const selectedTag = view.tagFilter.value;
+  const searchTerm = view.searchInput.value.trim().toLowerCase();
+  const selectedClass = view.classFilter.value || "all";
+  const selectedType = view.typeFilter.value || "all";
+  const selectedTag = view.tagFilter.value || "all";
   const filtered = model.filterWords({
     searchTerm,
     selectedClass,
@@ -250,6 +330,22 @@ function filterWords() {
     selectedTag,
   });
   view.renderWords(filtered);
+}
+
+function filterAndRenderWords() {
+  const searchTerm = view.searchInput.value.trim().toLowerCase();
+  // Treat empty or placeholder value as "all"
+  const selectedClass = view.classFilter.value || "all";
+  const selectedType = view.typeFilter.value || "all";
+  const selectedTag = view.tagFilter.value || "all";
+
+  const filteredWords = model.filterWords({
+    searchTerm,
+    selectedClass,
+    selectedType,
+    selectedTag,
+  });
+  view.renderWords(filteredWords);
 }
 
 document.addEventListener("DOMContentLoaded", init);
