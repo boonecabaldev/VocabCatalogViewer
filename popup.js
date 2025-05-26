@@ -54,6 +54,8 @@ const VocabModel = (() => {
 async function init() {
   await loadWordDatabase();
   processAllWords();
+  setupClassFilter();
+  setupTypeFilter();
   populateTagFilter();
   renderWords(allWords);
   setupEventListeners();
@@ -102,12 +104,20 @@ function populateTagFilter() {
   const tagFilter = document.getElementById("tag-filter");
   tagFilter.innerHTML = "";
 
+  // Placeholder option
   const placeholderOption = document.createElement("option");
-  placeholderOption.value = "all";
+  placeholderOption.value = "";
   placeholderOption.textContent = "Tags";
-  placeholderOption.selected = true;
   placeholderOption.disabled = true;
+  placeholderOption.selected = true;
+  placeholderOption.style.color = "#bbb"; // Set gray color for placeholder
   tagFilter.appendChild(placeholderOption);
+
+  // (all) option
+  const allOption = document.createElement("option");
+  allOption.value = "all";
+  allOption.textContent = "(all)";
+  tagFilter.appendChild(allOption);
 
   const sortedTags = Array.from(uniqueTags).sort();
   sortedTags.forEach((tag) => {
@@ -115,6 +125,15 @@ function populateTagFilter() {
     option.value = tag;
     option.textContent = tag;
     tagFilter.appendChild(option);
+  });
+
+  // Set initial color for placeholder
+  tagFilter.style.color = "#bbb";
+  tagFilter.selectedIndex = 0;
+  tagFilter.value = "";
+
+  tagFilter.addEventListener("change", function () {
+    tagFilter.style.color = tagFilter.value === "" ? "#bbb" : "";
   });
 }
 
@@ -239,16 +258,19 @@ function filterWords() {
       word.term.toLowerCase().includes(searchTerm) ||
       word.definition.toLowerCase().includes(searchTerm);
 
-    // Class filter
+    // Class filter: show all if "" (placeholder) or "all" is selected
     const matchesClass =
-      selectedClass === "all" || word.class === selectedClass;
+      !selectedClass || selectedClass === "all" || word.class === selectedClass;
 
-    // Type filter
-    const matchesType = selectedType === "all" || word.type === selectedType;
+    // Type filter: show all if "" (placeholder) or "all" is selected
+    const matchesType =
+      !selectedType || selectedType === "all" || word.type === selectedType;
 
-    // Tag filter
+    // Tag filter: show all if "" (placeholder) or "all" is selected
     const matchesTag =
-      selectedTag === "all" || (word.tags && word.tags.includes(selectedTag));
+      !selectedTag ||
+      selectedTag === "all" ||
+      (word.tags && word.tags.includes(selectedTag));
 
     return matchesSearch && matchesClass && matchesType && matchesTag;
   });
@@ -338,3 +360,111 @@ runVocabModelTests();
 
 // Initialize the app when DOM is loaded
 document.addEventListener("DOMContentLoaded", init);
+
+// In your HTML, update the class-filter <select> to match this logic:
+// <select id="class-filter">
+//   <option value="all" selected>(all)</option>
+//   <option value="Normal">Normal</option>
+//   <option value="Big">Big</option>
+// </select>
+
+// If you want to ensure this is always set up in JS (in case options are dynamic), you can do:
+function setupClassFilter() {
+  classFilter.innerHTML = "";
+
+  // Placeholder option
+  const placeholderOption = document.createElement("option");
+  placeholderOption.value = "";
+  placeholderOption.textContent = "Word Class";
+  placeholderOption.disabled = true;
+  placeholderOption.selected = true;
+  placeholderOption.style.color = "#bbb"; // Set gray color for placeholder
+  classFilter.appendChild(placeholderOption);
+
+  // (all) option
+  const allOption = document.createElement("option");
+  allOption.value = "all";
+  allOption.textContent = "(all)";
+  classFilter.appendChild(allOption);
+
+  // Normal option
+  const normalOption = document.createElement("option");
+  normalOption.value = "Normal";
+  normalOption.textContent = "Normal";
+  classFilter.appendChild(normalOption);
+
+  // Big option
+  const bigOption = document.createElement("option");
+  bigOption.value = "Big";
+  bigOption.textContent = "Big";
+  classFilter.appendChild(bigOption);
+
+  // Set initial color for placeholder
+  classFilter.style.color = "#bbb";
+  classFilter.selectedIndex = 0;
+  classFilter.value = "";
+
+  classFilter.addEventListener("change", function () {
+    // Remove gray color when a real value is selected
+    classFilter.style.color = classFilter.value === "" ? "#bbb" : "";
+  });
+}
+
+function setupTypeFilter() {
+  typeFilter.innerHTML = "";
+
+  // Placeholder option
+  const placeholderOption = document.createElement("option");
+  placeholderOption.value = "";
+  placeholderOption.textContent = "Word Type";
+  placeholderOption.disabled = true;
+  placeholderOption.selected = true;
+  placeholderOption.style.color = "#bbb"; // Set gray color for placeholder
+  typeFilter.appendChild(placeholderOption);
+
+  // (all) option
+  const allOption = document.createElement("option");
+  allOption.value = "all";
+  allOption.textContent = "(all)";
+  typeFilter.appendChild(allOption);
+
+  // Type options
+  ["Positive", "Negative", "Neutral", "Tone"].forEach(type => {
+    const option = document.createElement("option");
+    option.value = type;
+    option.textContent = type;
+    typeFilter.appendChild(option);
+  });
+
+  // Set initial color for placeholder
+  typeFilter.style.color = "#bbb";
+  typeFilter.selectedIndex = 0;
+  typeFilter.value = "";
+
+  typeFilter.addEventListener("change", function () {
+    typeFilter.style.color = typeFilter.value === "" ? "#bbb" : "";
+  });
+}
+
+// Ensure this is called in your init function
+async function init() {
+  await loadWordDatabase();
+  processAllWords();
+  setupClassFilter();
+  setupTypeFilter();
+  populateTagFilter();
+  renderWords(allWords);
+  setupEventListeners();
+}
+
+// Optional: Change text color when user selects a real value
+classFilter.addEventListener("change", function () {
+  if (classFilter.value === "") {
+    classFilter.style.color = "#888";
+  } else {
+    classFilter.style.color = ""; // Use default text color
+  }
+});
+
+// Set initial color for placeholder
+classFilter.style.color = "#888";

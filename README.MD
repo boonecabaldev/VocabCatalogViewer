@@ -27,9 +27,15 @@
 3. Click "Load unpacked" and select the project folder.
 4. Make sure `popup.html`, `popup.js`, `popup.css`, and `data/words-database.json` are present.
 
+## Functionality
+
+- **Dropdown Placeholders:** Each filter dropdown (Word Class, Word Type, and Tags) initially displays a placeholder option (e.g., 'Word Class') in a readable, whitish-grey color to indicate it is not a real selection.
+- **(all) Option:** The first selectable item in each dropdown is '(all)', which acts as a union filter (e.g., for Word Class, it includes both Normal and Big). This becomes the default selection after the user chooses a value.
+- **Consistent Styling:** The placeholder option for all dropdowns uses a subtle gray color for clarity and consistency, making it easy to distinguish from selectable options.
+
 ## File Structure
 
-```
+```text
 vocab-master/
 ├── data/
 │   └── words-database.json
@@ -39,24 +45,6 @@ vocab-master/
 │   └── popup.js
 └── README.md
 ```
-
-## Contributing
-
-Contributions are welcome! Please read the [contribution guidelines](CONTRIBUTING.md) before submitting a pull request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Inspired by the need for a powerful yet simple vocabulary management tool.
-- Thanks to all contributors and users for their feedback and support.
-
-## Contact
-
-For support or business inquiries, please email [your-email@example.com](mailto:your-email@example.com).
-
 
 ## Customizing the Word Database
 
