@@ -46,7 +46,7 @@ class VocabCatalogViewerModel {
   filterWords({ searchTerm, selectedClass, selectedType, selectedTag }) {
     return this.allWords.filter((word) => {
       const matchesSearch =
-        word.term.toLowerCase().includes(searchTerm) ||
+        word.term.toLowerCase().toLowerCase().includes(searchTerm) ||
         word.definition.toLowerCase().includes(searchTerm);
 
       const matchesClass =
@@ -349,3 +349,139 @@ function filterAndRenderWords() {
 }
 
 document.addEventListener("DOMContentLoaded", init);
+
+// --- Simple Unit Tests for VocabCatalogViewerModel ---
+
+function assertEquals(actual, expected, message) {
+  if (JSON.stringify(actual) !== JSON.stringify(expected)) {
+    console.error("❌", message, "\nExpected:", expected, "\nActual:", actual);
+  } else {
+    console.log("✅", message);
+  }
+}
+
+function runVocabCatalogViewerModelTests() {
+  // Mock data
+  const mockDB = {
+    Animals: {
+      Cat: {
+        definition: "A small domesticated carnivorous mammal.",
+        class: "Normal",
+        type: "Neutral",
+        tags: ["pet", "mammal"],
+      },
+      Dog: {
+        definition: "A domesticated carnivorous mammal.",
+        class: "Big",
+        type: "Positive",
+        tags: ["pet", "mammal", "friend"],
+      },
+    },
+    Plants: {
+      Rose: {
+        definition: "A woody perennial flowering plant.",
+        class: "Normal",
+        type: "Positive",
+        tags: ["flower", "thorn"],
+      },
+    },
+  };
+
+  // Setup
+  //////////////////////////////////////
+  const model = new VocabCatalogViewerModel();
+  model.wordDatabase = mockDB;
+  model.processAllWords();
+
+  // Test getAllWords
+  assertEquals(model.getAllWords().length, 3, "getAllWords returns all words");
+
+  // Test getUniqueTags
+  assertEquals(
+    model.getUniqueTags(),
+    ["flower", "friend", "mammal", "pet", "thorn"],
+    "getUniqueTags returns sorted unique tags"
+  );
+
+  // Test filterWords: searchTerm
+  let filtered = model.filterWords({
+    searchTerm: "cat",
+    selectedClass: "all",
+    selectedType: "all",
+    selectedTag: "all",
+  });
+  assertEquals(filtered.length, 2, "filterWords filters by searchTerm (term)");
+
+  filtered = model.filterWords({
+    searchTerm: "carnivorous",
+    selectedClass: "all",
+    selectedType: "all",
+    selectedTag: "all",
+  });
+  assertEquals(
+    filtered.length,
+    2,
+    "filterWords filters by searchTerm (definition)"
+  );
+
+  // Test filterWords: class
+  filtered = model.filterWords({
+    searchTerm: "",
+    selectedClass: "Big",
+    selectedType: "all",
+    selectedTag: "all",
+  });
+  assertEquals(
+    filtered.map((w) => w.term),
+    ["Dog"],
+    "filterWords filters by class"
+  );
+
+  // Test filterWords: type
+  filtered = model.filterWords({
+    searchTerm: "",
+    selectedClass: "all",
+    selectedType: "Positive",
+    selectedTag: "all",
+  });
+  assertEquals(
+    filtered.map((w) => w.term).sort(),
+    ["Dog", "Rose"],
+    "filterWords filters by type"
+  );
+
+  // Test filterWords: tag
+  filtered = model.filterWords({
+    searchTerm: "",
+    selectedClass: "all",
+    selectedType: "all",
+    selectedTag: "mammal",
+  });
+  assertEquals(
+    filtered.map((w) => w.term).sort(),
+    ["Cat", "Dog"],
+    "filterWords filters by tag"
+  );
+
+  // Test filterWords: combined filters
+  filtered = model.filterWords({
+    searchTerm: "",
+    selectedClass: "Normal",
+    selectedType: "Neutral",
+    selectedTag: "pet",
+  });
+  assertEquals(
+    filtered.map((w) => w.term),
+    ["Cat"],
+    "filterWords filters by multiple criteria"
+  );
+}
+
+// Run tests if in dev mode (or always, for demonstration)
+if (typeof window !== "undefined") {
+  window.runVocabCatalogViewerModelTests = runVocabCatalogViewerModelTests;
+  // Uncomment to run automatically:
+  // runVocabCatalogViewerModelTests();
+}
+
+runVocabCatalogViewerModelTests();
