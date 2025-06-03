@@ -352,15 +352,16 @@ document.addEventListener("DOMContentLoaded", init);
 
 // --- Simple Unit Tests for VocabCatalogViewerModel ---
 
-function assertEquals(actual, expected, message) {
-  if (JSON.stringify(actual) !== JSON.stringify(expected)) {
-    console.error("❌", message, "\nExpected:", expected, "\nActual:", actual);
-  } else {
-    console.log("✅", message);
+function runVocabCatalogViewerModelTests(logFn = console.log, errorFn = console.error) {
+  // Add this function:
+  function assertEquals(actual, expected, message) {
+    if (JSON.stringify(actual) !== JSON.stringify(expected)) {
+      errorFn("❌ " + message + "<br>Expected: " + JSON.stringify(expected) + "<br>Actual: " + JSON.stringify(actual));
+    } else {
+      logFn("✅ " + message);
+    }
   }
-}
 
-function runVocabCatalogViewerModelTests() {
   // Mock data
   const mockDB = {
     Animals: {

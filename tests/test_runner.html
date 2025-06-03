@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>popup.js Test Runner</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2em; }
+        .pass { color: green; }
+        .fail { color: red; }
+        pre { background: #f4f4f4; padding: 1em; }
+    </style>
+</head>
+<body>
+    <h1>popup.js Test Runner</h1>
+    <div id="results"></div>
+    <script type="module">
+    const resultsDiv = document.getElementById('results');
+    let output = "";
+
+    function logFn(msg) {
+        output += `<div class="pass">${msg}</div>`;
+    }
+    function errorFn(msg) {
+        output += `<div class="fail">${msg}</div>`;
+    }
+
+    async function runAndDisplayTests() {
+        output = "";
+        // Dynamically import popup.js so window.runVocabCatalogViewerModelTests is set
+        await import('../popup.js');
+        if (window.runVocabCatalogViewerModelTests) {
+            window.runVocabCatalogViewerModelTests(logFn, errorFn);
+            resultsDiv.innerHTML = `<h2>Model Unit Test Results</h2>${output}`;
+        } else {
+            resultsDiv.innerHTML = "<div class='fail'>Test runner not found.</div>";
+        }
+    }
+
+    runAndDisplayTests();
+</script>
+</body>
+</html>
