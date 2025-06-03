@@ -6,6 +6,19 @@ class VocabCatalogViewerModel {
     this.uniqueTags = new Set();
   }
 
+  /**
+   * Asynchronously loads the word database from a JSON file using the Chrome extension API.
+   * 
+   * This function fetches the "data/words-database.json" file and populates the `wordDatabase` property
+   * with its contents. If loading fails, it logs an error to the console.
+   * 
+   * Interactions:
+   * - Called during application initialization (see `init()`).
+   * - After loading, `processAllWords()` should be called to process and flatten the loaded data.
+   * - The loaded data is used by other model methods such as `getAllWords()`, `getUniqueTags()`, and `filterWords()`.
+   * 
+   * @returns {Promise<void>} Resolves when the database is loaded or fails.
+   */
   async loadWordDatabase() {
     try {
       const response = await fetch(
@@ -17,6 +30,18 @@ class VocabCatalogViewerModel {
     }
   }
 
+  /**
+   * Processes and flattens the loaded word database into a single array of word objects.
+   *
+   * This function iterates through all categories and terms in the `wordDatabase` property,
+   * creates a flat array of word entries (each including its category), and populates the
+   * `allWords` property. It also collects all unique tags from the words and stores them
+   * in the `uniqueTags` set.
+   *
+   * Interactions:
+   * - Should be called after `loadWordDatabase()` to prepare the data for searching and filtering.
+   * - The resulting `allWords` array is used by methods like `getAllWords()`, `getUniqueTags()`, and `filterWords()`.
+   */
   processAllWords() {
     this.allWords = [];
     this.uniqueTags.clear();
@@ -35,14 +60,49 @@ class VocabCatalogViewerModel {
     });
   }
 
+  /**
+   * Returns a flat array of all word objects in the database.
+   *
+   * Interactions:
+   * - Used by the view to render the list of words.
+   * - Used by tests and filtering logic to access all available words.
+   *
+   * @returns {Array<Object>} Array of word objects.
+   */
   getAllWords() {
     return this.allWords;
   }
 
+  /**
+   * Returns a sorted array of all unique tags found in the word database.
+   *
+   * Interactions:
+   * - Used by the view to populate the tag filter dropdown.
+   * - Used by tests to verify tag extraction.
+   *
+   * @returns {Array<string>} Sorted array of unique tag strings.
+   */
   getUniqueTags() {
     return Array.from(this.uniqueTags).sort();
   }
 
+  /**
+   * Filters the list of words based on search term, class, type, and tag.
+   *
+   * This function checks each word against the provided filter criteria and returns
+   * only those that match all filters.
+   *
+   * Interactions:
+   * - Called by the view/controller when the user changes search or filter options.
+   * - Used by tests to verify filtering logic.
+   *
+   * @param {Object} filters - The filter criteria.
+   * @param {string} filters.searchTerm - The search term to match in term or definition.
+   * @param {string} filters.selectedClass - The selected word class to filter by.
+   * @param {string} filters.selectedType - The selected word type to filter by.
+   * @param {string} filters.selectedTag - The selected tag to filter by.
+   * @returns {Array<Object>} Array of word objects matching the filters.
+   */
   filterWords({ searchTerm, selectedClass, selectedType, selectedTag }) {
     return this.allWords.filter((word) => {
       const matchesSearch =
@@ -64,6 +124,15 @@ class VocabCatalogViewerModel {
 
 // --- View ---
 class VocabCatalogViewerView {
+  /**
+   * Constructs the view and initializes references to DOM elements.
+   *
+   * @param {VocabCatalogViewerModel} model - The model instance to interact with.
+   *
+   * Interactions:
+   * - Stores references to key DOM elements for rendering and event handling.
+   * - Used by controller to initialize and render the UI.
+   */
   constructor(model) {
     this.model = model;
     // DOM elements
@@ -80,6 +149,13 @@ class VocabCatalogViewerView {
     this.notificationTimeout = null;
   }
 
+  /**
+   * Populates the class filter dropdown with available word classes.
+   *
+   * Interactions:
+   * - Reads available classes and updates the class filter DOM element.
+   * - Called during initialization and when the class filter needs to be refreshed.
+   */
   populateClassFilter() {
     this.classFilter.innerHTML = "";
 
@@ -106,6 +182,13 @@ class VocabCatalogViewerView {
     });
   }
 
+  /**
+   * Populates the type filter dropdown with available word types.
+   *
+   * Interactions:
+   * - Reads available types and updates the type filter DOM element.
+   * - Called during initialization and when the type filter needs to be refreshed.
+   */
   populateTypeFilter() {
     this.typeFilter.innerHTML = "";
 
@@ -132,6 +215,14 @@ class VocabCatalogViewerView {
     });
   }
 
+  /**
+   * Populates the tag filter dropdown with unique tags from the model.
+   *
+   * Interactions:
+   * - Calls model.getUniqueTags() to get tags.
+   * - Updates the tag filter DOM element.
+   * - Called during initialization and when the tag filter needs to be refreshed.
+   */
   populateTagFilter() {
     this.tagFilter.innerHTML = "";
 
@@ -158,6 +249,15 @@ class VocabCatalogViewerView {
     });
   }
 
+  /**
+   * Displays a temporary notification when a word is copied.
+   *
+   * @param {string} text - The text to display in the notification.
+   *
+   * Interactions:
+   * - Updates the notification DOM element.
+   * - Called by handleWordCopy() after copying to clipboard.
+   */
   showCopyNotification(text) {
     this.notification.textContent = text;
     this.notification.classList.add("show");
@@ -167,6 +267,17 @@ class VocabCatalogViewerView {
     }, 2000);
   }
 
+  /**
+   * Handles copying a word to the clipboard and updates the notification.
+   *
+   * @param {string} word - The word to copy.
+   * @param {boolean} [isRightClick=false] - Whether the copy was triggered by a right-click.
+   *
+   * Interactions:
+   * - Updates the currentString for clipboard.
+   * - Calls showCopyNotification() after copying.
+   * - Used as an event handler for word row clicks.
+   */
   handleWordCopy(word, isRightClick = false) {
     if (isRightClick) {
       this.currentString = "(normal)";
@@ -183,6 +294,16 @@ class VocabCatalogViewerView {
       .catch((err) => console.error("Could not copy text: ", err));
   }
 
+  /**
+   * Renders the list of words in the table body.
+   *
+   * @param {Array<Object>} words - The array of word objects to render.
+   *
+   * Interactions:
+   * - Updates the words table DOM element.
+   * - Sets up click and contextmenu event listeners for copying.
+   * - Updates the word count display.
+   */
   renderWords(words) {
     this.wordsTable.innerHTML = "";
     words.forEach((word) => {
@@ -230,6 +351,16 @@ class VocabCatalogViewerView {
     this.wordCountSpan.textContent = words.length;
   }
 
+  /**
+   * Sets up event listeners for search and filter controls.
+   *
+   * @param {Function} filterCallback - The callback to invoke when a filter changes.
+   *
+   * Interactions:
+   * - Attaches input/change listeners to filter and search elements.
+   * - Removes placeholder options on first change.
+   * - Focuses the search input on setup.
+   */
   setupEventListeners(filterCallback) {
     this.searchInput.addEventListener("input", filterCallback);
 
@@ -263,6 +394,13 @@ class VocabCatalogViewerView {
     this.searchInput.focus();
   }
 
+  /**
+   * Improves the user experience for dropdown filters (focus/blur styling and placeholder removal).
+   *
+   * Interactions:
+   * - Adds focus and blur event listeners to filter dropdowns.
+   * - Removes placeholder options and updates styling on focus/blur.
+   */
   improveDropdownUX() {
     // Word Class
     this.classFilter.addEventListener("focus", function () {
@@ -468,13 +606,13 @@ function runVocabCatalogViewerModelTests(logFn = console.log, errorFn = console.
   filtered = model.filterWords({
     searchTerm: "",
     selectedClass: "Normal",
-    selectedType: "Neutral",
-    selectedTag: "pet",
+    selectedType: "Positive",
+    selectedTag: "flower",
   });
   assertEquals(
     filtered.map((w) => w.term),
-    ["Cat"],
-    "filterWords filters by multiple criteria"
+    ["Rose"],
+    "filterWords filters by combined criteria"
   );
 }
 
